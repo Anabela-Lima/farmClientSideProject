@@ -1,64 +1,161 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  
+  /*  */
+  
 
-
-/*  FOOTER CSS STARTS */
-
- 
-ul {
+  /* entire footer */
+   
+  nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:rgb(153,191,210)
-}
- 
- 
- 
-li {
+    background-color:rgb(153,191,210);
+    background-size: cover;
+    padding-top:1em;
+    padding-bottom: 2em;
+    position:relative;
+    top: 40em;
+
+
+  }
+  
+/*   
+  individual list items */
+  a {
     float: left;
     background-color: rgb(132,177,40);
- 
+    
+  
+    
+  
     /* moving the list items to the right */
     position: relative;
     left:0.2em;
- 
-}
- 
- 
+  
+  }
+  
+  
   /* when hover- hover in black */
-li a:hover {
-    background-color: rgb(35,169,195)}
- 
-li a {
+  li a:hover {
+    background-color: rgb(35,169,195);
+    text-decoration-line: overline;
+   }
+  
+  li a {
     display:block;
     color: white;
     text-align: center;
-    padding: 16px;
-    text-decoration:underline;
-}
- 
- 
-#li1{
- 
-    position: relative;
-    left: 10em;
- 
-}
- 
-#li2{
- 
-    position: relative;
-    left: 10em;
+    padding: 20px;
+    text-decoration:none;
+    font-size: large;
   }
- 
-#li3{
- 
+  
+  
+  #li1{
+  
     position: relative;
-    left: 10em;
-}
- 
- 
-#li4{
- 
+    left:  15em;
+    /* color:black;
+    border-radius: 12px 50px 45px 1px; */
+    
+    
+  
+  }
+  
+  #li2{
+  
     position: relative;
-    left: 10em;
-}
+    left: 15em;
+  }
+  
+  #li3{
+  
+    position: relative;
+    left:15em;
+  }
+  
+  
+  #li4{
+  
+    position: relative;
+    left: 15em;
+  }
+  
+  #cowPic {
+    position: relative;
+    left:48em;
+    width:200px;
+    height:110px;
+    bottom:.5em;
+    border-radius: 0.2em;
+    
+  }
+
+  #farmLogo{
+    position: relative;
+    right: 31em;
+
+    
+
+ 
+    width: 200px;
+    height: 150px;
+    
+
+
+  }
+
+  /* rounding off edges */
+  
+  #anchor1{
+    border-radius:20px 0px 0px 20px;
+  }
+
+  #anchor2{
+    border-radius:0px 20px 20px 0px;
+  }
+
+
+
+
+ 
