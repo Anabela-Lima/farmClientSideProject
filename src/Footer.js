@@ -3,7 +3,7 @@
 const Footer = () => {
 
     return (
-        <div id="Footecd footr">
+        <div id="footerr">
 
             <footer>
             <nav id="nav">
