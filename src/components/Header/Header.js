@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
 import logo from './logoimage.jpg';
-<link href="http://fonts.cdnfonts.com/css/gameria" rel="stylesheet"/> 
 
 const Header = () => {
 
@@ -9,9 +8,8 @@ const Header = () => {
       <div className="Main-Header">
       
   <div className="title">
-  <img src ={logo}></img>
+  <img src ={logo} alt="farmhouse logo"></img>
     <h2>Our Farm Game </h2>
-    <style> @import url('http://fonts.cdnfonts.com/css/gameria');</style>
 </div>
 
  
