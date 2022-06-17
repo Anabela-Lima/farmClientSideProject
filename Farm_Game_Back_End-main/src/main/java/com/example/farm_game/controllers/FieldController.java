@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/fields")
+@CrossOrigin(origins = "http://localhost:3000")
 public class FieldController {
 
     public final FieldService fieldService;

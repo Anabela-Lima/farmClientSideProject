@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/farms")
+@CrossOrigin(origins = "http://localhost:3000")
 public class FarmController {
 
     public final FieldService fieldService;
