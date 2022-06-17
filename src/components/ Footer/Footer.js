@@ -13,7 +13,8 @@ const Footer = () => {
                     <div id="li2"><li class="li-nav"> <a href= "https://www.addictinggames.com/"> Get Involved </a></li></div>
                     <div id="li3"><li class="li-nav"> <a href= "https://www.addictinggames.com/">Support  </a></li></div>
                     <div id= "li4"> <li class="li-nav"> <a href= "">Languages</a></li></div>
-                    
+                    <div > <img  id = "cowPic" src= "https://c.tenor.com/XF4caftz0fQAAAAC/cow-farm.gif" alt="Cow gif"></img> </div>
+  
                </ul>
             </nav>
             </footer>
