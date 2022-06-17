@@ -8,11 +8,11 @@ const Header = () => {
   return(
       <div className="Main-Header">
       
-  <h1 >&#129293;Farm Game Title&#129293;</h1>
+  <h1 className="title">Farm Game 'Title'</h1>
 
  
 
-  <div className='navbar'>
+  <div className="navbar">
   <ul>
 <li><a href="default.asp">Home</a></li>
 <li><a href="news.asp">How to Play</a></li>
