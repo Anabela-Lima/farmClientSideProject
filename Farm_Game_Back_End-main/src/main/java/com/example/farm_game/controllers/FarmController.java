@@ -47,7 +47,7 @@ public class FarmController {
         return ResponseEntity.ok().body(farm);
     }
 
-    @PostMapping("/farms")
+    @PostMapping("/addFarm")
     public void createFarm(@RequestParam String farmName) {
         Farm newFarm = new Farm(null, farmName, 1000, 0, null);
         farmService.saveFarm(newFarm);
