@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from 'axios'; 
 import Farm from "../Farm/Farm";
 
 
-const FarmList = () => {
+const FarmList = ( {farmsList, setFarmsList} ) => {
 
-  const [farmsList, setFarmsList] = useState([]);
 
   useEffect( () => {
 
@@ -15,7 +14,8 @@ const FarmList = () => {
         setFarmsList(farmsList);
       })
       .catch(err => console.log(err));
-  }, []);
+
+  });
 
   return (
     <>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from 'axios';
 
 
-const AddFarm = () => {
+const AddFarm = ( {farmsList, setFarmsList}) => {
 
     const [farmName, setFarmName] = useState('');
 
@@ -12,8 +12,16 @@ const AddFarm = () => {
         event.preventDefault();
 
         axios.post('http://127.0.0.1:8081/farms/addFarm', null, { params: {farmName}})
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res);
+                let newFarm = res;
+                setFarmsList(listedFarms => [...listedFarms, newFarm]);
+            })
             .catch( (err) => console.log(err) )
+
+        
+        setFarmName('');
+
     }
 
 
