@@ -1,6 +1,7 @@
 import React from 'react';
-
 import './Header.css';
+
+import logo from './logoimage.jpg';
 
 
 const Header = () => {
@@ -8,16 +9,19 @@ const Header = () => {
   return(
       <div className="Main-Header">
       
-  <h1 className="title">Farm Game 'Title'</h1>
+  <div className="title">
+  <img src ={logo}></img>
+    <h2>Farm Game 'Title'</h2></div>
 
  
 
   <div className="navbar">
   <ul>
-<li><a href="default.asp">Home</a></li>
-<li><a href="news.asp">How to Play</a></li>
-<li><a href="contact.asp">My Farms</a></li>
-<li><a href="about.asp">Help</a></li>
+<li><a href="home.asp">Home</a></li>
+<li><a href="myfarms.asp" >My Farms</a></li>
+<li><a href="howtoplay.asp" >How to Play</a></li>
+<li><a href="help.asp" >Help</a></li>
+
 <input type="text" placeholder="Search.."/>
 
 </ul>

@@ -1,13 +1,22 @@
 
+.title{
+    padding: 30px;
+    text-align: center;
+    background: #9DC183;
+    color: black;
+    font-size: 40px;
+}
+
+
 .navbar {
-    background-color: #333;
+    background-color: gainsboro;
     overflow: hidden;
   }
   
   /* css for the options  */
   .navbar a {
     float: left;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -35,6 +44,9 @@
     font-size: 17px;
   }
 
-  .navbar .icon {
-    display: none;
+  img {
+    float: left;
+    height:100px;
+    width: 100px;
   }
+ 
