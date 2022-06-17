@@ -2,15 +2,20 @@ import { useState } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
 import FarmHeader from "../FarmHeader/FarmHeader";
 
-const Farm = () => {
+const Farm = ( {farmName, farmFunds, farmDate} ) => {
 
-    const [money, setMoney] = useState(1000);
+    const [money, setMoney] = useState(farmFunds);
 
   return (
     <>
         <section className="farm-container">
 
-            <FarmHeader money={money} setMoney={setMoney} />
+            <FarmHeader 
+                farmName={farmName} 
+                money={money}
+                setMoney={setMoney}
+                farmDate={farmDate}
+            />
 
             <section className="main-farm-and-fields">
 

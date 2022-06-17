@@ -9,7 +9,7 @@ const FarmList = () => {
 
   useEffect( () => {
 
-    axios.get('http://127.0.0.1:8081/farms')
+    axios.get('http://127.0.0.1:8081/farms/farms')
       .then(res => {
         const farmsList = res.data;
         setFarmsList(farmsList);
@@ -20,13 +20,14 @@ const FarmList = () => {
   return (
     <>
         
-        <Farm />
-        <Farm />
-
         <ul>
           {
             farmsList.map(farm =>
-              <li key={farm.id}>{farm}</li>
+              <li key={farm.id}><Farm 
+                                  farmName={farm.name}
+                                  farmFunds={farm.funds}
+                                  farmDate={farm.date}
+                                  farmFields={farm.fields}/></li>
               )
           }
         </ul>

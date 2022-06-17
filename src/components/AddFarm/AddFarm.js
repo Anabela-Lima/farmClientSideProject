@@ -11,11 +11,7 @@ const AddFarm = () => {
     const handleAddFarmSubmit = event => {
         event.preventDefault();
 
-        const farm = {
-            "farmName": farmName,
-        }
-
-        axios.post('http://127.0.0.1:8081/addFarm', farm)
+        axios.post('http://127.0.0.1:8081/farms/addFarm', null, { params: {farmName}})
             .then(res => console.log(res))
             .catch( (err) => console.log(err) )
     }
@@ -23,7 +19,7 @@ const AddFarm = () => {
 
   return (
     <>
-        <form onAddFarmSubmit={handleAddFarmSubmit}>
+        <form onSubmit={handleAddFarmSubmit}>
             <label>
                 Farm Name
                 <input type="text" name="farm-name" onChange={handleFarmNameChange} />

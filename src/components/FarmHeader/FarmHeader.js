@@ -1,6 +1,6 @@
 
 
-const FarmHeader = ( { money, setMoney } ) => {
+const FarmHeader = ( { money, setMoney, farmName, farmDate } ) => {
 
     
 
@@ -8,9 +8,9 @@ const FarmHeader = ( { money, setMoney } ) => {
     <>
 
         <section className="farmHeader">
-                <h3>Farm One</h3>
+                <h3>{farmName}</h3>
                 <h3>Money: £{money}</h3>
-                <h3>Date: Day 1</h3>
+                <h3>Days Passed: {farmDate}</h3>
         </section>
     
     </>
