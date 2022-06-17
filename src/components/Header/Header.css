@@ -5,6 +5,8 @@
     background: #9DC183;
     color: black;
     font-size: 40px;
+    font-family: 'GAMERIA', sans-serif;
+    
 }
 
 
@@ -20,6 +22,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'GAMERIA', sans-serif;
     font-size: 17px;
   }
   /* css for when we hover over an option */
