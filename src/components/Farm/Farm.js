@@ -1,15 +1,16 @@
-import farmHouseClipart from "../images/farm-clipart-transparent-20.png";
+import { useState } from "react";
+import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
+import FarmHeader from "../FarmHeader/FarmHeader";
 
 const Farm = () => {
+
+    const [money, setMoney] = useState(1000);
+
   return (
     <>
         <section className="farm-container">
 
-            <section className="farmHeader">
-                <h3>Farm One</h3>
-                <h3>Money: £1000</h3>
-                <h3>Date: Day 1</h3>
-            </section>
+            <FarmHeader money={money} setMoney={setMoney} />
 
             <section className="main-farm-and-fields">
 
