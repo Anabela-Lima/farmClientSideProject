@@ -4,23 +4,21 @@ import './Footer.css';
 
 // lets import FontAwesome from react
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
 
 
     // on display menu bar on hover
 
-    const menuDown = (e) => {
+    const menuDown = () => {
 
-       let  box= document.querySelector("#box"); 
-       e.preventDefault();
-    //   box.style.backgroundColor= "YellowGreen";
-
+       let  box= document.querySelector("#box");
+       let colour= "rgb(132,177,40)"
+       box.style.backgroundColor= colour;
 
        return(
-        
-
-     
+  
         
         box.innerHTML = "hello"
 
@@ -59,31 +57,19 @@ const Footer = () => {
 
 
 
-
-
-
     const menuUp = () => {
-        let box= document.querySelector("#box") 
+        
+        let box= document.querySelector("#box")
+       let  colour= "rgb(153,191,210)";
+        box.style.backgroundColor= colour
 
         return(
-             
-            box.innerHTML = ""
+        box.innerHTML = ""
+    
         )
        
     }
  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -101,10 +87,10 @@ const Footer = () => {
             
                 <ul>
 
-                    <div id= "li1"> <li className="li-nav"> <a id="anchor1"   href="https://www.addictinggames.com/" onMouseOver={menuDown} onMouseOut={menuUp}>Company Info </a> </li></div>
-                    <div id="li2"><li className="li-nav"> <a href= "https://www.addictinggames.com/"> Get Involved </a></li></div>
-                    <div id="li3"><li className="li-nav"> <a href= "https://www.addictinggames.com/">Support  </a></li></div>
-                    <div id= "li4"> <li className="li-nav"> <a id="anchor2" href= "">Languages</a></li></div>
+                    <div id= "li1"> <li className="liNav"> <a id="anchor1"   href="https://www.addictinggames.com/" onMouseOver={menuDown} onMouseOut={menuUp}>Company Info </a> </li></div>
+                    <div id="li2"><li className="liNav"> <a href= "https://www.addictinggames.com/"> Get Involved </a></li></div>
+                    <div id="li3"><li className="liNav"> <a href= "https://www.addictinggames.com/">Support  </a></li></div>
+                    <div id= "li4"> <li className="liNav"> <a id="anchor2" href= "">Languages</a></li></div>
                     <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow gif"></img> </div>
 
                     {/* <div > <img id = "cowPic" src= "https://c.tenor.com/XF4caftz0fQAAAAC/cow-farm.gif" alt="Cow gif"></img> </div> */}
@@ -153,12 +139,12 @@ const Footer = () => {
            
          </footer>
 
+            <section id="boxSection"> </section>
 
-         <div id="box" >
+           <div id="box" >
            
          
          </div>
-
 
             
             

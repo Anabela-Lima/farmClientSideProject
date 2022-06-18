@@ -310,19 +310,17 @@
 
 
 
-/* working on menu bar   */
+/* working on drop down menu bar   */
 
 #box{
 
   background-color:  rgb(132,177,40);
   width: 150px;
   height: 120px;
-  
-  
   border-radius: 0px 0px 10px 10px;
   position:relative;
   left:15.25em;
-  top:31.9em;
+  top:32.25em;
   
 }
 
@@ -350,7 +348,5 @@
   bottom:-1.5em;
  left: 2.5em;
 }
-
-
 
 
