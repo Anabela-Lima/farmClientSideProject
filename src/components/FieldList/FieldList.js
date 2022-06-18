@@ -16,6 +16,7 @@ const FieldList = ( {fieldList, setFieldList} ) => {
         <ul>
           {fieldList.map(field =>
               <li key={field.id}><Farm 
+                    fieldId={field.id}
                     fieldName={field.name}
                     fieldTimeLeft={field.timeLeft}
                     fieldSoilType={field.soilType}
