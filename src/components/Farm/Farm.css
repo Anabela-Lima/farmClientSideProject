@@ -47,25 +47,31 @@
 }
 
 .farmNameImage img {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
 }
 
 .fields-section {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 
     max-width: 50%;
+    height: 300px;
+    border-radius: 1rem;
+
+    background-image: url("./grass-background-1-Farm.jpeg");
 }
 
 .field {
-    background-color: #B59275;
+    background-color: #bea189;
     width: 100px;
     height: 100px;
     margin: 1rem;
     border-radius: 0.5rem;
+
+    background-image: repeating-linear-gradient(#C29B6C,  #674422 33%, #C29B6C 33%);
 }
 
 .farmFooter {

@@ -19,3 +19,9 @@
     border: 1px solid burlywood;
     background-color: bisque;
 }
+
+.add-farm-form > button:hover {
+    border: 1px solid burlywood;
+    background-color: rgb(241, 182, 111);
+    cursor: pointer;
+}
