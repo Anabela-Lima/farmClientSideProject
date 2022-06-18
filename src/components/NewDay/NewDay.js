@@ -1,7 +1,7 @@
 import axios from "axios";
 import "./NewDay.css";
 
-const NewDay = ( {farmId, farmDaysPassed, setFarmDaysPassed} ) => {
+const NewDay = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney} ) => {
 
     const handleNewDayClick = event => {
         event.preventDefault();
@@ -9,8 +9,8 @@ const NewDay = ( {farmId, farmDaysPassed, setFarmDaysPassed} ) => {
 
         axios.put(`http://127.0.0.1:8080/farms/newDay/${farmId}`)
             .then( res => {
-                console.log(res, farmId);
-                console.log(farmId);
+                console.log(res.data);
+                setMoney(money + res.data);
             })
             .catch( (err) => console.log(err))
 

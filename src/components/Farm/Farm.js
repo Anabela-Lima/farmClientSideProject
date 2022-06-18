@@ -47,7 +47,9 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                 <h3>Add Crop: xxx</h3>
                 <NewDay farmId={farmId}
                         farmDaysPassed={farmDaysPassed}
-                        setFarmDaysPassed={setFarmDaysPassed} />
+                        setFarmDaysPassed={setFarmDaysPassed}
+                        money={money}
+                        setMoney={setMoney} />
                 <DeleteFarm farmId={farmId} />
             </section>
 

@@ -73,13 +73,13 @@ public class FarmController {
     }
 
     @PutMapping("/newDay/{id}")
-    public ResponseEntity<String> dawnDay(@PathVariable Long id) {
+    public ResponseEntity<Integer> dawnDay(@PathVariable Long id) {
         Farm farm = farmService.getFarm(id);
         farmService.nextDay(farm);
         farmService.saveFarm(farm);
         int moneyMade = fieldService.sellReadyCropsInFields(id);
         farmService.updateMoneyWhenCropsSold(id, moneyMade);
-        return ResponseEntity.ok().body(farm.getName() + " made " + moneyMade + " today, it's now day " + farm.getDate() + "!");
+        return ResponseEntity.ok().body(moneyMade);
 
     }
 
