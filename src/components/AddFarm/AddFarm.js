@@ -9,8 +9,16 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
 
     const handleFarmNameChange = event => setFarmName(event.target.value);
 
+    const clearInput = (inputField) => {
+        inputField.value = inputField.innerText = "";
+    }
+
     const handleAddFarmSubmit = event => {
         event.preventDefault();
+
+        if (farmName === "") {
+            return alert("Please enter a name for your farm 🚀")
+        }
 
         axios.post('http://127.0.0.1:8080/farms/addFarm', null, { params: {farmName}})
             .then(res => {
@@ -22,9 +30,7 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
 
         
         setFarmName('');
-
-        const inputField = document.querySelector(".add-form-input");
-        inputField.value = inputField.innerText("");
+        clearInput(document.querySelector(".add-form-input"));
 
     }
 
