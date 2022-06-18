@@ -10,6 +10,72 @@ const Footer = () => {
 
     // on display menu bar on hover
 
+    const menuDown = (e) => {
+
+       let  box= document.querySelector("#box"); 
+       e.preventDefault();
+    //   box.style.backgroundColor= "YellowGreen";
+
+
+       return(
+        
+
+     
+        
+        box.innerHTML = "hello"
+
+            
+        //     < nav id="menuNav">
+         
+        //      <ul >
+        //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
+        //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
+        //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
+        //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
+         
+        //      </ul>
+         
+         
+        //    </nav>
+       )
+
+       
+      
+    }
+
+
+//     < nav id="menuNav">
+         
+//     <ul >
+//     <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
+//             <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
+//             <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
+//             <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
+
+//     </ul>
+
+
+//   </nav>
+
+
+
+
+
+
+    const menuUp = () => {
+        let box= document.querySelector("#box") 
+
+        return(
+             
+            box.innerHTML = ""
+        )
+       
+    }
+ 
+
+
+
+
 
 
 
@@ -35,7 +101,7 @@ const Footer = () => {
             
                 <ul>
 
-                    <div id= "li1"> <li className="li-nav"> <a id="anchor1" href="https://www.addictinggames.com/">Company Info </a> </li></div>
+                    <div id= "li1"> <li className="li-nav"> <a id="anchor1"   href="https://www.addictinggames.com/" onMouseOver={menuDown} onMouseOut={menuUp}>Company Info </a> </li></div>
                     <div id="li2"><li className="li-nav"> <a href= "https://www.addictinggames.com/"> Get Involved </a></li></div>
                     <div id="li3"><li className="li-nav"> <a href= "https://www.addictinggames.com/">Support  </a></li></div>
                     <div id= "li4"> <li className="li-nav"> <a id="anchor2" href= "">Languages</a></li></div>
@@ -45,6 +111,13 @@ const Footer = () => {
                </ul>
               
             </nav>
+            <div> 
+
+
+        </div>
+
+
+
 
             
 
@@ -76,12 +149,21 @@ const Footer = () => {
             </div>
 
 
+
            
          </footer>
+
+
+         <div id="box" >
+           
+         
+         </div>
+
 
             
             
         </div>
+
 
 
 
