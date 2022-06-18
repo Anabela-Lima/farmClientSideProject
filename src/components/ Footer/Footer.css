@@ -432,6 +432,34 @@
   
  
 
+
+
+  /* code for subsribe starts here */
+
+  
   
     
+}
+
+
+#subForm{
+
+  position:relative;
+  top:54em;
+  left:70em;
+  /* bringing element to front- overlay */
+  z-index:1
+
+
+}
+
+
+#pForm{
+  position: relative;
+  bottom: 1.5em;
+  font-size:medium;
+  color: rgb(159, 159, 87);
+  outline: #333333;
+ 
+
 }

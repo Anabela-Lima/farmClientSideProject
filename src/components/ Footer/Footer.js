@@ -342,6 +342,21 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
          <footer id = "footer">
 
+
+            <div id= "subForm">
+
+                <p id= "pForm"> Dont Miss out on the Fun !</p>
+
+            <form action="">
+            <input type="email" required placeholder="abc@example.com"></input>
+            <button>Button   <span id="button icon"><FontAwesomeIcon icon={['fa', 'gamepad']} /></span></button>
+            </form>
+            </div>
+
+
+            <div> <img> </img></div>
+        
+
                 {/* nav bar */}
             <nav id="nav">
 
@@ -362,12 +377,6 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
 
         </div>
-
-
-
-
-            
-
 
             <div className="allIcon">
 
@@ -397,21 +406,35 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
 
              {/* company logo  */}
-            <div id= "copyright"> © FarmPlay  </div>
+         <div id= "copyright"> © FarmPlay  </div>
        
-           
-
-
            
          </footer>
 
-        
-        
+         
+
+         <section id="boxes">   </section>
 
            <div id="box1" > </div>
            <div id="box2" > </div>
            <div id="box3" > </div>
            <div id="box4" > </div>
+
+
+           <div>
+
+
+
+</div>      
+
+
+
+         
+                
+
+
+
+
 
 
 
