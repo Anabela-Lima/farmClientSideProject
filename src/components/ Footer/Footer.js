@@ -11,15 +11,15 @@ const Footer = () => {
 
     // on display menu bar on hover
 
-    const menuDown = () => {
+    const menuDown1 = () => {
 
-       let  box= document.querySelector("#box");
+       let  box= document.querySelector("#box1");
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
 
        return(
   
-        
+    
         box.innerHTML = "hello"
 
             
@@ -42,24 +42,9 @@ const Footer = () => {
     }
 
 
-//     < nav id="menuNav">
-         
-//     <ul >
-//     <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
-//             <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
-//             <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
-//             <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
-
-//     </ul>
-
-
-//   </nav>
-
-
-
-    const menuUp = () => {
+    const menuUp1 = () => {
         
-        let box= document.querySelector("#box")
+        let box= document.querySelector("#box1")
        let  colour= "rgb(153,191,210)";
         box.style.backgroundColor= colour
 
@@ -69,6 +54,204 @@ const Footer = () => {
         )
        
     }
+
+
+
+
+    // Menu 2------------------------------------------
+
+
+    const menuDown2 = () => {
+
+        let  box= document.querySelector("#box2");
+        let colour= "rgb(132,177,40)"
+        box.style.backgroundColor= colour;
+ 
+        return(
+   
+     
+         box.innerHTML = "hello"
+ 
+             
+         //     < nav id="menuNav">
+          
+         //      <ul >
+         //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
+         //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
+         //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
+         //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
+          
+         //      </ul>
+          
+          
+         //    </nav>
+        )
+ 
+        
+       
+     }
+ 
+ 
+     const menuUp2 = () => {
+         
+         let box= document.querySelector("#box2")
+        let  colour= "rgb(153,191,210)";
+         box.style.backgroundColor= colour
+ 
+         return(
+         box.innerHTML = ""
+     
+         )
+        
+     }
+
+
+      // Menu 3------------------------------------------
+
+    const menuDown3 = () => {
+
+        let  box= document.querySelector("#box3");
+        let colour= "rgb(132,177,40)"
+        box.style.backgroundColor= colour;
+ 
+        return(
+   
+     
+         box.innerHTML = "hello"
+ 
+             
+         //     < nav id="menuNav">
+          
+         //      <ul >
+         //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
+         //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
+         //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
+         //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
+          
+         //      </ul>
+          
+          
+         //    </nav>
+        )
+ 
+        
+       
+     }
+ 
+ 
+     const menuUp3 = () => {
+         
+         let box= document.querySelector("#box3")
+        let  colour= "rgb(153,191,210)";
+         box.style.backgroundColor= colour
+ 
+         return(
+         box.innerHTML = ""
+     
+         )
+        
+     }
+
+  // Menu 4------------------------------------------
+
+    const menuDown4 = () => {
+
+       let  box= document.querySelector("#box4");
+       let colour= "rgb(132,177,40)"
+       box.style.backgroundColor= colour;
+
+       return(
+  
+    
+        box.innerHTML = "hello"
+
+            
+        //     < nav id="menuNav">
+         
+        //      <ul >
+        //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
+        //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
+        //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
+        //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
+         
+        //      </ul>
+         
+         
+        //    </nav>
+       )
+
+       
+      
+    }
+
+
+    const menuUp4 = () => {
+        
+        let box= document.querySelector("#box4")
+       let  colour= "rgb(153,191,210)";
+        box.style.backgroundColor= colour
+
+        return(
+        box.innerHTML = ""
+    
+        )
+       
+    }
+
+
+
+ 
+ 
+ 
+
+     
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
@@ -87,10 +270,10 @@ const Footer = () => {
             
                 <ul>
 
-                    <div id= "li1"> <li className="liNav"> <a id="anchor1"   href="https://www.addictinggames.com/" onMouseOver={menuDown} onMouseOut={menuUp}>Company Info </a> </li></div>
-                    <div id="li2"><li className="liNav"> <a href= "https://www.addictinggames.com/"> Get Involved </a></li></div>
-                    <div id="li3"><li className="liNav"> <a href= "https://www.addictinggames.com/">Support  </a></li></div>
-                    <div id= "li4"> <li className="liNav"> <a id="anchor2" href= "">Languages</a></li></div>
+                    <div id= "li1"> <li className="liNav"> <a id="anchor1"   href="https://www.addictinggames.com/"  onload={menuUp1} onMouseOver={menuDown1} onMouseOut={menuUp1}>Company Info </a> </li></div>
+                    <div id="li2"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown2} onMouseOut={menuUp2}> Get Involved </a></li></div>
+                    <div id="li3"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown3} onMouseOut={menuUp3}>Support  </a></li></div>
+                    <div id= "li4"> <li className="liNav"> <a id="anchor2" href= ""  onMouseOver={menuDown4} onMouseOut={menuUp4}>Languages</a></li></div>
                     <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow gif"></img> </div>
 
                     {/* <div > <img id = "cowPic" src= "https://c.tenor.com/XF4caftz0fQAAAAC/cow-farm.gif" alt="Cow gif"></img> </div> */}
@@ -139,12 +322,13 @@ const Footer = () => {
            
          </footer>
 
-            <section id="boxSection"> </section>
+        
 
-           <div id="box" >
-           
-         
-         </div>
+           <div id="box1" > </div>
+           <div id="box2" > </div>
+           <div id="box3" > </div>
+           <div id="box4" > </div>
+       
 
             
             
