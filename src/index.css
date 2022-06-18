@@ -11,3 +11,10 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace; 
   }
+  @font-face {
+    font-family: 'GAMERIA';
+    font-style: normal;
+    font-weight: 400;
+    src: local('GAMERIA'), url('https://fonts.cdnfonts.com/s/59871/GAMERIA.woff') format('woff');
+}
+

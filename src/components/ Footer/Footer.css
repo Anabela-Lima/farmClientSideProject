@@ -61,6 +61,9 @@
     padding-bottom: 5em;
     position:relative;
     top: 40em;
+    
+
+  
 
 
   }
@@ -69,11 +72,7 @@
   individual list items */
   a {
     float: left;
-    background-color: rgb(132,177,40);
-    
-  
-    
-  
+    background-color: rgb(132,177,40)
     /* moving the list items to the right */
     position: relative;
     left:0.2em;
@@ -85,6 +84,8 @@
   li a:hover {
     background-color: rgb(35,169,195);
     text-decoration-line: overline;
+    text-shadow: 2px 2px #583232;
+  
    }
   
   li a {
@@ -417,5 +418,15 @@
 #copyright{
   text-decoration: #3b5999;
   font-size: xx-large;
-  font-family: 'GAMERIA', sans-serif;
+  font-family: 'GAMERIA';
+  position: relative;
+  right: 10em;
+  top:18em;
+  color: green;
+  text-shadow: 2px 2px #583232;
+  
+ 
+
+  
+    
 }
