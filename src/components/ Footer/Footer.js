@@ -383,6 +383,11 @@ Languages- A list of languages-  click a lang activate translation feature in br
             </div>
 
 
+             {/* company logo  */}
+            <div id= "copyright"> © FarmPlay  </div>
+       
+           
+
 
            
          </footer>
@@ -396,11 +401,8 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
 
 
-            {/* company logo  */}
+         
 
-           <div id= "copyright"> © farmPlay  </div>
-       
-           
 
 
             
