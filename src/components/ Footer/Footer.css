@@ -69,6 +69,7 @@
   ul {
     position:relative;
     left:10em;
+    
   }
   
 /*   
@@ -79,6 +80,7 @@
     /* moving the list items to the right */
     position: relative;
     left:0.2em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   
   }
   
@@ -309,7 +311,8 @@
 .allIcon {
   position: relative;
   left: 65em;
-  top: 26em;
+  top: 25em;
+
 
 }
 
@@ -324,8 +327,9 @@
   height: 120px;
   border-radius: 0px 0px 10px 10px;
   position:relative;
-  left:15.25em;
-  top:29.25em;
+  left:25.25em;
+  top:27.25em;
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
 
   
 }
@@ -336,8 +340,9 @@
   height: 120px;
   border-radius: 0px 0px 10px 10px;
   position:relative;
-  left:24.5em;
-  top:21.75em;
+  left:34.5em;
+  top:19.75em;
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
   
 }
 #box3{
@@ -347,8 +352,9 @@
   height: 120px;
   border-radius: 0px 0px 10px 10px;
   position:relative;
-  left:33.5em;
-  top:14.25em;
+  left:43.5em;
+  top:12.25em;
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
   
 }
 #box4{
@@ -358,8 +364,9 @@
   height: 120px;
   border-radius: 0px 0px 10px 10px;
   position:relative;
-  left:40em;
-  top:6.8em;
+  left:50em;
+  top:4.75em;
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
   
 }
 

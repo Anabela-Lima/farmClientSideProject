@@ -16,8 +16,9 @@ const Footer = () => {
        let  box= document.querySelector("#box1");
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
-       let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+       let shadow=" 10px 10px 10px green"
        box.style.boxShadow=shadow;
+      
        
       
 /*
@@ -41,7 +42,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
         var bul4 = "cookies consent"
 
         let arr = [ bul1, bul2, bul3,bul4,]
-        box.innerHTML =  arr[0] + " " + arr[1] + " "+  arr[2] + " " + arr[3]
+        
 
  
 
@@ -49,7 +50,10 @@ Languages- A list of languages-  click a lang activate translation feature in br
     
 
        return( 
-      "hi"
+
+        // "hi"
+
+        box.innerHTML =  arr[0] + " " + arr[1] + " "+  arr[2] + " " + arr[3]
     
 
             
@@ -75,12 +79,13 @@ Languages- A list of languages-  click a lang activate translation feature in br
     const menuUp1 = () => {
         
         let box= document.querySelector("#box1")
-       let  colour= "rgb(153,191,210)";
+       let  colour= "transparent"
         box.style.backgroundColor= colour;
         let outline= ""
         box.style.outline=outline;
         let shadow="";
         box.style.boxShadow=shadow;
+     
         
        
 
@@ -100,7 +105,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
         let  box= document.querySelector("#box2");
         let colour= "rgb(132,177,40)"
         box.style.backgroundColor= colour;
-        let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+        let shadow=" 10px 10px 10px green"
         box.style.boxShadow=shadow;
 
 
@@ -113,6 +118,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
         
         return(
    
+            // "hi2"
      
             box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
  
@@ -133,6 +139,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
          box.style.boxShadow=shadow;
  
          return(
+            // "hi2"
          box.innerHTML = ""
      
          )
@@ -147,7 +154,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
         let  box= document.querySelector("#box3");
         let colour= "rgb(132,177,40)"
         box.style.backgroundColor= colour;
-        let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+        let shadow=" 10px 10px 10px green"
         box.style.boxShadow=shadow;
 
         var bul1 = "Help";
@@ -159,6 +166,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
  
         return(
 
+            // "hi3"
          
                 box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
     
@@ -191,6 +199,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
          
  
          return(
+            // "hi3"
          box.innerHTML = ""
      
          )
@@ -204,7 +213,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
        let  box= document.querySelector("#box4");
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
-       let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+     let shadow=" 10px 10px 10px green"
        box.style.boxShadow=shadow;
 
        var bul1 = "Spanish";
@@ -220,6 +229,8 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
 
        return(
+
+        // "hi4"
 
         box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] 
   
@@ -257,6 +268,8 @@ Languages- A list of languages-  click a lang activate translation feature in br
         box.style.boxShadow=shadow;
 
         return(
+
+            // "hi4"
         box.innerHTML = ""
     
         )
