@@ -1,0 +1,21 @@
+.add-farm-form {
+    margin: 0rem 37rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    margin-top: 1rem;
+    text-align: center;
+
+    background-color: lightblue;
+}
+
+.add-farm-form > label, .add-farm-form > button, .add-farm-form > input {
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+}
+
+.add-farm-form > button {
+    border: 1px solid burlywood;
+    background-color: bisque;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
+import "./AddFarm.css";
 
 
 const AddFarm = ( {farmsList, setFarmsList}) => {
@@ -27,13 +28,10 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
 
   return (
     <>
-        <form onSubmit={handleAddFarmSubmit}>
-            <label>
-                Farm Name
-                <input type="text" name="farm-name" onChange={handleFarmNameChange} />
-            </label>
-
-            <button type="submit">Add Farm!</button>
+        <form className="add-farm-form" onSubmit={handleAddFarmSubmit}>
+            <label>Farm Name</label>
+            <input type="text" name="farm-name" onChange={handleFarmNameChange} />
+            <button type="submit">Add Farm 🌾</button>
         </form>
     </>
   )
