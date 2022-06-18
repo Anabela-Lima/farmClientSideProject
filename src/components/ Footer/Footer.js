@@ -18,14 +18,39 @@ const Footer = () => {
        box.style.backgroundColor= colour;
        let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
        box.style.boxShadow=shadow;
-      
        
       
+/*
 
-       return(
-  
+ON hover-  drop down 
+
+Company Info- Terms of use , Privacy Policy, Information, Cookies, Cookie Consent
+
+Support-Help, FAQ, Fund our Projects
+
+Languages- A list of languages-  click a lang activate translation feature in browser? 
+
+
+*/
+   
+      
+
+        var bul1 = "Terms of Use";
+        var bul2 = "Privacy Policy";
+        var bul3 = "Information";
+        var bul4 = "cookies consent"
+
+        let arr = [ bul1, bul2, bul3,bul4,]
+        box.innerHTML =  arr[0] + " " + arr[1] + " "+  arr[2] + " " + arr[3]
+
+ 
+
+
     
-        box.innerHTML = "hello"
+
+       return( 
+      "hi"
+    
 
             
         //     < nav id="menuNav">
@@ -40,7 +65,7 @@ const Footer = () => {
          
          
         //    </nav>
-       )
+       );
 
        
       
@@ -67,9 +92,6 @@ const Footer = () => {
        
     }
 
-
-
-
     // Menu 2------------------------------------------
 
 
@@ -80,27 +102,21 @@ const Footer = () => {
         box.style.backgroundColor= colour;
         let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
         box.style.boxShadow=shadow;
- 
-      
- 
+
+
+        var bul1 = "Forums";
+        var bul2 = "Competitions";
+        var bul3 = "Our Projects";
+
+
+        let arr = [ bul1, bul2, bul3]
+        
         return(
    
      
-         box.innerHTML = "hello"
+            box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
  
-             
-         //     < nav id="menuNav">
-          
-         //      <ul >
-         //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
-         //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
-         //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
-         //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
-          
-         //      </ul>
-          
-          
-         //    </nav>
+            
         )
  
         
@@ -133,13 +149,19 @@ const Footer = () => {
         box.style.backgroundColor= colour;
         let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
         box.style.boxShadow=shadow;
+
+        var bul1 = "Help";
+        var bul2 = "FAQ";
+        var bul3 = "Customer Line";
+
+
+        let arr = [ bul1, bul2, bul3]
  
         return(
-   
-     
-         box.innerHTML = "hello"
- 
-             
+
+         
+                box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
+    
          //     < nav id="menuNav">
           
          //      <ul >
@@ -166,6 +188,7 @@ const Footer = () => {
          box.style.backgroundColor= colour
          let shadow=""
          box.style.boxShadow=shadow;
+         
  
          return(
          box.innerHTML = ""
@@ -184,10 +207,26 @@ const Footer = () => {
        let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
        box.style.boxShadow=shadow;
 
+       var bul1 = "Spanish";
+       var bul2 = "Portuguese";
+       var bul3 = "Italian";
+       var bul4 = "Hindi";
+       var bul5 = "French";
+       var bul6 = "Russian";
+
+
+       let arr = [ bul1, bul2, bul3, bul4, bul5, bul6]
+
+
+
        return(
+
+        box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] 
   
     
-        box.innerHTML = "hello"
+      
+
+        
 
             
         //     < nav id="menuNav">
@@ -354,7 +393,15 @@ const Footer = () => {
            <div id="box2" > </div>
            <div id="box3" > </div>
            <div id="box4" > </div>
+
+
+
+            {/* company logo  */}
+
+           <div id= "copyright"> © farmPlay  </div>
        
+           
+
 
             
             
