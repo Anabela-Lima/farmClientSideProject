@@ -28,11 +28,13 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
 
   return (
     <>
-        <form className="add-farm-form" onSubmit={handleAddFarmSubmit}>
-            <label>Farm Name</label>
-            <input type="text" name="farm-name" onChange={handleFarmNameChange} />
-            <button type="submit">Add Farm 🌾</button>
-        </form>
+        <section className="add-farm-form-section">
+            <form className="add-farm-form" onSubmit={handleAddFarmSubmit}>
+                <label>Farm Name</label>
+                <input type="text" name="farm-name" onChange={handleFarmNameChange} />
+                <button type="submit">Add Farm 🌾</button>
+            </form>
+        </section>
     </>
   )
 }

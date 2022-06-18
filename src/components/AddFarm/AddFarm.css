@@ -1,5 +1,10 @@
+.add-farm-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .add-farm-form {
-    margin: 0rem 37rem;
     border-radius: 0.5rem;
     padding: 1rem;
 
