@@ -1,6 +1,10 @@
-// component: 
 
+// component: 
 import './Footer.css';
+
+// lets import FontAwesome from react
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 
 const Footer = () => {
@@ -11,7 +15,9 @@ const Footer = () => {
  
         <div id="footerr">
 
-            <footer id = "footer">
+         <footer id = "footer">
+
+                {/* nav bar */}
             <nav id="nav">
 
             
@@ -24,14 +30,44 @@ const Footer = () => {
                     <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow gif"></img> </div>
 
                     {/* <div > <img id = "cowPic" src= "https://c.tenor.com/XF4caftz0fQAAAAC/cow-farm.gif" alt="Cow gif"></img> </div> */}
-                    
-
                </ul>
               
-
             </nav>
-            </footer>
 
+            
+
+
+            <div className="allIcon">
+
+             <a href="https://en-gb.facebook.com/FarmVille/" className="icon facebook">
+             <div className="socialNameBox">Facebook</div>
+             <span><FontAwesomeIcon className='iconSize' icon={['fab', 'facebook']} /></span>
+             </a> 
+
+             <a href="https://twitter.com/farmville?lang=en-GB" className="icon twitter">
+             <div className="socialNameBox">Twitter</div>
+             <span ><FontAwesomeIcon className='iconSize' icon={['fab', 'twitter']} /></span>
+             </a>
+             <a href="https://www.instagram.com/farmville/?hl=en" className="icon instagram">
+             <div className="socialNameBox">Instagram</div>
+             <span><FontAwesomeIcon  className='iconSize' icon={['fab', 'instagram']} /></span>
+             </a>
+             <a href="https://github.com" className="icon github">
+             <div className="socialNameBox">Github</div>
+             <span><FontAwesomeIcon  className='iconSize' icon={['fab', 'github']} /></span>
+             </a>
+             <a href="https://www.youtube.com/c/FarmVille1" className="icon youtube">
+             <div className="socialNameBox">Youtube</div>
+             <span><FontAwesomeIcon className='iconSize'icon={['fab', 'youtube']} /></span>
+             </a>
+
+            </div>
+
+
+           
+         </footer>
+
+            
             
         </div>
 
