@@ -6,11 +6,11 @@ const NewDay = ( {farmId, farmDaysPassed, setFarmDaysPassed} ) => {
     const handleNewDayClick = event => {
         event.preventDefault();
 
-        const id = farmId;
 
-        axios.put(`http://127.0.0.1:8080/farms/newday/${id}`)
+        axios.put(`http://127.0.0.1:8080/farms/newDay/${farmId}`)
             .then( res => {
-                console.log(res);
+                console.log(res, farmId);
+                console.log(farmId);
             })
             .catch( (err) => console.log(err))
 
@@ -21,7 +21,7 @@ const NewDay = ( {farmId, farmDaysPassed, setFarmDaysPassed} ) => {
   return (
     <>
         <h3 id="new-day-tab"
-            onClick={handleNewDayClick}>New Day 🌒☀️ {farmId}</h3>
+            onClick={handleNewDayClick}>New Day 🌒☀️</h3>
     </>
   )
 }

@@ -72,8 +72,8 @@ public class FarmController {
     public void deleteFarm(@PathVariable Long id){farmService.deleteFarm(farmService.getFarm(id));
     }
 
-    @PutMapping("/newday/{id}")
-    public ResponseEntity<String> dawnDay(Long id) {
+    @PutMapping("/newDay/{id}")
+    public ResponseEntity<String> dawnDay(@PathVariable Long id) {
         Farm farm = farmService.getFarm(id);
         farmService.nextDay(farm);
         farmService.saveFarm(farm);
