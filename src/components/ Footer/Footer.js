@@ -5,15 +5,27 @@ import './Footer.css';
 // lets import FontAwesome from react
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-
-
 const Footer = () => {
+
+
+    // on display menu bar on hover
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return (
 
-
- 
-        <div id="footerr">
+        <div id="footer">
 
          <footer id = "footer">
 
