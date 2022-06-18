@@ -11,7 +11,7 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
     const handleAddFarmSubmit = event => {
         event.preventDefault();
 
-        axios.post('http://127.0.0.1:8081/farms/addFarm', null, { params: {farmName}})
+        axios.post('http://127.0.0.1:8080/farms/addFarm', null, { params: {farmName}})
             .then(res => {
                 console.log(res);
                 let newFarm = res;

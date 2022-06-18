@@ -8,7 +8,7 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
 
   useEffect( () => {
 
-    axios.get('http://127.0.0.1:8081/farms/farms')
+    axios.get('http://127.0.0.1:8080/farms/farms')
       .then(res => {
         const farmsList = res.data;
         setFarmsList(farmsList);
