@@ -30,3 +30,7 @@
     background-color: rgb(241, 182, 111);
     cursor: pointer;
 }
+
+.add-farm-form > input {
+    text-align: center;
+}

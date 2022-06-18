@@ -18,6 +18,7 @@ const Header = () => {
   <ul>
 <li><a href="home.asp">Home</a></li>
 <li><a href="myfarms.asp" >My Farms</a></li>
+<li><a href="marketplace.asp" >Crop Markets</a></li>
 <li><a href="howtoplay.asp" >How to Play</a></li>
 <li><a href="help.asp" >Help</a></li>
 
