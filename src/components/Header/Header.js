@@ -9,7 +9,7 @@ const Header = () => {
       <div className="Main-Header">
       
   <div className="title">
-  <img src ={logo}></img>
+  <img src ={logo} alt="game-logo"></img>
     <h2>Our Farm Game </h2>
     <style> @import url('http://fonts.cdnfonts.com/css/gameria');</style>
 </div>
