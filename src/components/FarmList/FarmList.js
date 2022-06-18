@@ -27,7 +27,9 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
                                   farmName={farm.name}
                                   farmFunds={farm.funds}
                                   farmDate={farm.date}
-                                  farmFields={farm.fields}/></li>
+                                  farmFields={farm.fields}
+                                  farmId={farm.id}
+                                  /></li>
               )
           }
         </ul>

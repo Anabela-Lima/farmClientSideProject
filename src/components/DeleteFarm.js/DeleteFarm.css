@@ -1,0 +1,4 @@
+.delete-farm-tab:hover {
+    background-color: rgb(183, 59, 59);
+    cursor: pointer;
+}

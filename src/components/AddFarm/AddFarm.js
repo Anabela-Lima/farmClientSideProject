@@ -23,6 +23,9 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
         
         setFarmName('');
 
+        const inputField = document.querySelector(".add-form-input");
+        inputField.value = inputField.innerText("");
+
     }
 
 
@@ -31,7 +34,7 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
         <section className="add-farm-form-section">
             <form className="add-farm-form" onSubmit={handleAddFarmSubmit}>
                 <label>Farm Name</label>
-                <input type="text" name="farm-name" onChange={handleFarmNameChange} />
+                <input class="add-form-input" type="text" name="farm-name" onChange={handleFarmNameChange} />
                 <button type="submit">Add Farm 🌾</button>
             </form>
         </section>

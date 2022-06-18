@@ -1,9 +1,10 @@
 import { useState } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
+import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import "./Farm.css";
 
-const Farm = ( {farmName, farmFunds, farmDate} ) => {
+const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
     const [money, setMoney] = useState(farmFunds);
 
@@ -42,7 +43,7 @@ const Farm = ( {farmName, farmFunds, farmDate} ) => {
             <section className="farmFooter">
                 <h3>Add Field: xxx</h3>
                 <h3>Add Crop: xxx</h3>
-                <h3>Delete Farm: xxx</h3>
+                <DeleteFarm farmId={farmId} />
             </section>
 
         </section>
