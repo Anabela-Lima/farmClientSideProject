@@ -16,6 +16,11 @@ const Footer = () => {
        let  box= document.querySelector("#box1");
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
+       let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+       box.style.boxShadow=shadow;
+      
+       
+      
 
        return(
   
@@ -46,9 +51,16 @@ const Footer = () => {
         
         let box= document.querySelector("#box1")
        let  colour= "rgb(153,191,210)";
-        box.style.backgroundColor= colour
+        box.style.backgroundColor= colour;
+        let outline= ""
+        box.style.outline=outline;
+        let shadow="";
+        box.style.boxShadow=shadow;
+        
+       
 
         return(
+            
         box.innerHTML = ""
     
         )
@@ -66,6 +78,10 @@ const Footer = () => {
         let  box= document.querySelector("#box2");
         let colour= "rgb(132,177,40)"
         box.style.backgroundColor= colour;
+        let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+        box.style.boxShadow=shadow;
+ 
+      
  
         return(
    
@@ -95,8 +111,10 @@ const Footer = () => {
      const menuUp2 = () => {
          
          let box= document.querySelector("#box2")
-        let  colour= "rgb(153,191,210)";
+        let  colour= "transparent"
          box.style.backgroundColor= colour
+         let shadow="";
+         box.style.boxShadow=shadow;
  
          return(
          box.innerHTML = ""
@@ -113,6 +131,8 @@ const Footer = () => {
         let  box= document.querySelector("#box3");
         let colour= "rgb(132,177,40)"
         box.style.backgroundColor= colour;
+        let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+        box.style.boxShadow=shadow;
  
         return(
    
@@ -142,8 +162,10 @@ const Footer = () => {
      const menuUp3 = () => {
          
          let box= document.querySelector("#box3")
-        let  colour= "rgb(153,191,210)";
+        let  colour= "transparent"
          box.style.backgroundColor= colour
+         let shadow=""
+         box.style.boxShadow=shadow;
  
          return(
          box.innerHTML = ""
@@ -159,6 +181,8 @@ const Footer = () => {
        let  box= document.querySelector("#box4");
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
+       let shadow=" 10px 10px 10px rgba(0, 0, 0, 0.1)"
+       box.style.boxShadow=shadow;
 
        return(
   
@@ -188,8 +212,10 @@ const Footer = () => {
     const menuUp4 = () => {
         
         let box= document.querySelector("#box4")
-       let  colour= "rgb(153,191,210)";
+       let  colour= "transparent";
         box.style.backgroundColor= colour
+        let shadow="";
+        box.style.boxShadow=shadow;
 
         return(
         box.innerHTML = ""
@@ -270,7 +296,7 @@ const Footer = () => {
             
                 <ul>
 
-                    <div id= "li1"> <li className="liNav"> <a id="anchor1"   href="https://www.addictinggames.com/"  onload={menuUp1} onMouseOver={menuDown1} onMouseOut={menuUp1}>Company Info </a> </li></div>
+                    <div id= "li1"> <li className="liNav"> <a id="anchor1"   href="https://www.addictinggames.com/"  onMouseOver={menuDown1} onMouseOut={menuUp1}>Company Info </a> </li></div>
                     <div id="li2"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown2} onMouseOut={menuUp2}> Get Involved </a></li></div>
                     <div id="li3"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown3} onMouseOut={menuUp3}>Support  </a></li></div>
                     <div id= "li4"> <li className="liNav"> <a id="anchor2" href= ""  onMouseOver={menuDown4} onMouseOut={menuUp4}>Languages</a></li></div>
@@ -343,18 +369,6 @@ const Footer = () => {
 }
 
 
-/*
-
-ON hover-  drop down 
-
-Company Info- Terms of use , Privacy Policy, Information, Cookies, Cookie Consent
-
-Support-Help, FAQ, Fund our Projects
-
-Languages- A list of languages-  click a lang activate translation feature in browser? 
-
-
-*/
 
 
 export default Footer;
