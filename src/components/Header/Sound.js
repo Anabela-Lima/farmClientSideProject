@@ -11,17 +11,11 @@ const PlaySound = () => {
         return (
             <div>
           <button onClick={() => play()} className="button" >
-          <span role="img" aria-label="play">
-          ▶️
-      </span>
-            Play
+          <span role="img" aria-label="play"> ▶️ </span> Play
           </button>
+
           <button onClick={() => stop()} className="button" >
-          <span role="img" aria-label="pause">
-          ⏸️
-      </span>
-          
-          Pause
+          <span role="img" aria-label="pause"> ⏸️ </span> Pause
         </button>
         </div>
         );
