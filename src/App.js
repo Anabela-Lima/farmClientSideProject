@@ -6,6 +6,9 @@ import FarmContainer from './HomePage/containers/FarmContainer.js';
 //     from 'react-router-dom';
 // import MarketPlace from './MarketPlace/MarketPlace';
 
+import PlaySound from './components/Sound/sound';
+
+
 
 function App() {
   return (
@@ -18,10 +21,10 @@ function App() {
         
       </Router> */}
 
-      <Header />
-      <FarmContainer />
-      {/* <Footer /> */}
-
+     <Header />
+     <PlaySound />
+     <FarmContainer />
+     {/* <Footer /> */}
     </>
   );
 }

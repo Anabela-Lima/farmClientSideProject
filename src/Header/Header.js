@@ -22,6 +22,8 @@ const Header = () => {
 {/* <li><NavLink to="../MarketPlace/MarketPlace.js" activeStyle>Crop Market</NavLink></li> */}
 <li><a href="cropmarket.asp">Crop Market</a></li>
 <li><a href="howtoplay.asp" >How to Play</a></li>
+<li><a href="marketplace.asp" >Crop Markets</a></li>
+<li><a href="http://localhost:3000/howtoplay.html" >How to Play</a></li>
 <li><a href="help.asp" >Help</a></li>
 
 <input type="text" placeholder="Search.."/>
