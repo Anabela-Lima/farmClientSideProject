@@ -1,4 +1,5 @@
 import React from 'react';
+// import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from './logoimage.jpg';
 
@@ -18,7 +19,8 @@ const Header = () => {
   <ul>
 <li><a href="home.asp">Home</a></li>
 <li><a href="myfarms.asp" >My Farms</a></li>
-<li><a href="marketplace.asp" >Crop Markets</a></li>
+{/* <li><NavLink to="../MarketPlace/MarketPlace.js" activeStyle>Crop Market</NavLink></li> */}
+<li><a href="cropmarket.asp">Crop Market</a></li>
 <li><a href="howtoplay.asp" >How to Play</a></li>
 <li><a href="help.asp" >Help</a></li>
 
