@@ -393,6 +393,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
          </footer>
 
         
+        
 
            <div id="box1" > </div>
            <div id="box2" > </div>

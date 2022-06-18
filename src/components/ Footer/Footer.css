@@ -61,18 +61,21 @@
     padding-bottom: 5em;
     position:relative;
     top: 40em;
-    
-
   
 
+  }
 
+
+  ul {
+    position:relative;
+    left:10em;
   }
   
 /*   
   individual list items */
   a {
     float: left;
-    background-color: rgb(132,177,40)
+    background-color: rgb(132,177,40);
     /* moving the list items to the right */
     position: relative;
     left:0.2em;
@@ -137,7 +140,7 @@
 
   #farmLogo{
     position: relative;
-    right: 31em;
+    right: 2em;
     width: 200px;
     height: 150px;
 
@@ -307,6 +310,7 @@
   position: relative;
   left: 65em;
   top: 26em;
+
 }
 
 
@@ -322,12 +326,6 @@
   position:relative;
   left:15.25em;
   top:29.25em;
- 
-
- 
-
-
- 
 
   
 }
