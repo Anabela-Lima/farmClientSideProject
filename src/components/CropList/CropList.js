@@ -37,3 +37,5 @@ return (
 
 
 }
+
+export default CropList;
