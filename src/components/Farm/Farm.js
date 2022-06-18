@@ -2,11 +2,13 @@ import { useState } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
 import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
+import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
     const [money, setMoney] = useState(farmFunds);
+    const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
 
   return (
     <>
@@ -43,6 +45,9 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
             <section className="farmFooter">
                 <h3>Add Field: xxx</h3>
                 <h3>Add Crop: xxx</h3>
+                <NewDay farmId={farmId}
+                        farmDaysPassed={farmDaysPassed}
+                        setFarmDaysPassed={setFarmDaysPassed} />
                 <DeleteFarm farmId={farmId} />
             </section>
 

@@ -1,0 +1,8 @@
+#new-day-tab {
+    background-color: lightblue;
+}
+
+#new-day-tab:hover {
+    background-color: rgb(104, 196, 226);
+    cursor: pointer;
+}
