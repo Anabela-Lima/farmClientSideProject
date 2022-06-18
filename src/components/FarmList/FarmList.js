@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import axios from 'axios'; 
 import Farm from "../Farm/Farm";
+import noFarmsGif from "./no-farms-gif.gif";
+import "./FarmList.css";
 
 
 const FarmList = ( {farmsList, setFarmsList} ) => {
@@ -20,7 +22,7 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
   return (
     <>
         
-        <ul>
+        {farmsList.length > 0 ? <ul>
           {
             farmsList.map(farm =>
               <li key={farm.id}><Farm 
@@ -30,9 +32,21 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
                                   farmFields={farm.fields}
                                   farmId={farm.id}
                                   /></li>
-              )
-          }
-        </ul>
+                                )}</ul> :
+              <section className="no-farms-in-list">
+
+                <div className="no-farms-text">
+                  <h3>You have no active Farms!</h3>
+                  <p>Enter a farm name and click add farm above to get started 😄</p>
+                </div>
+                
+                <div className="should-be-you">
+                  <img className="no-farms-image" src={noFarmsGif} alt="Landscape of a farm" />
+                  <h4>☝️ This could be <span>you!</span> ☝️</h4>
+                </div>
+                
+
+              </section>}
         
     </>
   )
