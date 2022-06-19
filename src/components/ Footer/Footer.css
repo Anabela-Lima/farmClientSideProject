@@ -15,6 +15,7 @@
     padding-bottom: 5em;
     position:relative;
     top: 40em;
+    height: 15em;
   
   }
   
@@ -290,7 +291,6 @@ new dropdown starts here */
   
   :root {
   --primary-color:rgb(132,177,40);
-  --secondary-color: chocolate;
 }
 
 * {
@@ -301,7 +301,7 @@ new dropdown starts here */
 }
 
 body {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f8f8f8;
   
@@ -310,12 +310,12 @@ body {
 /* changing properties of navbar */
 
 #navbar{
-  width: 400px;
-  padding-left:1em;
+  width: 470px;
+  padding-left:4em;
   border-radius: 0.5em;
   background: var(--primary-color);
   position: relative;
-  left:5em;   
+  left:6em;   
   top:24em;
   float: left;
 
@@ -378,7 +378,7 @@ body {
 
 #navbar ul li:hover ul li {
   display: block;
-  background: #e7e7e7;
+  background: var(--primary-color);
   width:8em;
   
 }
@@ -391,7 +391,7 @@ body {
 }
 
 #navbar ul li:hover ul li:hover {
-  background: #e0e0e0;
+  /* background: #e0e0e0; */
   color: inherit;
   
 }
@@ -408,7 +408,6 @@ body {
 }
 
 #navbar ul li:hover ul li:hover span {
-  background: var(--secondary-color);
   background-color: rgb(35,169,195);
   text-decoration-line: overline;
   text-shadow: 2px 2px #583232;
@@ -441,176 +440,15 @@ body {
     position: relative;
     
     
+    
   }
 
 }
 
 /* 
 changes colour of titles upon hover */
-.titles:hover  {
-  background-color: rgb(35,169,195);
-  text-decoration-line: overline;
-  text-shadow: 2px 2px #583232;
-
-}
 
 
-  /*  */
-
-  :root {
-    --primary-color:rgb(132,177,40);
-    --secondary-color: chocolate;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    /* width & height properties  */
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #f4f4f4;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f8f8;
-    
-  }
-  
-  /* changing properties of navbar */
-  
-  #navbar{
-    width: 400px;
-    padding-left:1em;
-    border-radius: 0.5em;
-    background: var(--primary-color);
-    position: relative;
-    left:5em;
-    padding-top: none;
-  
-  }
-  
-  
-  #navbar ul li {
-    color: #333;
-    display: inline-block;
-    padding: 1rem;
-    position: relative;
-
-    
-    
-    
-  }
-  
-  #navbar ul li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  /* Dont show the nested unordered list- default */
-  
-  #navbar ul li ul {
-    display: none;
-    
-  }
-  
-  
-  
-  
-  #navbar ul li:hover {
-    cursor: pointer;
-    background: var(--primary-color);
-    color: #fff;
-  
-    
-  }
-  
-  #navbar ul li:hover a {
-    color: #fff;
-    
-  }
-  
-  /* Nested Dropdown Show */
-  
-  #navbar ul li:hover ul {
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 200px;
-    margin-top: 1rem;
-  
-  }
-  
-  #navbar ul li:hover ul li {
-    display: block;
-    background: #e7e7e7;
-    width:8em;
-    
-  }
-  
-  
-  
-  #navbar ul li:hover ul li a {
-    color: #333;
-    
-  }
-  
-  #navbar ul li:hover ul li:hover {
-    background: #e0e0e0;
-    color: inherit;
-    
-  }
-  
-  #navbar ul li:hover ul li span {
-    float: right;
-    color: #fff;
-    background: var(--primary-color);
-    padding: 0.2rem 0.5rem;
-    text-align: center;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    
-  }
-  
-  #navbar ul li:hover ul li:hover span {
-    background: var(--secondary-color);
-    background-color: rgb(35,169,195);
-    text-decoration-line: overline;
-    text-shadow: 2px 2px #583232;
-  
-    
-  }
-  
-  
-  #showcase h1, #showcase p {
-    color: #fff;
-    
-    
-  }
-  
-  #navbar ul li:first-child {
-    background-color: var(--primary-color);
-    
-    
-  }
-  
-  
-  @media (max-width: 600px) {
-    #navbar ul li {
-      display: block;
-      
-    }
-  
-    #navbar ul li:hover ul {
-      width: 100%;
-      position: relative;
-      
-      
-    }
-  
-  }
-  
-  /* 
-  changes colour of titles upon hover */
   .titles:hover  {
     background-color: rgb(35,169,195);
     text-decoration-line: overline;
@@ -623,8 +461,19 @@ changes colour of titles upon hover */
   /* overriding background colour on text */
 
   .textDropMenu{
-    background-color:  #e7e7e7;
+    background: var(--primary-color);
     box-shadow: none;
+
+    
  
   }
+
+
+  .textDropMenu:hover{
+    background: var(--primary-color);
+    /* background: #e0e0e0; */
+    --primary-color:rgb(132,177,40);
+   
+  } 
+
 

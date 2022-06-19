@@ -104,10 +104,10 @@ const Footer = () => {
           <li>
           <div className='titles'> Support <i class="fas fa-angle-down"></i></div>
             <ul>
-              <li><a className= "textDropMenu"href="#">FAQ</a></li>
+              <li><a  className= "textDropMenu"href="#">FAQ</a></li>
               <li><a className= "textDropMenu" href="#">Forums</a></li>
-              <li><a className= "textDropMenu"href="#">Competitions</a></li>
-              <li><a className= "textDropMenu" href="#">Our Projects</a></li>
+              <li><a href="#">Competitions</a></li>
+              <li><a href="#">Our Projects</a></li>
             </ul>
           </li>
          
