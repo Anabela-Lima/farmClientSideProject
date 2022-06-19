@@ -78,7 +78,7 @@
 /* Navbar */
 
 :root {
-    --primary-color:rgb(132,177,40);
+    --primary-color:rgba(165, 188, 118, 0.533);
     --secondary-color: chocolate;
 }
   
@@ -232,17 +232,17 @@
    
     /* a b c  : a= shadow to right, b =  down, c =blur effect intensity */
    
-    box-shadow:  10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow:  10px 2px 10px rgba(28, 102, 102, 0.566);
 
     /* colour the icons in  */
-    color: green;
+    color: rgb(6, 105, 6);
     
     /* moving icons to desired location on the page */
     
     right:22em;
     bottom:0.28em;
     
-    
+
 } 
 
 

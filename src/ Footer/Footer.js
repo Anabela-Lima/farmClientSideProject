@@ -10,6 +10,20 @@ import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
 
+  const sub= () => {
+
+    alert(
+    
+      " 🎉 Great to have you on board! pssst... a true gamer never misses their alerts 🎉 🥳",
+      [
+        { text: "Im ready ✅", onPress: () => console.log("Me too! ") }
+      ]
+    );
+  }
+
+  
+  
+
 
 
     return (
@@ -26,8 +40,7 @@ const Footer = () => {
             <span id= "copyright"> © FarmPlay  </span>
 
         </div>
-              
-
+  
 
       <section className= "centreFooter">
 
@@ -69,19 +82,13 @@ const Footer = () => {
 
          </nav>
 
-
         <form id= "subForm" action="">
             <input type="email" required placeholder="abc@example.com"></input>
-            <button>Subscribe <span id="button icon"></span></button>
+            <button  onClick={sub}>Subscribe <span id="button icon"></span></button>
         </form>
          
-
-
          </section>
          
-
-
-        
 
         <div className='footerRight'>
 
@@ -112,31 +119,17 @@ const Footer = () => {
 
             </div>
 
-
               <img id="ad1"src="https://jobtribes.playmining.com/wp-content/uploads/2021/04/banner_003-3.png" alt="ad"></img>
-                
-            
+                    
         </div>
-       
            
          </footer>
 
-
-         
-
-        
-
-
         <div>
             
-        
-
-
-
-
+      
      </div>   
         
-
 
   </div>
 
