@@ -1,3 +1,7 @@
+import React from 'react';
+
+// importing my icon library
+import initFontAwesome from './components/initFontAwesome.js'
 import './App.css';
 import Header from './Header/Header.js';
 import FarmContainer from './HomePage/containers/FarmContainer.js';
@@ -7,6 +11,11 @@ import FarmContainer from './HomePage/containers/FarmContainer.js';
 // import MarketPlace from './MarketPlace/MarketPlace';
 
 import PlaySound from './components/Sound/sound';
+import Footer from './components/ Footer/Footer';
+
+initFontAwesome();
+
+
 
 
 
@@ -25,6 +34,10 @@ function App() {
      <PlaySound />
      <FarmContainer />
      {/* <Footer /> */}
+    <Footer/>
+    
+    
+    
     </>
   );
 }
