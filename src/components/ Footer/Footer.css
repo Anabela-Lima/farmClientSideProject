@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 
-
 .App {
     text-align: center;
   }
@@ -42,7 +41,7 @@
       transform: rotate(360deg);
     }
   }
-  
+ 
   
   
   /*  */
@@ -62,7 +61,6 @@
     position:relative;
     top: 40em;
   
-
   }
 
 
@@ -319,8 +317,6 @@
 
 }
 
-
-
 /* working on drop down menu bar START  */
 
 #box1{
@@ -372,29 +368,7 @@
   
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
 
 #link1{
   position: relative;
@@ -419,7 +393,7 @@
   position: relative;
   bottom:-1.5em;
  left: 2.5em;
-}
+} */
 
 
 #copyright{
@@ -431,17 +405,10 @@
   top:18.5em;
   color: green;
   text-shadow: 2px 2px #583232;
-  
- 
-
-
-
-  /* code for subsribe starts here */
-
-  
-  
     
 }
+
+/* code for subsribe starts here */
 
 
 #subForm{
@@ -456,7 +423,6 @@
 
 }
 
-
 /* #pForm{
   position: relative;
   bottom: -1.25em;
@@ -468,6 +434,10 @@
 
 } */
 
+
+/* code for ad starts here */
+
+
 #ad1{
   width:330px;
   height:100px;
@@ -478,8 +448,5 @@
   /* bringing element to front- overlay */
   z-index:1;
   box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.581);
-
-  
-  
 
 }
