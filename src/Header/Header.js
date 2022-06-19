@@ -1,36 +1,39 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from './logoimage.jpg';
+
+import { NavLink as Link } from 'react-router-dom';
 
 const Header = () => {
 
   return(
       <div className="Main-Header">
       
-  <div className="title">
-  <img src ={logo} alt="farm-logo"></img>
-    <h2>Our Farm Game </h2>
-</div>
+        <div className="title">
+        <img src ={logo} alt="farm-logo"></img>
+          <h2>Our Farm Game </h2>
+        </div>
 
  
 
-  <div className="navbar">
-  <ul>
-<li><a href="home.asp">Home</a></li>
-<li><a href="myfarms.asp" >My Farms</a></li>
-{/* <li><NavLink to="../MarketPlace/MarketPlace.js" activeStyle>Crop Market</NavLink></li> */}
-<li><a href="cropmarket.asp">Crop Market</a></li>
-<li><a href="howtoplay.asp" >How to Play</a></li>
-<li><a href="help.asp" >Help</a></li>
+        <div className="navbar">
+          <ul>
 
-<input type="text" placeholder="Search.."/>
+            <li><Link to="/" activeStyle>Home</Link></li>
 
-</ul>
-  </div>
+            <li><a href="myfarms.asp" >My Farms</a></li>
 
+            <li><Link to="/marketplace" activeStyle>Market Place</Link></li>
 
-  </div>
+            <li><a href="howtoplay.asp" >How to Play</a></li>
+
+            <li><a href="help.asp" >Help</a></li>
+
+            <input type="text" placeholder="Search.."/>
+
+          </ul>
+        </div>
+      </div>
   )
 }
 

@@ -1,24 +1,31 @@
 import './App.css';
+
+
 import Header from './Header/Header.js';
-import FarmContainer from './HomePage/containers/FarmContainer.js';
-// import { BrowserRouter as Router, Routes, Route}
-//     from 'react-router-dom';
-// import MarketPlace from './MarketPlace/MarketPlace';
+import Home from './HomePage/Home.js'
+import MarketPlace from './MarketPlace/MarketPlace.js';
+
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+
 
 
 function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
 
+        <Header />
         <Routes>
-          <Route path="./MarketPlace/MarketPlace.js" element={<MarketPlace />} />
+
+          <Route path="/" element={<Home />} />
+          <Route path="/marketplace" element={<MarketPlace />} />
+
         </Routes>
         
-      </Router> */}
 
-      <Header />
-      <FarmContainer />
+      </Router>
+      
     </>
   );
 }
