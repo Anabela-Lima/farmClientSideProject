@@ -2,6 +2,7 @@
 // component: 
 import './Footer.css';
 
+
 // lets import FontAwesome from react
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
@@ -76,6 +77,44 @@ const Footer = () => {
        
            
          </footer>
+
+
+         <nav id="navbar">
+        <ul>
+          <li >
+            <div className='titles'> Company Info <i class="fas fa-angle-down"></i></div>
+        
+            <ul id = "ul1">
+              <li><a className= "textDropMenu" href="#">Terms of use</a> </li>
+              <li><a  className= "textDropMenu" href="#">Privacy Policy</a></li>
+              <li><a className= "textDropMenu" href="#">Information</a></li>
+              <li><a className= "textDropMenu" href="#">Cookies</a></li>
+            </ul>
+          </li>
+          <li>
+          <div className='titles'> Languages <i class="fas fa-angle-down"></i></div>
+        
+            <ul>
+              <li><a className= "textDropMenu" href="#">Portuguese</a></li>
+              <li><a className= "textDropMenu" href="#">Spanish</a></li>
+              <li><a className= "textDropMenu"href="#">Russian</a></li>
+              <li><a className= "textDropMenu"href="#">French</a></li>
+            </ul>
+          </li>
+          <li>
+          <div className='titles'> Support <i class="fas fa-angle-down"></i></div>
+            <ul>
+              <li><a className= "textDropMenu"href="#">FAQ</a></li>
+              <li><a className= "textDropMenu" href="#">Forums</a></li>
+              <li><a className= "textDropMenu"href="#">Competitions</a></li>
+              <li><a className= "textDropMenu" href="#">Our Projects</a></li>
+            </ul>
+          </li>
+         
+        </ul>
+      </nav>
+
+         
 
         
 

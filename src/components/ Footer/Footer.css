@@ -19,8 +19,7 @@
   }
   
   
-/*   
-  individual list items */
+/*   individual list items */
   a {
     float: left;
     background-color: rgb(132,177,40);
@@ -30,6 +29,8 @@
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   
   }
+
+  
   
   #cowPic {
     position: relative;
@@ -220,83 +221,6 @@
 
 }
 
-/* working on drop down menu bar START  */
-
-#box1{
-
-  background-color:  rgb(132,177,40);
-  width: 150px;
-  height: 120px;
-  border-radius: 0px 0px 10px 10px;
-  position:relative;
-  left:25.25em;
-  top:27.25em;
-  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
-  
-}
-#box2{
-
-  background-color:  rgb(132,177,40);
-  width: 144px;
-  height: 120px;
-  border-radius: 0px 0px 10px 10px;
-  position:relative;
-  left:34.5em;
-  top:19.75em;
-  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
-  
-}
-#box3{
-
-  background-color:  rgb(132,177,40);
-  width: 106px;
-  height: 120px;
-  border-radius: 0px 0px 10px 10px;
-  position:relative;
-  left:43.5em;
-  top:12.25em;
-  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
-  
-}
-#box4{
-
-  background-color:  rgb(132,177,40);
-  width: 120px;
-  height: 120px;
-  border-radius: 0px 0px 10px 10px;
-  position:relative;
-  left:50em;
-  top:4.75em;
-  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
-  
-}
-
-/* 
-
-#link1{
-  position: relative;
-  bottom:3em;
-  right:0.2em;
-  
-}
-#link2{
-  position: relative;
-  bottom:1.5em;
-  right: 2.8em;
-}
-
-
-#link3{
-  position: relative;
-  bottom: 1em;
-  left: 2.5em;
-}
-
-#link4{
-  position: relative;
-  bottom:-1.5em;
- left: 2.5em;
-} */
 
 
 #copyright{
@@ -354,4 +278,353 @@
 
 }
 
+
+/* 
+new dropdown starts here */
+
+
+
+  /*  */
+
+  /* variables for colours */
+  
+  :root {
+  --primary-color:rgb(132,177,40);
+  --secondary-color: chocolate;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* width & height properties  */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+  
+}
+
+/* changing properties of navbar */
+
+#navbar{
+  width: 400px;
+  padding-left:1em;
+  border-radius: 0.5em;
+  background: var(--primary-color);
+  position: relative;
+  left:5em;   
+  top:24em;
+  float: left;
+
+  
+
+
+}
+
+
+#navbar ul li {
+  color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  
+  
+}
+
+#navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Dont show the nested unordered list- default */
+
+#navbar ul li ul {
+  display: none;
+  
+  
+}
+
+
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  
+
+  
+}
+
+#navbar ul li:hover a {
+  color: #fff;
+  
+  
+}
+
+/* Nested Dropdown Show */
+
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+  
+
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+  width:8em;
+  
+}
+
+
+
+#navbar ul li:hover ul li a {
+  color: #333;
+  
+}
+
+#navbar ul li:hover ul li:hover {
+  background: #e0e0e0;
+  color: inherit;
+  
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  
+}
+
+#navbar ul li:hover ul li:hover span {
+  background: var(--secondary-color);
+  background-color: rgb(35,169,195);
+  text-decoration-line: overline;
+  text-shadow: 2px 2px #583232;
+
+  
+}
+
+
+#showcase h1, #showcase p {
+  color: #fff;
+  
+  
+}
+
+#navbar ul li:first-child {
+  background-color: var(--primary-color);
+  
+  
+}
+
+
+@media (max-width: 600px) {
+  #navbar ul li {
+    display: block;
+    
+  }
+
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+    
+    
+  }
+
+}
+
+/* 
+changes colour of titles upon hover */
+.titles:hover  {
+  background-color: rgb(35,169,195);
+  text-decoration-line: overline;
+  text-shadow: 2px 2px #583232;
+
+}
+
+
+  /*  */
+
+  :root {
+    --primary-color:rgb(132,177,40);
+    --secondary-color: chocolate;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    /* width & height properties  */
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    
+  }
+  
+  /* changing properties of navbar */
+  
+  #navbar{
+    width: 400px;
+    padding-left:1em;
+    border-radius: 0.5em;
+    background: var(--primary-color);
+    position: relative;
+    left:5em;
+    padding-top: none;
+  
+  }
+  
+  
+  #navbar ul li {
+    color: #333;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+
+    
+    
+    
+  }
+  
+  #navbar ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Dont show the nested unordered list- default */
+  
+  #navbar ul li ul {
+    display: none;
+    
+  }
+  
+  
+  
+  
+  #navbar ul li:hover {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+  
+    
+  }
+  
+  #navbar ul li:hover a {
+    color: #fff;
+    
+  }
+  
+  /* Nested Dropdown Show */
+  
+  #navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: 1rem;
+  
+  }
+  
+  #navbar ul li:hover ul li {
+    display: block;
+    background: #e7e7e7;
+    width:8em;
+    
+  }
+  
+  
+  
+  #navbar ul li:hover ul li a {
+    color: #333;
+    
+  }
+  
+  #navbar ul li:hover ul li:hover {
+    background: #e0e0e0;
+    color: inherit;
+    
+  }
+  
+  #navbar ul li:hover ul li span {
+    float: right;
+    color: #fff;
+    background: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    
+  }
+  
+  #navbar ul li:hover ul li:hover span {
+    background: var(--secondary-color);
+    background-color: rgb(35,169,195);
+    text-decoration-line: overline;
+    text-shadow: 2px 2px #583232;
+  
+    
+  }
+  
+  
+  #showcase h1, #showcase p {
+    color: #fff;
+    
+    
+  }
+  
+  #navbar ul li:first-child {
+    background-color: var(--primary-color);
+    
+    
+  }
+  
+  
+  @media (max-width: 600px) {
+    #navbar ul li {
+      display: block;
+      
+    }
+  
+    #navbar ul li:hover ul {
+      width: 100%;
+      position: relative;
+      
+      
+    }
+  
+  }
+  
+  /* 
+  changes colour of titles upon hover */
+  .titles:hover  {
+    background-color: rgb(35,169,195);
+    text-decoration-line: overline;
+    text-shadow: 2px 2px #583232;
+    position: relative;
+  
+  }
+  
+
+  /* overriding background colour on text */
+
+  .textDropMenu{
+    background-color:  #e7e7e7;
+    box-shadow: none;
+ 
+  }
 
