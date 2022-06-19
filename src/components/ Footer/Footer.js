@@ -202,7 +202,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
        let  box= document.querySelector("#box4");
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
-     let shadow=" 10px 10px 10px green"
+      let shadow=" 10px 10px 10px green"
        box.style.boxShadow=shadow;
 
        var bul1 = "Spanish";
@@ -215,11 +215,12 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
        let arr = [ bul1, bul2, bul3, bul4, bul5, bul6]
 
-
-
        return(
 
         // "hi4"
+
+
+        
 
         box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] 
   
