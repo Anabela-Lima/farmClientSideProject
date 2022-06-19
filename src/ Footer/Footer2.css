@@ -1,0 +1,82 @@
+#footer > footer { 
+    /* > any direct children of id footer  */
+
+    /* flexbox begins */
+
+    display: flex;
+    /* direction content flows */
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+.footerLeft {
+
+    display: flex;
+    flex-direction:  column;
+    justify-content:space-around;
+
+
+}
+
+
+.centreFooter {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footerNavbar > ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.footerRight {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items:center;
+
+
+}
+
+
+
+.footerRight > div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* showing ways to target things */
+
+
+/* example of targeting specificity  */
+.allIcon .socialNameBoxFb{
+
+    font-size: 3rem;
+}
+
+/* targeting siblings  */
+a + a + a + a + a{ 
+    color: pink;
+}
+
+/* direct-parent child */
+
+div > div {
+
+    color: red;
+}
