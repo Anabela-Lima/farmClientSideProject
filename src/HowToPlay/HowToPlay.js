@@ -6,7 +6,6 @@ const HowToPlay = () => {
     return (
     
     <>
-    <Header />
     <h1>Welcome Farmer, are you ready to create your own farm?</h1>
 
     <h2>First things first, decide what you want to name your farm</h2>
