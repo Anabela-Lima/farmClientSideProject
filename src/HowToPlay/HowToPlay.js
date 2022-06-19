@@ -1,6 +1,5 @@
 import React from 'react';
 import './HowToPlay.css';
-import Header from '../Header/Header';
 
 const HowToPlay = () => {
     return (

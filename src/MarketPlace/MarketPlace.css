@@ -1,0 +1,82 @@
+.marketplace-main {
+    margin: 1rem 0rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: blanchedalmond;
+
+}
+
+.marketplace-welcome {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.marketplace-welcome+p {
+    font-size: 2rem;
+}
+
+.crop-field-orderform {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: lightcyan;
+
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+}
+
+.crop-field-orderform h2 {
+    font-size: 2.6rem;
+}
+
+.crop-field-section-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.fields-order-form,
+.crops-order-form {
+    padding: 1rem 2rem;
+
+    background-color: lightgoldenrodyellow;
+    margin: 1rem;
+}
+
+.fields-order-form h3,
+.crops-order-form h3 {
+    padding: 1rem 0;
+    font-size: 3rem;
+}
+
+
+.fields-order-form {
+    display: flex;
+    flex-direction: column;
+
+
+    align-self: flex-start;
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+.crops-order-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}

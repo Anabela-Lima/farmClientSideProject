@@ -3,9 +3,6 @@
 import './Footer2.css';
 
 // lets import FontAwesome from react
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 
 const Footer = () => {
 
@@ -33,7 +30,7 @@ const Footer = () => {
         <nav id="footerNavbar">
               <ul>
                 <li >
-                  <div className='titles'> Company Info <i class="fas fa-angle-down"></i></div>
+                  <div className='titles'> Company Info </div>
               
                   <ul id = "ul1">
                     <li><a className= "textDropMenu" href="#">Terms of use</a> </li>
@@ -56,7 +53,7 @@ const Footer = () => {
                  </li>
 
                 <li>
-                  <div className='titles'> Support <i class="fas fa-angle-down"></i></div>
+                  <div className='titles'> Support</div>
                  <ul>
                     <li><a  className= "textDropMenu"href="#">FAQ</a></li>
                     <li><a className= "textDropMenu" href="#">Forums</a></li>
@@ -71,7 +68,7 @@ const Footer = () => {
 
         <form id= "subForm" action="">
             <input type="email" required placeholder="abc@example.com"></input>
-            <button>Subscribe <span id="button icon"><FontAwesomeIcon icon={['fa', 'gamepad']} /></span></button>
+            <button>Subscribe <span id="button icon"></span></button>
         </form>
          
 
@@ -88,24 +85,24 @@ const Footer = () => {
 
                 <a href="https://en-gb.facebook.com/FarmVille/" className="icon facebook">
                 <div className="socialNameBoxFb">Facebook</div>
-                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'facebook']} /></span>
+                <span></span>
                 </a> 
 
                 <a href="https://twitter.com/farmville?lang=en-GB" className="icon twitter">
                 <div className="socialNameBox">Twitter</div>
-                <span ><FontAwesomeIcon className='iconSize' icon={['fab', 'twitter']} /></span>
+                <span ></span>
                 </a>
                 <a href="https://www.instagram.com/farmville/?hl=en" className="icon instagram">
                 <div className="socialNameBox">Instagram</div>
-                <span><FontAwesomeIcon  className='iconSize' icon={['fab', 'instagram']} /></span>
+                <span></span>
                 </a>
                 <a href="https://github.com" className="icon github">
                 <div className="socialNameBox">Github</div>
-                <span><FontAwesomeIcon  className='iconSize' icon={['fab', 'github']} /></span>
+                <span></span>
                 </a>
                 <a href="https://www.youtube.com/c/FarmVille1" className="icon youtube">
                 <div className="socialNameBox">Youtube</div>
-                <span><FontAwesomeIcon className='iconSize'icon={['fab', 'youtube']} /></span>
+                <span></span>
                 </a>
 
             </div>
