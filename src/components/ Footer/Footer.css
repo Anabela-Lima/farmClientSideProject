@@ -145,6 +145,9 @@
     right:40em;
     width: 200px;
     height: 150px;
+    opacity:100%;
+    top:1em;
+  
 
   }
 
@@ -422,11 +425,11 @@
 
 #copyright{
   text-decoration: #3b5999;
-  font-size: xx-large;
+  font-size:xx-large;
   font-family: 'GAMERIA';
   position: relative;
   right: 10em;
-  top:18em;
+  top:18.5em;
   color: green;
   text-shadow: 2px 2px #583232;
   
@@ -445,21 +448,39 @@
 #subForm{
 
   position:relative;
-  top:54em;
-  left:70em;
+  top:61em;
   /* bringing element to front- overlay */
-  z-index:1
+  z-index:1;
+  left:36em;
+
 
 
 }
 
 
-#pForm{
+/* #pForm{
   position: relative;
-  bottom: 1.5em;
+  bottom: -1.25em;
+  right:14em;
   font-size:medium;
   color: rgb(159, 159, 87);
   outline: #333333;
  
+
+} */
+
+#ad1{
+  width:330px;
+  height:100px;
+
+  position:relative;
+  top:54em;
+  left:66em;
+  /* bringing element to front- overlay */
+  z-index:1;
+  box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.581);
+
+  
+  
 
 }

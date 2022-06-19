@@ -345,16 +345,16 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
             <div id= "subForm">
 
-                <p id= "pForm"> Dont Miss out on the Fun !</p>
+                {/* <p id= "pForm"> Dont Miss out on the Fun !</p> */}
 
             <form action="">
             <input type="email" required placeholder="abc@example.com"></input>
-            <button>Button   <span id="button icon"><FontAwesomeIcon icon={['fa', 'gamepad']} /></span></button>
+            <button>Subscribe <span id="button icon"><FontAwesomeIcon icon={['fa', 'gamepad']} /></span></button>
             </form>
             </div>
 
-
-            <div> <img> </img></div>
+            <img id="ad1"src="https://jobtribes.playmining.com/wp-content/uploads/2021/04/banner_003-3.png" alt="ad"></img>
+            
         
 
                 {/* nav bar */}
