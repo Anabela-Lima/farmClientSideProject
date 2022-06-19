@@ -1,3 +1,14 @@
 .HowToPlay {
     font-family: 'GAMERIA', sans-serif;
+    
+}
+
+.HowToPlayText{
+
+    color: black;
+}
+
+.Title{
+    text-align: center;
+    font-size: x-large;
 }
