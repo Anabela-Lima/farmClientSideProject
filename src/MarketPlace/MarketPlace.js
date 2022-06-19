@@ -1,9 +1,10 @@
-
-
 const MarketPlace = () => {
   return (
-    <div>MarketPlace</div>
-  )
-}
+    <>
+      <div>MarketPlace</div>
+      <div>Enter cool looking marketplace here!</div>
+    </>
+  );
+};
 
-export default MarketPlace
+export default MarketPlace;
