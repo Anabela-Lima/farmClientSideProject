@@ -212,19 +212,20 @@
 }
 
 
+/* code for icons */
  
 .allIcon .icon{
     position: relative;
     /* change icon background colour to white */
     background-color: #ffffff;
     /* round off the edges */
-    border-radius: 20%;
+    border-radius: 50%;
     /* space out the icons using margin */
     margin: 10px;
     /* widen the icon block using width */
-    width: 50px;
+    width: 40px;
     /* modify height */
-    height: 50px;
+    height: 40px;
     /* modify social icon size */
     font-size: 25px;
     /* specify a horizontal and vertical shawdow  i.e. ___| + a blur effect through last parameter (5px)  */
@@ -238,9 +239,10 @@
     
     /* moving icons to desired location on the page */
     
-    /* top: 18em;
-    left:44em; */
-    right:24em;
+    right:22em;
+    bottom:0.28em;
+    
+    
 } 
 
 
@@ -351,24 +353,25 @@
 
 /* enlarging actual icons- using class */
   .iconSize{
-    width:2em;
+    width:1.5em;
     height:1.8em;
     position: relative;
-    top: 0.25em;
-    left:0.04m;
+    top: -0.07em;
+    left: 0.06em;
+
+
         
 }
 
 
-
 #ad1{
-    width:330px;
-    height:100px;
+    width:220px;
+    height:85px;
     position:relative;
     top:2.5em;
     box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.581);
     /* opacity:80%; */
-    right:38em;
+    right:33em;
 }
     
 
