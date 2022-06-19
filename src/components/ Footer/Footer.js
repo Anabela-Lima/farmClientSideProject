@@ -17,22 +17,9 @@ const Footer = () => {
        let colour= "rgb(132,177,40)"
        box.style.backgroundColor= colour;
        let shadow=" 10px 10px 10px green"
-       box.style.boxShadow=shadow;
+       box.style.boxShadow=shadow
       
-     
-      
-/*
 
-ON hover-  drop down 
-
-Company Info- Terms of use , Privacy Policy, Information, Cookies, Cookie Consent
-
-Support-Help, FAQ, Fund our Projects
-
-Languages- A list of languages-  click a lang activate translation feature in browser? 
-
-
-*/
    
         var bul1 = "Terms of Use";
         var bul2 = "Privacy Policy";
@@ -46,25 +33,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
         // "hi"
 
-        box.innerHTML =  arr[0] + " " + arr[1] + " "+  arr[2] + " " + arr[3]
-    
-
-            
-        //     < nav id="menuNav">
-         
-        //      <ul >
-        //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
-        //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
-        //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
-        //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
-         
-        //      </ul>
-         
-         
-        //    </nav>
-       );
-
-       
+        box.innerHTML =  arr[0] + " " + arr[1] + " "+  arr[2] + " " + arr[3]);
       
     }
 
@@ -72,7 +41,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
     const menuUp1 = () => {
         
         let box= document.querySelector("#box1")
-       let  colour= "transparent"
+        let  colour= "transparent"
         box.style.backgroundColor= colour;
         let outline= ""
         box.style.outline=outline;
@@ -82,10 +51,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
         return(
             
-        box.innerHTML = ""
-    
-        )
-       
+        box.innerHTML = "")
     }
 
     // Menu 2------------------------------------------
@@ -110,13 +76,8 @@ Languages- A list of languages-  click a lang activate translation feature in br
    
             // "hi2"
      
-            box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
-            
-        )
- 
- 
-       
-     }
+            box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2]     )
+        }
  
  
      const menuUp2 = () => {
@@ -129,14 +90,11 @@ Languages- A list of languages-  click a lang activate translation feature in br
  
          return(
             // "hi2"
-         box.innerHTML = ""
-     
-         )
-        
-     }
+         box.innerHTML = "")
+            
+        }
 
-
-      // Menu 3------------------------------------------
+    // Menu 3------------------------------------------
 
     const menuDown3 = () => {
 
@@ -157,28 +115,12 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
             // "hi3"
          
-                box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
-    
-         //     < nav id="menuNav">
-          
-         //      <ul >
-         //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
-         //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
-         //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
-         //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
-          
-         //      </ul>
-          
-          
-         //    </nav>
-        )
+                box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] )
  
-        
-       
-     }
+    }
  
  
-     const menuUp3 = () => {
+    const menuUp3 = () => {
          
          let box= document.querySelector("#box3")
         let  colour= "transparent"
@@ -189,13 +131,11 @@ Languages- A list of languages-  click a lang activate translation feature in br
  
          return(
             // "hi3"
-         box.innerHTML = ""
-     
-         )
+         box.innerHTML = "")
         
-     }
+    }
 
-  // Menu 4------------------------------------------
+    // Menu 4------------------------------------------
 
     const menuDown4 = () => {
 
@@ -219,28 +159,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
         // "hi4"
 
-
-        
-
-        box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] 
-  
-    
-            
-        //     < nav id="menuNav">
-         
-        //      <ul >
-        //      <ul id = "link4"> <p> <a href= "#"> hello4 </a>  </p></ul>
-        //              <ul id= "link1"> <p> <a href= "#"> hello1 </a>  </p></ul>
-        //              <ul id= "link2"> <p> <a href= "#"> hello2 </a>  </p></ul>
-        //              <ul id = "link3"> <p> <a href= "#"> hello3 </a>  </p></ul>
-         
-        //      </ul>
-         
-         
-        //    </nav>
-       )
-
-       
+        box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] )  
       
     }
 
@@ -256,9 +175,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
         return(
 
             // "hi4"
-        box.innerHTML = ""
-    
-        )
+        box.innerHTML = "" )
        
     }
 
@@ -332,54 +249,28 @@ Languages- A list of languages-  click a lang activate translation feature in br
             </div>
 
 
-             {/* company logo  */}
+         {/* company logo  */}
+
          <div id= "copyright"> © FarmPlay  </div>
        
            
          </footer>
 
-         
-
-         <section id="boxes">   </section>
-
+        
            <div id="box1" > </div>
            <div id="box2" > </div>
            <div id="box3" > </div>
            <div id="box4" > </div>
 
 
-           <div>
+        <div>
+
+     </div>      
 
 
+  </div>
 
-</div>      
-
-
-
-         
-                
-
-
-
-
-
-
-
-         
-
-
-
-            
-            
-        </div>
-
-
-
-
-        
-
-    )
-}
+)}
 
 
 
