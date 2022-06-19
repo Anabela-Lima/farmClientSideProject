@@ -5,179 +5,10 @@ import './Footer.css';
 // lets import FontAwesome from react
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const Footer = () => {
 
-
-    // on display menu bar on hover
-
-    const menuDown1 = () => {
-
-       let  box= document.querySelector("#box1");
-       let colour= "rgb(132,177,40)"
-       box.style.backgroundColor= colour;
-       let shadow=" 10px 10px 10px green"
-       box.style.boxShadow=shadow
-      
-
-   
-        var bul1 = "Terms of Use";
-        var bul2 = "Privacy Policy";
-        var bul3 = "Information";
-        var bul4 = "cookies consent"
-
-        let arr = [ bul1, bul2, bul3,bul4,]
-    
-
-       return( 
-
-        // "hi"
-
-        box.innerHTML =  arr[0] + " " + arr[1] + " "+  arr[2] + " " + arr[3]);
-      
-    }
-
-
-    const menuUp1 = () => {
-        
-        let box= document.querySelector("#box1")
-        let  colour= "transparent"
-        box.style.backgroundColor= colour;
-        let outline= ""
-        box.style.outline=outline;
-        let shadow="";
-        box.style.boxShadow=shadow;
-    
-
-        return(
-            
-        box.innerHTML = "")
-    }
-
-    // Menu 2------------------------------------------
-
-
-    const menuDown2 = () => {
-
-        let  box= document.querySelector("#box2");
-        let colour= "rgb(132,177,40)"
-        box.style.backgroundColor= colour;
-        let shadow=" 10px 10px 10px green"
-        box.style.boxShadow=shadow;
-
-        var bul1 = "Forums";
-        var bul2 = "Competitions";
-        var bul3 = "Our Projects";
-
-
-        let arr = [ bul1, bul2, bul3]
-        
-        return(
-   
-            // "hi2"
-     
-            box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2]     )
-        }
- 
- 
-     const menuUp2 = () => {
-         
-         let box= document.querySelector("#box2")
-        let  colour= "transparent"
-         box.style.backgroundColor= colour
-         let shadow="";
-         box.style.boxShadow=shadow;
- 
-         return(
-            // "hi2"
-         box.innerHTML = "")
-            
-        }
-
-    // Menu 3------------------------------------------
-
-    const menuDown3 = () => {
-
-        let  box= document.querySelector("#box3");
-        let colour= "rgb(132,177,40)"
-        box.style.backgroundColor= colour;
-        let shadow=" 10px 10px 10px green"
-        box.style.boxShadow=shadow;
-
-        var bul1 = "Help";
-        var bul2 = "FAQ";
-        var bul3 = "Customer Line";
-
-
-        let arr = [ bul1, bul2, bul3]
- 
-        return(
-
-            // "hi3"
-         
-                box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] )
- 
-    }
- 
- 
-    const menuUp3 = () => {
-         
-         let box= document.querySelector("#box3")
-        let  colour= "transparent"
-         box.style.backgroundColor= colour
-         let shadow=""
-         box.style.boxShadow=shadow;
-         
- 
-         return(
-            // "hi3"
-         box.innerHTML = "")
-        
-    }
-
-    // Menu 4------------------------------------------
-
-    const menuDown4 = () => {
-
-       let  box= document.querySelector("#box4");
-       let colour= "rgb(132,177,40)"
-       box.style.backgroundColor= colour;
-      let shadow=" 10px 10px 10px green"
-       box.style.boxShadow=shadow;
-
-       var bul1 = "Spanish";
-       var bul2 = "Portuguese";
-       var bul3 = "Italian";
-       var bul4 = "Hindi";
-       var bul5 = "French";
-       var bul6 = "Russian";
-
-
-       let arr = [ bul1, bul2, bul3, bul4, bul5, bul6]
-
-       return(
-
-        // "hi4"
-
-        box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] )  
-      
-    }
-
-
-    const menuUp4 = () => {
-        
-        let box= document.querySelector("#box4")
-       let  colour= "transparent";
-        box.style.backgroundColor= colour
-        let shadow="";
-        box.style.boxShadow=shadow;
-
-        return(
-
-            // "hi4"
-        box.innerHTML = "" )
-       
-    }
 
 
     return (
@@ -201,27 +32,17 @@ const Footer = () => {
             
         
 
-                {/* nav bar */}
-            <nav id="nav">
-
-            
+            <div id="backgroundBlue">
                 <ul>
-
-                    <div id= "li1"> <li className="liNav"> <a id="anchor1"   href="https://www.addictinggames.com/"  onMouseOver={menuDown1} onMouseOut={menuUp1}>Company Info </a> </li></div>
-                    <div id="li2"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown2} onMouseOut={menuUp2}> Get Involved </a></li></div>
-                    <div id="li3"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown3} onMouseOut={menuUp3}>Support  </a></li></div>
-                    <div id= "li4"> <li className="liNav"> <a id="anchor2" href= ""  onMouseOver={menuDown4} onMouseOut={menuUp4}>Languages</a></li></div>
-                    <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow logo"></img> </div>
-
-                    {/* <div > <img id = "cowPic" src= "https://c.tenor.com/XF4caftz0fQAAAAC/cow-farm.gif" alt="Cow gif"></img> </div> */}
+                 <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow logo"></img> </div>
+       
                </ul>
               
-            </nav>
-            <div> 
+            </div>
 
 
-        </div>
 
+    
             <div className="allIcon">
 
              <a href="https://en-gb.facebook.com/FarmVille/" className="icon facebook">
@@ -257,15 +78,17 @@ const Footer = () => {
          </footer>
 
         
-           <div id="box1" > </div>
-           <div id="box2" > </div>
-           <div id="box3" > </div>
-           <div id="box4" > </div>
 
 
         <div>
+            
+        
 
-     </div>      
+
+
+
+     </div>   
+        
 
 
   </div>
