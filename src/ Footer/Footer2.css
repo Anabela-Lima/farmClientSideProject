@@ -12,7 +12,9 @@
     /* direction content flows */
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 3.4em;
+    padding-top: 0.5em;
+    padding-bottom:4em;
+    background:#bbd6e2;
 
 }
 
@@ -65,8 +67,11 @@
  
 #farmLogo{
     height:120px;
-    width: 150px;
+    width: 160px;
     opacity:100%;
+    position:relative;
+    top:1.5em;
+    left:1.6em;
 }
 
 
@@ -358,7 +363,9 @@
     width:330px;
     height:100px;
     position:relative;
+    top:2.5em;
     box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.581);
+    /* opacity:80%; */
 }
     
 
@@ -367,15 +374,25 @@
 
    position:relative;
    left: 10em;
+   top:2em;
    
     
 }
+
+
+
+#copyright{
+    text-decoration: #3b5999;
+    font-size:x-large;
+    font-family: 'GAMERIA';
+    color: green;
+    text-shadow: 2px 2px  #630909;
+    position: relative;
+    top:2em;  
+    left:1.3em;
     
-
-
-
-
-
+  
+}
 
 
 
