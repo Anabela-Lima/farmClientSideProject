@@ -3,13 +3,10 @@
 import './Footer2.css';
 
 // lets import FontAwesome from react
-<<<<<<< HEAD
-=======
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
 
->>>>>>> Ana_Branch
 
 const Footer = () => {
 
@@ -91,30 +88,26 @@ const Footer = () => {
             <div className="allIcon">
 
                 <a href="https://en-gb.facebook.com/FarmVille/" className="icon facebook">
-<<<<<<< HEAD
-                <div className="socialNameBoxFb">Facebook</div>
-                <span></span>
-=======
                 <div className="socialNameBox">Facebook</div>
                 <span><FontAwesomeIcon className='iconSize' icon={['fab', 'facebook']} /></span>
->>>>>>> Ana_Branch
                 </a> 
 
                 <a href="https://twitter.com/farmville?lang=en-GB" className="icon twitter">
                 <div className="socialNameBox">Twitter</div>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'twitter']} /></span>
                 <span ></span>
                 </a>
                 <a href="https://www.instagram.com/farmville/?hl=en" className="icon instagram">
                 <div className="socialNameBox">Instagram</div>
-                <span></span>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'instagram']} /></span>
                 </a>
                 <a href="https://github.com" className="icon github">
                 <div className="socialNameBox">Github</div>
-                <span></span>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'github']} /></span>
                 </a>
                 <a href="https://www.youtube.com/c/FarmVille1" className="icon youtube">
                 <div className="socialNameBox">Youtube</div>
-                <span></span>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'youtube']} /></span>
                 </a>
 
             </div>
