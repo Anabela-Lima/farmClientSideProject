@@ -2,7 +2,6 @@
 // component: 
 import './Footer.css';
 
-
 // lets import FontAwesome from react
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';

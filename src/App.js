@@ -1,13 +1,7 @@
 import React from 'react';
-
-// importing my icon library
-import initFontAwesome from './components/initFontAwesome.js'
 import './App.css';
 
 import Header from './Header/Header.js';
-import Footer from './components/ Footer/Footer';
-
-initFontAwesome();
 
 import Home from './HomePage/Home.js'
 import MarketPlace from './MarketPlace/MarketPlace.js';
@@ -15,6 +9,7 @@ import MarketPlace from './MarketPlace/MarketPlace.js';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import HowToPlay from './HowToPlay/HowToPlay';
+import Footer from './ Footer/Footer';
 
 
 function App() {
@@ -29,6 +24,7 @@ function App() {
           <Route path="/marketplace" element={<MarketPlace />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
         </Routes>
+
         <Footer/>
     
       </Router>
