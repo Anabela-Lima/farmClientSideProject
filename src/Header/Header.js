@@ -24,7 +24,7 @@ const Header = () => {
 
             <li><Link to="/marketplace" activeStyle>Market Place</Link></li>
 
-            <li><a href="howtoplay.asp" >How to Play</a></li>
+            <li><Link to="/how-to-play" activeStyle>How To Play</Link></li>
 
             <li><a href="help.asp" >Help</a></li>
 
