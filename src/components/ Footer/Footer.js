@@ -19,7 +19,7 @@ const Footer = () => {
        let shadow=" 10px 10px 10px green"
        box.style.boxShadow=shadow;
       
-       
+     
       
 /*
 
@@ -34,19 +34,12 @@ Languages- A list of languages-  click a lang activate translation feature in br
 
 */
    
-      
-
         var bul1 = "Terms of Use";
         var bul2 = "Privacy Policy";
         var bul3 = "Information";
         var bul4 = "cookies consent"
 
         let arr = [ bul1, bul2, bul3,bul4,]
-        
-
- 
-
-
     
 
        return( 
@@ -85,9 +78,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
         box.style.outline=outline;
         let shadow="";
         box.style.boxShadow=shadow;
-     
-        
-       
+    
 
         return(
             
@@ -108,7 +99,6 @@ Languages- A list of languages-  click a lang activate translation feature in br
         let shadow=" 10px 10px 10px green"
         box.style.boxShadow=shadow;
 
-
         var bul1 = "Forums";
         var bul2 = "Competitions";
         var bul3 = "Our Projects";
@@ -121,11 +111,10 @@ Languages- A list of languages-  click a lang activate translation feature in br
             // "hi2"
      
             box.innerHTML =  bul1 + "  " + arr[1] + " "+  arr[2] 
- 
             
         )
  
-        
+ 
        
      }
  
@@ -235,10 +224,6 @@ Languages- A list of languages-  click a lang activate translation feature in br
         box.innerHTML =  arr[0] + " "+  arr[1]  + "  " + arr[2] + " "+  arr[3]  + "  " + arr[4] + "  " + arr[5] 
   
     
-      
-
-        
-
             
         //     < nav id="menuNav">
          
@@ -275,65 +260,6 @@ Languages- A list of languages-  click a lang activate translation feature in br
         )
        
     }
-
-
-
- 
- 
- 
-
-     
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
 
 
     return (
