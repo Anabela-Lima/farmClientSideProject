@@ -3,6 +3,13 @@
 import './Footer2.css';
 
 // lets import FontAwesome from react
+<<<<<<< HEAD
+=======
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
+
+>>>>>>> Ana_Branch
 
 const Footer = () => {
 
@@ -84,8 +91,13 @@ const Footer = () => {
             <div className="allIcon">
 
                 <a href="https://en-gb.facebook.com/FarmVille/" className="icon facebook">
+<<<<<<< HEAD
                 <div className="socialNameBoxFb">Facebook</div>
                 <span></span>
+=======
+                <div className="socialNameBox">Facebook</div>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'facebook']} /></span>
+>>>>>>> Ana_Branch
                 </a> 
 
                 <a href="https://twitter.com/farmville?lang=en-GB" className="icon twitter">
