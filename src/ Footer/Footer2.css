@@ -57,6 +57,107 @@
 }
 
 
+ 
+#farmLogo{
+ 
+    right:40em;
+    width: 110px;
+    opacity:100%;
+}
+
+
+/* Navbar */
+
+:root {
+    --primary-color:rgb(132,177,40);
+    --secondary-color: chocolate;
+}
+  
+
+#footerNavbar {
+
+    width: 400px;
+    padding-left:1em;
+  
+    border-radius: 0.5em;
+    background: var(--primary-color);
+    position: relative;
+    left:5em;
+
+}
+
+
+ 
+.centreFooter > nav ul li {
+    color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  
+
+}
+
+.centreFooter ul li a {
+  color: #333;
+  text-decoration: none;
+
+}
+
+/* Dont show the nested unordered list- default */
+
+
+
+.centreFooter> nav ul li ul {
+    display: none;
+
+}
+
+
+.centreFooter> nav ul li:hover {
+
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+
+}
+
+.centreFooter> nav ul li a {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,19 +165,22 @@
 
 
 /* example of targeting specificity  */
-.allIcon .socialNameBoxFb{
+/* .allIcon .socialNameBoxFb{
 
     font-size: 3rem;
-}
+} */
 
 /* targeting siblings  */
-a + a + a + a + a{ 
+/* a + a + a + a + a{ 
     color: pink;
-}
+} */
 
 /* direct-parent child */
-
+/* 
 div > div {
 
     color: red;
 }
+ */
+
+
