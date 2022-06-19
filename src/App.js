@@ -1,25 +1,25 @@
 import './App.css';
-import Header from './Header/Header.js';
-import FarmContainer from './HomePage/containers/FarmContainer.js';
+import Header from './web-pages/Header/Header.js';
+import FarmContainer from './web-pages/HomePage/containers/FarmContainer.js';
 
-// import { BrowserRouter as Router, Routes, Route}
-//     from 'react-router-dom';
-// import MarketPlace from './MarketPlace/MarketPlace';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import MarketPlace from './MarketPlace/MarketPlace';
 
-import PlaySound from './components/Sound/sound';
+import PlaySound from './web-pages/components/Sound/sound';
 
 
 
 function App() {
   return (
     <>
-      {/* <Router>
-
+      <Router>
+        <Header />
         <Routes>
-          <Route path="./MarketPlace/MarketPlace.js" element={<MarketPlace />} />
-        </Routes>
-        
-      </Router> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/Marketplace" element={<MarketPlace />} />
+    </Routes>
+  </Router>,
 
      <Header />
      <PlaySound />
