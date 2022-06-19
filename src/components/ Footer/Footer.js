@@ -367,7 +367,7 @@ Languages- A list of languages-  click a lang activate translation feature in br
                     <div id="li2"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown2} onMouseOut={menuUp2}> Get Involved </a></li></div>
                     <div id="li3"><li className="liNav"> <a href= "https://www.addictinggames.com/"  onMouseOver={menuDown3} onMouseOut={menuUp3}>Support  </a></li></div>
                     <div id= "li4"> <li className="liNav"> <a id="anchor2" href= ""  onMouseOver={menuDown4} onMouseOut={menuUp4}>Languages</a></li></div>
-                    <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow gif"></img> </div>
+                    <div > <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow logo"></img> </div>
 
                     {/* <div > <img id = "cowPic" src= "https://c.tenor.com/XF4caftz0fQAAAAC/cow-farm.gif" alt="Cow gif"></img> </div> */}
                </ul>
