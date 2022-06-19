@@ -25,7 +25,6 @@
     flex-direction: column;
     justify-content:space-around;
    
-    
 }
 
 
@@ -70,8 +69,9 @@
     width: 160px;
     opacity:100%;
     position:relative;
-    top:1.5em;
+    top:1em;
     left:1.6em;
+    z-index: 1;
 }
 
 
@@ -85,13 +85,13 @@
 
 #footerNavbar {
 
-    width: 400px;
+    width:1500px;
     padding-left:1em;
   
     border-radius: 0.5em;
     background: var(--primary-color);
     position: relative;
-    left:5em;
+    right:12em;
 
 }
 
@@ -211,6 +211,7 @@
     /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
 }
 
+
  
 .allIcon .icon{
     position: relative;
@@ -239,6 +240,7 @@
     
     /* top: 18em;
     left:44em; */
+    right:24em;
 } 
 
 
@@ -366,6 +368,7 @@
     top:2.5em;
     box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.581);
     /* opacity:80%; */
+    right:38em;
 }
     
 
@@ -373,7 +376,7 @@
 #subForm{
 
    position:relative;
-   left: 10em;
+   left: 28em;
    top:2em;
    
     
