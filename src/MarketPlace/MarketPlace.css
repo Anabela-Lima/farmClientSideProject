@@ -80,3 +80,34 @@
     align-items: flex-start;
     align-content: center;
 }
+
+.confirm-order-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    background-color: lightgrey;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.confirm-order-section h3 {
+    font-size: 1.6rem;
+}
+
+.confirm-order-section select {
+    margin: 0 1rem;
+}
+
+.confirm-order-section button {
+    border: none;
+    background-color: lightgreen;
+    border-radius: 0.25rem;
+}
+
+.confirm-order-section button:hover {
+    cursor: pointer;
+    background-color: green;
+}

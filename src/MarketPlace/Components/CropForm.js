@@ -27,7 +27,7 @@ const CropForm = ( {cropType} ) => {
             <button type="button" onClick={handleDecreaseQuantity}>-</button>
             <input type="text" name="tiny-field-quantity" placeholder="Quantity" value={quantity}/>
             <button type="button" onClick={handleIncreaseQuantity}>+</button>
-            <button type="submit" value="Purchase">Purchase</button>
+            {/* <button type="submit" value="Purchase">Purchase</button> */}
       </form>
     </>
   )

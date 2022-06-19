@@ -26,7 +26,7 @@ export const FieldForm = ( {fieldType} ) => {
                    placeholder="Quantity" value={quantity}
             />
             <button type="button" onClick={handleIncreaseQuantity}>+</button>
-            <button type="submit" value="Purchase">Purchase</button>
+            {/* <button type="submit" value="Purchase">Purchase</button> */}
         </form>
     </>
   )

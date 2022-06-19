@@ -1,8 +1,25 @@
 import CropForm from "./Components/CropForm";
 import { FieldForm } from "./Components/FieldForm";
 import "./MarketPlace.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const MarketPlace = () => {
+
+  const [farmsList, setFarmsList] = useState([]);
+
+  useEffect( () => {
+
+    axios.get('http://127.0.0.1:8080/farms/farms')
+      .then(res => {
+        const farmsList = res.data;
+        setFarmsList(farmsList);
+      })
+      .catch(err => console.log(err));
+
+  });
+
+
   return (
     <>
 
@@ -46,7 +63,20 @@ const MarketPlace = () => {
               </section>
 
             </div>
-            
+
+            <section className="confirm-order-section">
+
+              <h3>Which farm should we deliver the goods to?</h3>
+              <select placeholder="Pick your farm!">
+                <option hidden disabled>Pick your farm!</option>
+                {
+                  farmsList.map(farm =>
+                    <option key={farm.id}>{farm.name}</option>
+                )}
+              </select>
+              <button type="button">Confirm Order ✅</button>
+
+            </section>
 
         </section>
 
