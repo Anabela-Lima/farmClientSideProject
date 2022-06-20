@@ -7,15 +7,15 @@ import Farm from '../Farm/Farm';
 const Field = () => {
 
 const [field, SetField] = useState([])
-const [chosenField, SetChosenField] = useState({});
 
         useEffect( () => { //get all fields
         axios.get('http://127.0.0.1:8080/fields')
-        .then(res => {const data = res.data;
-        SetField(data);
+        .then(res => {const field = res.data;
+        SetField(field);
         }).catch(err => console.log(err)); 
         });
 
+ const [chosenField, SetChosenField] = useState({});
 
         useEffect( () => { //get specific field
         axios.get(`http://127.0.0.1:8080/fields/field/1`)
@@ -27,7 +27,9 @@ const [chosenField, SetChosenField] = useState({});
   return (
 
        <>
-       <h1>Hi I'm {field.name}</h1>
+       <h1>Hi I'm {chosenField.name}</h1>
+
+
        </>
             
        
