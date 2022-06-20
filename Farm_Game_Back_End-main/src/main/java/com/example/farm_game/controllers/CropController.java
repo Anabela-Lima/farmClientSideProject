@@ -33,7 +33,7 @@ public class CropController {
     }
 
     @GetMapping("/crop/{id}")
-    public ResponseEntity<Crop> getSpecificCrop(Long id) {
+    public ResponseEntity<Crop> getSpecificCrop(@PathVariable Long id) {
         Crop crop = cropService.getCrop(id);
         return ResponseEntity.ok().body(crop);
     }
