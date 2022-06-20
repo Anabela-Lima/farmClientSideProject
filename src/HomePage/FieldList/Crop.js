@@ -2,25 +2,45 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 
+
 // function that returns crops 
 
 
 const Crop = () => {
 
-    const [data, setData] = useState({})
+    const [crops, setCrops] = useState([]);
+
+
+    const [specificCrop, setSpecificCrop] = useState({});
+
+
 
     useEffect( () => {
+        
+        let endpoint2=  "http://localhost:8080/crops/crop/2"
+         axios.get(endpoint2)
+         .then(response => {
+             const specificCrop = response.data;
+             setSpecificCrop(specificCrop);
+         })
+         .catch(err => console.log(err ));
+     })
 
-       let endpoint1=  "http://localhost:8080/crops/crop/%7Bid%7D?id=1"
-        axios.get(endpoint1)
-        .then(response => {
-            const data = response.data;
-            setData(data);
 
-        })
 
-        .catch(err => console.log(err ));
-    })
+
+
+
+    // useEffect( () => {
+        
+    //    let endpoint1=  "http://localhost:8080/crops/crops/"
+    //     axios.get(endpoint1)
+    //     .then(response => {
+    //         const data = response.data;
+    //         setCrops(data);
+    //     })
+    //     .catch(err => console.log(err ));
+    // })
 
 
 
@@ -28,18 +48,27 @@ const Crop = () => {
     <>
 
     <h3> This is a crop</h3>
+    <h3> This crop {specificCrop.name} has an id of {specificCrop.id}</h3>
 
-    {
-     data.map((crop) => (                           
+    <ul>
+
+        {
+            crops.map( crop =>  
+                        
+            <li key = {crop.id}>   
+                    {`Name: ${crop.name},  Price: ${crop.price}, Stock: ${crop.stock} Soil Types: ${crop.soilTypes} Soil Effects: ${crop.soilEffects} Grow Time: ${crop.growTime}` }
+            </li> 
       
-    
-      <li key = {crop.id}>   
-        {`Name: ${crop.name},  Price: ${crop.price}, Stock: ${crop.stock} Soil Types: ${crop.soilTypes} Soil Effects: ${crop.soilEffects} Grow Time: ${crop.growTime}` }
-      </li>
+            )
+        }
 
-     ))
-   }
-     
+
+
+    </ul>
+
+
+
+
     
     </>
   )
