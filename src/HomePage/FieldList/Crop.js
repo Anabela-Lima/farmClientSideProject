@@ -8,39 +8,62 @@ import { useState } from 'react'
 
 const Crop = () => {
 
-    const [crops, setCrops] = useState([]);
-
+    // get specific crops
 
     const [specificCrop, setSpecificCrop] = useState({});
 
 
+    // get all crops
 
-    useEffect( () => {
-        
-        let endpoint2=  "http://localhost:8080/crops/crop/2"
+    const [crops, setCrops] = useState([]);
+
+    // delete crop
+
+    const [specificCropDelete, setSpecificCropDelete] = useState({});
+
+    
+
+    // // get specific crop code
+
+    useEffect( (id) => {
+    
+        let endpoint2=  `http://localhost:8080/crops/crop/${id}`
          axios.get(endpoint2)
          .then(response => {
              const specificCrop = response.data;
              setSpecificCrop(specificCrop);
          })
          .catch(err => console.log(err ));
-     })
+    })
 
 
 
-
-
-
-    // useEffect( () => {
+    // get all crops code
+    useEffect( () => {
         
-    //    let endpoint1=  "http://localhost:8080/crops/crops/"
-    //     axios.get(endpoint1)
-    //     .then(response => {
-    //         const data = response.data;
-    //         setCrops(data);
-    //     })
-    //     .catch(err => console.log(err ));
-    // })
+       let endpoint1=  "http://localhost:8080/crops/crops/"
+        axios.get(endpoint1)
+        .then(response => {
+            const data = response.data;
+            setCrops(data);
+        })
+        .catch(err => console.log(err ));
+    })
+
+
+    // delete crop
+    
+    useEffect( () => {
+        
+        let endpoint3=  `http://localhost:8080/crops/deleteCrop/1`
+         axios.get(endpoint3)
+         .then(response => {
+             const specificCropDelete = response.data;
+             setSpecificCrop(specificCropDelete);
+         })
+         .catch(err => console.log(err ));
+    })
+
 
 
 
@@ -48,9 +71,10 @@ const Crop = () => {
     <>
 
     <h3> This is a crop</h3>
-    <h3> This crop {specificCrop.name} has an id of {specificCrop.id}</h3>
+    <h3>  This crop {specificCrop.name} has an id of {specificCrop.id}</h3>
+    <h3>  📦 You have removed {specificCropDelete.name} crop from your inventory  </h3>
 
-    <ul>
+    {/* <ul>
 
         {
             crops.map( crop =>  
@@ -63,8 +87,7 @@ const Crop = () => {
         }
 
 
-
-    </ul>
+    </ul> */}
 
 
 
