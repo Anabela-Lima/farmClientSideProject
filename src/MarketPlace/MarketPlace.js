@@ -10,14 +10,14 @@ const MarketPlace = () => {
 
   useEffect( () => {
 
-    axios.get('http://127.0.0.1:8080/farms/farms')
+        axios.get('http://127.0.0.1:8080/farms/farms')
       .then(res => {
         const farmsList = res.data;
         setFarmsList(farmsList);
       })
-      .catch(err => console.log(err));
-
-  });
+      .catch(err => console.log(err))
+      
+    });
 
 
   return (

@@ -2,22 +2,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./FieldForm.css";
 
-export const FieldForm = ( {fieldType, farmsList} ) => {
+export const FieldForm = ( {farmsList} ) => {
 
     const [fieldList, setFieldList] = useState([]);
-    const [fieldName, setFieldName] = useState({});
 
-
-    const handleFieldConfirmOrder = event => {
-        event.preventDefault();
-
-        const idfarm = 1;
-        const idfieldtype = 1;
-
-        axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
-            .then(result => console.log(result.data))
-            .catch( err => console.log(err))
-    }
+    const [fieldName, setFieldName] = useState('');
+    const [fieldTypeChoice, setFieldTypeChoice] = useState('');
+    const [farmToSendField, setFarmToSendField] = useState('');
 
     useEffect( () =>  {
 
@@ -31,6 +22,18 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
     });
 
 
+    const handleFieldConfirmOrder = async event => {
+        event.preventDefault();
+
+        const idfarm = 1;
+        const idfieldtype = 1;
+
+        axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
+            .then(result => console.log(result.data))
+            .catch( err => console.log(err))
+    }
+
+
   return (
     <>
         <form id="fieldformGridCont" className='fof-labels-buttons-inputs'>
@@ -39,8 +42,8 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
                 <label htmlFor="">What is the name of your field?</label>
 
                 <input type="text" placeholder='Field name' 
-                        value=''
-                        onChange={(e) => setFieldName(e.currentTarget.value)} />
+                        value={fieldName}
+                        onChange={(e) => setFieldName(e.target.value)} />
             </div>
 
             <div className='fieldSelector'>
@@ -48,6 +51,7 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
                 <h4>Which field would you like to purchase?</h4>
 
                 <select placeholder='Pick your field!'
+                        onChange={(e) => setFieldTypeChoice(e.target.value)}
                 >
                 {
                 fieldList.map( (field) => {
@@ -63,7 +67,8 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
 
                 <h4>Which farm should we deliver the goods to?</h4>
 
-                <select placeholder="Pick your farm!">
+                <select placeholder="Pick your farm!"
+                        onChange={(e) => setFarmToSendField(e.target.value)}>
                     <option hidden disabled>Pick your farm!</option>
                     {
                     farmsList.map(farm =>
@@ -76,7 +81,7 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
             <div className='confirm-or-reset'>
 
                 <button className='confirm-order-btn' type="button" onClick={handleFieldConfirmOrder}>Confirm Order ✅</button>
-                <button className='reset-order-btn' type="button">Reset Form 🔄</button>
+                <button className='reset-order-btn' type="button" onClick={0}>Reset Form 🔄</button>
             </div>
             
         </form>
