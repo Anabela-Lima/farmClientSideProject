@@ -5,6 +5,10 @@ import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
 import Crop from "../../FieldList/Crop";
+import CInventory from "../../FieldList/CInventory";
+import CInventoryCss from "../../FieldList/CInventoryCss.css"
+
+
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
@@ -39,7 +43,16 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                     <div className="field"></div>
                     <div className="field"></div>
                     <Crop/>
+                  
+                    
+                </section>  
+
+                <section className= "inventory-section">
+                    <CInventory/>
+
                 </section>
+                
+               
 
             </section>
 
