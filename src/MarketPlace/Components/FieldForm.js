@@ -4,7 +4,6 @@ import "./FieldForm.css";
 
 export const FieldForm = ( {fieldType, farmsList} ) => {
 
-    const [quantity, setQuantity] = useState(0);
     const [fieldList, setFieldList] = useState([]);
     const [fieldName, setFieldName] = useState({});
 
@@ -35,6 +34,12 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
   return (
     <>
         <form id="fieldformGridCont" className='fof-labels-buttons-inputs'>
+
+            <div className='name-field-form'>
+                <h4>What is the name of your field?</h4>
+
+                <input type="text"></input>
+            </div>
 
             <div className='fieldSelector'>
 
