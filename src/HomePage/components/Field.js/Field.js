@@ -1,10 +1,26 @@
+import FarmHeader from "../FarmHeader/FarmHeader";
+import FieldList from "../../FieldList/FieldList";
+
+import { useEffect } from "react";
+
 const Fields = ( {fields} ) => {
 
-    const {name, timeLeft, soilType, fieldType, crop, farm} = fields;
+    const {fieldName, fieldTimeLeft, fieldSoilType, fieldFieldType, fieldCrop, fieldFarm} = fields;
 
-    return {
+    return (
+    
+    <>
 
-    }
+
+    </>
+    
+    )
+        
+
+    
+    
+
+            
 
 }
 
