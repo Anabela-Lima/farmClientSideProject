@@ -37,6 +37,6 @@ const Header = () => {
 }
 
 
-
+// search bar: functionality^^
 
 export default Header;
