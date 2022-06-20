@@ -6,7 +6,16 @@ import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
 import Fields from "../Field.js/Field";
 import Crop from "../../FieldList/Crop";
+<<<<<<< HEAD
 import CInventory from "../../FieldList/CInventory";
+=======
+import CInventory from "../../CropList/CInventory";
+import CInventoryCss from  "../../FieldList/CInventoryCss.css";
+
+
+
+
+>>>>>>> Ana_Branch
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
@@ -41,6 +50,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                     <div className="field"></div>
                     <div className="field"></div>
                     <Crop/>
+             
                   
                     
                 </section>  
