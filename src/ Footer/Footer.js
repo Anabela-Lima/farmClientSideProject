@@ -3,8 +3,26 @@
 import './Footer2.css';
 
 // lets import FontAwesome from react
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
+
 
 const Footer = () => {
+
+  const sub= () => {
+
+    alert(
+    
+      " 🎉 Great to have you on board! pssst... a true gamer never misses their alerts 🎉 🥳",
+      [
+        { text: "Im ready ✅", onPress: () => console.log("Me too! ") }
+      ]
+    );
+  }
+
+  
+  
 
 
 
@@ -22,8 +40,7 @@ const Footer = () => {
             <span id= "copyright"> © FarmPlay  </span>
 
         </div>
-              
-
+  
 
       <section className= "centreFooter">
 
@@ -65,73 +82,54 @@ const Footer = () => {
 
          </nav>
 
-
         <form id= "subForm" action="">
             <input type="email" required placeholder="abc@example.com"></input>
-            <button>Subscribe <span id="button icon"></span></button>
+            <button  onClick={sub}>Subscribe <span id="button icon"></span></button>
         </form>
          
-
-
          </section>
          
-
-
-        
 
         <div className='footerRight'>
 
             <div className="allIcon">
 
                 <a href="https://en-gb.facebook.com/FarmVille/" className="icon facebook">
-                <div className="socialNameBoxFb">Facebook</div>
-                <span></span>
+                <div className="socialNameBox">Facebook</div>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'facebook']} /></span>
                 </a> 
 
                 <a href="https://twitter.com/farmville?lang=en-GB" className="icon twitter">
                 <div className="socialNameBox">Twitter</div>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'twitter']} /></span>
                 <span ></span>
                 </a>
                 <a href="https://www.instagram.com/farmville/?hl=en" className="icon instagram">
                 <div className="socialNameBox">Instagram</div>
-                <span></span>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'instagram']} /></span>
                 </a>
                 <a href="https://github.com" className="icon github">
                 <div className="socialNameBox">Github</div>
-                <span></span>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'github']} /></span>
                 </a>
                 <a href="https://www.youtube.com/c/FarmVille1" className="icon youtube">
                 <div className="socialNameBox">Youtube</div>
-                <span></span>
+                <span><FontAwesomeIcon className='iconSize' icon={['fab', 'youtube']} /></span>
                 </a>
 
             </div>
 
-
               <img id="ad1"src="https://jobtribes.playmining.com/wp-content/uploads/2021/04/banner_003-3.png" alt="ad"></img>
-                
-            
+                    
         </div>
-       
            
          </footer>
 
-
-         
-
-        
-
-
         <div>
             
-        
-
-
-
-
+      
      </div>   
         
-
 
   </div>
 

@@ -11,6 +11,15 @@ import { BrowserRouter as Router, Routes, Route}
 import HowToPlay from './HowToPlay/HowToPlay';
 import Footer from './ Footer/Footer';
 
+// importing my icon library
+
+import initFontAwesome from './ Footer/initFontAwesome.js'
+initFontAwesome();
+
+
+// importing my icon library
+
+
 
 function App() {
   return (
