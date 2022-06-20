@@ -6,9 +6,11 @@ import { useState } from "react";
 
 const Field = () => {
 
-
+//for get all fields
 const [field, setField] = useState([]);
+// for specific fields
 const [chosenField, setChosenField] = useState({});
+//for deleting chosen fields
 const [deleteChosenField, setDeleteChosenField] = useState({});
 
 //get all fields

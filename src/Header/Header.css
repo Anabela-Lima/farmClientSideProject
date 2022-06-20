@@ -35,19 +35,21 @@
     color: white;
   }
 
-  /* css for search bar  */
-  .navbar input[type=text] {
+
+
+  img {
+    float: left;
+    height:100px;
+    width: 100px;
+  }
+
+  .search{
+    
     float: right;
     padding: 6px;
     border: none;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
-  }
-
-  img {
-    float: left;
-    height:100px;
-    width: 100px;
   }
  
