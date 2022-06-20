@@ -4,6 +4,7 @@ import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
+import Crop from "../../FieldList/Crop";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
@@ -37,7 +38,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                     <div className="field"></div>
                     <div className="field"></div>
                     <div className="field"></div>
-                    <div className="field"></div>
+                    <Crop/>
                 </section>
 
             </section>

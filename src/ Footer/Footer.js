@@ -22,8 +22,6 @@ const Footer = () => {
   }
 
   
-  
-
 
 
     return (
