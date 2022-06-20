@@ -1,37 +1,24 @@
 import React from 'react';
-import { useState } from 'react';
 import './Header.css';
 import logo from './logoimage.jpg';
-import Farm from '../HomePage/components/Farm/Farm';
+import filterFarms from './Search';
+import { Search } from 'react-router-dom';
 
 import { NavLink as Link } from 'react-router-dom';
 
 const Header = () => {
 
-  const [farm, setFarm] = useState({Farm});
-  const [filteredFarms, setfilteredFarms] = useState({});
-  const [searchTerm, setsearchTerm] = useState("");
-  
-
-  function filterFarms(searchTerm) {
-    console.log("SEARCH TERM", searchTerm);
-    const filtered = Farm.filter(farm => farm.farmName.toLowerCase().includes(searchTerm.toLowerCase()));
-    setfilteredFarms(filtered)
-    {return setfilteredFarms};
-  }
-    
   function handleSubmit(event) {
     event.preventDefault();
-    filterFarms(searchTerm);
+   
   }
-  
 
   return(
       <div className="Main-Header">
       
         <div className="title">
         <img src ={logo} alt="farm-logo"></img>
-          <h2>Farm Tycoon </h2>
+          <h2>FARM TYCOON </h2>
         </div>
 
         
@@ -65,9 +52,9 @@ const Header = () => {
         </div>
       </div>
   )
-}
 
 
+  };
 
 // search bar: functionality^^
 
