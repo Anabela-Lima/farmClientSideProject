@@ -7,7 +7,7 @@ import { NavLink as Link } from 'react-router-dom';
 
 const Header = () => {
 
-  const [searchTerm, setsearchTerm] = useState();
+  // const [searchTerm, setsearchTerm] = useState();
 
   function handleSubmit(e){e.preventDefault();
     
@@ -37,7 +37,7 @@ const Header = () => {
             <li><a href="help.asp" >Help</a></li>
 
         <form class="search-form">
-					<input type="text" placeholder="Search for your farms.."/> <input type="submit" value="Submit"/>
+					<input type="text" placeholder="Search for your farms.."/> <button type="submit" value="Submit"/>
 				</form>
 
           </ul>
