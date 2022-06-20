@@ -1,0 +1,11 @@
+.fieldSelector,
+.fieldQuantityInput,
+.deliverGoodsToFarm {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 2rem;
+}

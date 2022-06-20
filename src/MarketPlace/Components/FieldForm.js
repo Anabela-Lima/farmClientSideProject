@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import "./FieldForm.css";
 
 export const FieldForm = ( {fieldType, farmsList} ) => {
 
@@ -33,31 +34,56 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
 
   return (
     <>
-        <form className='field-order-form-labels-buttons-inputs'>
-            <h4>Which field would you like to purchase?</h4>
+        <form id="fieldformGridCont" className='fof-labels-buttons-inputs'>
 
-            <select placeholder='Pick your field!'>
-            {
-            fieldList.map( (field) => {
-                return <option key={field.id}>{field.name}</option>
-            }
-            )}
-            </select>
+            <div className='fieldSelector'>
 
-            <h4>How many crops shall we deliver?</h4>
-            <button type="button" onClick={handleDecreaseQuantity}>-</button>
-            <input type="text" name="tiny-field-quantity" placeholder="Quantity" value={quantity}/>
-            <button type="button" onClick={handleIncreaseQuantity}>+</button>
+                <h4>Which field would you like to purchase?</h4>
 
-            <h3>Which farm should we deliver the goods to?</h3>
-            <select placeholder="Pick your farm!">
-                <option hidden disabled>Pick your farm!</option>
+                <select placeholder='Pick your field!'>
                 {
-                farmsList.map(farm =>
-                    <option key={farm.id}>{farm.name}</option>
+                fieldList.map( (field) => {
+                    return <option key={field.id}>{field.name}</option>
+                }
                 )}
-            </select>
-            <button type="button">Confirm Order ✅</button>
+                </select>
+
+            </div>
+            
+
+            <div className='fieldQuantityInput'>
+
+                <h4>How many fields shall we deliver?</h4>
+
+                <div>
+                    <button type="button" onClick={handleDecreaseQuantity}>-</button>
+                    <input type="text" name="tiny-field-quantity" placeholder="Quantity" value={quantity}/>
+                   <button type="button" onClick={handleIncreaseQuantity}>+</button>
+                </div>
+               
+            </div>
+
+            
+            <div className='deliverGoodsToFarm'>
+
+                <h4>Which farm should we deliver the goods to?</h4>
+
+                <select placeholder="Pick your farm!">
+                    <option hidden disabled>Pick your farm!</option>
+                    {
+                    farmsList.map(farm =>
+                        <option key={farm.id}>{farm.name}</option>
+                    )}
+                </select>
+
+            </div>
+
+            <div className='confirm-or-reset'>
+
+                <button className='confirm-order-btn' type="button">Confirm Order ✅</button>
+                <button className='reset-order-btn' type="button">Reset Form 🔄</button>
+            </div>
+            
         </form>
     </>
   )

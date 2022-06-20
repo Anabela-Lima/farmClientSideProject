@@ -54,60 +54,28 @@
 
     background-color: lightgoldenrodyellow;
     margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 .fields-order-form h3,
 .crops-order-form h3 {
     padding: 1rem 0;
-    font-size: 3rem;
-}
-
-
-.fields-order-form {
-    display: flex;
-    flex-direction: column;
-
-
-    align-self: flex-start;
-    align-items: stretch;
-    flex-grow: 1;
-}
-
-.crops-order-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: center;
-}
-
-.confirm-order-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-
-    background-color: lightgrey;
-    padding: 1rem;
-    border-radius: 0.5rem;
-}
-
-.confirm-order-section h3 {
     font-size: 1.6rem;
 }
 
-.confirm-order-section select {
-    margin: 0 1rem;
-}
-
-.confirm-order-section button {
+.confirm-order-btn {
     border: none;
     background-color: lightgreen;
     border-radius: 0.25rem;
 }
 
-.confirm-order-section button:hover {
+.confirm-order-btn:hover {
     cursor: pointer;
     background-color: green;
 }
