@@ -29,7 +29,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                 </section>
 
                 <section className="fields-section">
-                    {/* <Fields /> */}
+                    <Fields />
                     <div className="field"></div>
                     <div className="field"></div>
                     <div className="field"></div>

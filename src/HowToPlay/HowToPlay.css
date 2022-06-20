@@ -1,3 +1,10 @@
 .HowToPlay {
     font-family: 'GAMERIA', sans-serif;
 }
+
+img {
+
+    width: 300px;
+    height: 300px;
+    position:relative;
+}

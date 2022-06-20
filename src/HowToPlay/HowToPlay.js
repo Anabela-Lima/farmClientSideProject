@@ -1,12 +1,14 @@
 import React from 'react';
 import './HowToPlay.css';
+import dance from './dancing-happy.gif'
 
 const HowToPlay = () => {
     return (
     
     <>
+      <img src={dance} alt="dancing farm img"></img>
     <h1>Welcome Farmer, are you ready to create your own farm?</h1>
-
+  
     <h2>First things first, decide what you want to name your farm</h2>
 
     <h3>Start by selecting a farm name</h3>
