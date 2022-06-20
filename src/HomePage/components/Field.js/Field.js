@@ -1,26 +1,27 @@
 import React, { useEffect } from 'react'
 import axios from 'axios';
 import { useState } from "react"; 
-import Farm from '../Farm/Farm';
+
 
 
 const Field = () => {
 
-const [field, SetField] = useState([])
+// const [field, setField] = useState([]);
+const [chosenField, setChosenField] = useState({});
 
-        useEffect( () => { //get all fields
-        axios.get('http://127.0.0.1:8080/fields')
-        .then(res => {const field = res.data;
-        SetField(field);
-        }).catch(err => console.log(err)); 
-        });
+        // useEffect( () => { //get all fields
+        // axios.get('http://127.0.0.1:8080/fields')
+        // .then(res => {const field = res.data;
+        // setField(field);
+        // }).catch(err => console.log(err)); 
+        // });
 
- const [chosenField, SetChosenField] = useState({});
 
-        useEffect( () => { //get specific field
-        axios.get(`http://127.0.0.1:8080/fields/field/1`)
-        .then(res => {const chosenField= res.data;
-        SetChosenField(chosenField);
+//get specific field
+        useEffect( () => { 
+        axios.get("http://127.0.0.1:8080/fields/field/2")
+        .then(response => {const chosenField= response.data;
+        setChosenField(chosenField);
          }).catch(err => console.log(err)); 
         });
 
@@ -28,8 +29,7 @@ const [field, SetField] = useState([])
 
        <>
        <h1>Hi I'm {chosenField.name}</h1>
-
-
+   
        </>
             
        

@@ -1,10 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
 import './Header.css';
 import logo from './logoimage.jpg';
 
 import { NavLink as Link } from 'react-router-dom';
 
 const Header = () => {
+
+  const [searchTerm, setsearchTerm] = useState();
+
+  function handleSubmit(e){e.preventDefault();
+    
+
+  }
 
   return(
       <div className="Main-Header">
@@ -28,13 +36,16 @@ const Header = () => {
 
             <li><a href="help.asp" >Help</a></li>
 
-            <input type="text" placeholder="Search.."/>
+        <form class="search-form">
+					<input type="text" placeholder="Search for your farms.."/> <input type="submit" value="Submit"/>
+				</form>
 
           </ul>
         </div>
       </div>
   )
 }
+
 
 
 // search bar: functionality^^
