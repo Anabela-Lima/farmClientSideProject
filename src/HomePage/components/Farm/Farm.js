@@ -5,6 +5,8 @@ import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
 import Fields from "../Field.js/Field";
+import Crop from "../../FieldList/Crop";
+import CInventory from "../../FieldList/CInventory";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
