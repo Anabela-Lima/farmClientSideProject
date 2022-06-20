@@ -30,21 +30,13 @@ const MarketPlace = () => {
 
         <section className="crop-field-orderform">
 
-            <h2>*Our Farm Game* Order Form</h2>
+            <h2>Farm tycoon field Order Form</h2>
 
             <div className="crop-field-section-container">
 
               <section className="fields-order-form">
-                <h3>Fields</h3>
 
                 <FieldForm farmsList={farmsList}/>
-
-              </section>
-
-              <section className="crops-order-form">
-                <h3>Crops</h3>
-
-                <CropForm farmsList={farmsList}/>
 
               </section>
 
