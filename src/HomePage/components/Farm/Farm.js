@@ -6,7 +6,6 @@ import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
 import Fields from "../Field.js/Field";
 
-
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
     const [money, setMoney] = useState(farmFunds);
