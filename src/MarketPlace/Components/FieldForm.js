@@ -22,12 +22,51 @@ export const FieldForm = ( {farmsList} ) => {
     });
 
 
-    const handleFieldConfirmOrder = async event => {
+    const getFarmIdViaName = () => {
+        return new Promise ( (resolve) => {
+                const farmNameConfirmed = farmsList.find( farm => farm.name === farmToSendField)
+                resolve(farmNameConfirmed)
+            })
+    }
+
+    const getFieldIdViaName = () => {
+        return new Promise ( (resolve) => {
+            const idNameConfirmed = fieldList.find( field => field.name === fieldTypeChoice )
+            resolve(idNameConfirmed);
+        })
+    }
+
+
+
+
+
+
+
+
+
+    const handleFieldConfirmOrder = async (event) => {
         event.preventDefault();
 
-        console.log(farmToSendField);
 
-        const idfarm = 1;
+        console.log("1...");
+
+        const pleaseWork = await getFarmIdViaName();
+
+        console.log("2...");
+
+        console.log(pleaseWork);
+
+        console.log("3...");
+
+        const pleaseWork2 = await getFieldIdViaName();
+
+        console.log("4...");
+
+        console.log(pleaseWork2);
+
+
+
+        const idfarm = pleaseWork.id;
         const idfieldtype = 1;
 
         axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
