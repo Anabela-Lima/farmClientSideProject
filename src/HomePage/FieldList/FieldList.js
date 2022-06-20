@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import axios from 'axios'; 
-import Farm from "./Farm";
+import Farm from "../components/Farm/Farm";
 
 const FieldList = ( {fieldList, setFieldList} ) => {
 

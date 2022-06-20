@@ -63,12 +63,18 @@ public class FieldController {
             fieldService.putCropInField(fieldID, cropID);
 
         }
+<<<<<<< HEAD
         return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
 
     };
 
 
 
+=======
+
+        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
+    }
+>>>>>>> 3f3d73b7f8a77a8771d577cf6a8826f21c559e25
 
     @DeleteMapping("/deleteField/{id}")
     public void deleteField(@PathVariable Long id){fieldService.deleteField(fieldService.getField(id));
