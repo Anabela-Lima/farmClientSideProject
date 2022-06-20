@@ -4,6 +4,7 @@ import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
+import Fields from "../Field.js/Field";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
@@ -28,7 +29,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                 </section>
 
                 <section className="fields-section">
-                    <div className="field"></div>
+                    {/* <Fields /> */}
                     <div className="field"></div>
                     <div className="field"></div>
                     <div className="field"></div>
