@@ -67,7 +67,7 @@ export const FieldForm = ( {farmsList} ) => {
 
 
         const idfarm = pleaseWork.id;
-        const idfieldtype = 1;
+        const idfieldtype = pleaseWork2.id;
 
         axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
             .then(result => console.log(result.data))
