@@ -11,7 +11,7 @@ const Header = () => {
       
         <div className="title">
         <img src ={logo} alt="farm-logo"></img>
-          <h2>Our Farm Game </h2>
+          <h2>Farm Game Tycoon</h2>
         </div>
 
         

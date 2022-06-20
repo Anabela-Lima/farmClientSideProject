@@ -36,11 +36,11 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
         <form id="fieldformGridCont" className='fof-labels-buttons-inputs'>
 
             <div className='name-field-form'>
-                <label htmlFor="">What is the name of your field? Lewis</label>
+                <label htmlFor="">What is the name of your field?</label>
 
                 <input type="text" placeholder='Field name' 
                         value=''
-                        onChange={(e) => setFieldName(e.currentTarget.value)}></input>
+                        onChange={(e) => setFieldName(e.currentTarget.value)} />
             </div>
 
             <div className='fieldSelector'>
