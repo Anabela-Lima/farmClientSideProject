@@ -25,8 +25,8 @@ const MarketPlace = () => {
 
       <section className="marketplace-main">
 
-        <h1 className="marketplace-welcome">Welcome to the *Our Farm Game* MarketPlace!</h1>
-        <p>Please use the order form below, so we can send crops and fields to your farms 👨‍🌾🚜👩‍🌾</p>
+        <h1 className="marketplace-welcome">Welcome to the Farm Tycoon MarketPlace!</h1>
+        <p>Please use the order form below, so we can send fields to your farms 👨‍🌾🚜👩‍🌾</p>
 
         <section className="crop-field-orderform">
 

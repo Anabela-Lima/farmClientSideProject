@@ -11,7 +11,7 @@ const Header = () => {
       
         <div className="title">
         <img src ={logo} alt="farm-logo"></img>
-          <h2>Farm Game Tycoon</h2>
+          <h2>Farm Tycoon</h2>
         </div>
 
         
@@ -19,8 +19,6 @@ const Header = () => {
           <ul>
 
             <li><Link to="/" >Home</Link></li>
-
-            <li><a href="myfarms" >My Farms</a></li>
 
             <li><Link to="/marketplace" >Market Place</Link></li>
 
