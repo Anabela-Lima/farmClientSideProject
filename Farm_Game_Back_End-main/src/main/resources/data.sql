@@ -39,8 +39,8 @@ INSERT INTO FIELDS (NAME, TIMELEFT, FIELD_ID, CROP_ID, FARM_ID, SOILTYPE) VALUES
 
 
 
---creating field to not interfere with peace fields - uding farm id = 2 so oldMcdonalds will have crop of corn
-INSERT INTO FIELDS (NAME, TIMELEFT, FIELD_ID, CROP_ID, FARM_ID, SOILTYPE) VALUES ('Test Field', 4, 2, 1, 2, 1);
+--creating field to not interfere with peace fields - uding farm id = 2 so oldMcdonalds will have crop of wheat
+INSERT INTO FIELDS (NAME, TIMELEFT, FIELD_ID, CROP_ID, FARM_ID, SOILTYPE) VALUES ('Test Field', 4, 5, 4, 2, 1);
 
 
 
