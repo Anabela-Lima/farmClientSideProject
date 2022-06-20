@@ -37,46 +37,18 @@ const MarketPlace = () => {
               <section className="fields-order-form">
                 <h3>Fields</h3>
 
-                <FieldForm fieldType={"Tiny Field"} />
-                <FieldForm fieldType={"Small Field"} />
-                <FieldForm fieldType={"Medium Field"} />
-                <FieldForm fieldType={"Large Field"} />
-                <FieldForm fieldType={"Huge Field"} />
-                <FieldForm fieldType={"Small Beach"} />
-                <FieldForm fieldType={"Beach"} />
+                <FieldForm farmsList={farmsList}/>
 
               </section>
 
               <section className="crops-order-form">
                 <h3>Crops</h3>
 
-                <CropForm cropType={"Corn 🌽"} />
-                <CropForm cropType={"Rye"} />
-                <CropForm cropType={"Rice 🍚"} />
-                <CropForm cropType={"Sunflower 🌻"} />
-                <CropForm cropType={"Lavender 💜"} />
-                <CropForm cropType={"Potatoe 🥔"} />
-                <CropForm cropType={"Cabbage"} />
-                <CropForm cropType={"Leek"} />
-                <CropForm cropType={"Tomato 🍅"} />
-                <CropForm cropType={"Carrot 🥕"} />
+                <CropForm farmsList={farmsList}/>
+
               </section>
 
             </div>
-
-            <section className="confirm-order-section">
-
-              <h3>Which farm should we deliver the goods to?</h3>
-              <select placeholder="Pick your farm!">
-                <option hidden disabled>Pick your farm!</option>
-                {
-                  farmsList.map(farm =>
-                    <option key={farm.id}>{farm.name}</option>
-                )}
-              </select>
-              <button type="button">Confirm Order ✅</button>
-
-            </section>
 
         </section>
 
