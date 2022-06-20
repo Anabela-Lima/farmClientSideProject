@@ -53,7 +53,7 @@ public class FarmController {
         farmService.saveFarm(newFarm);
     }
 
-    @PutMapping("/farm/{idfarm}/buyfield/{idfieldtype}")
+    @PutMapping("/farm/buyfield")
     public ResponseEntity<Field> buyField(@RequestParam String fieldName, Long idfieldtype, Long idfarm) {
         FieldType newFieldType = fieldTypeService.getFieldType(idfieldtype);
         Farm farm = farmService.getFarm(idfarm);

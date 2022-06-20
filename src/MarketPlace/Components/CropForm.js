@@ -8,18 +8,9 @@ const CropForm = ( {cropType, farmsList} ) => {
   const [quantity, setQuantity] = useState(0);
   const [cropList, setCropList] = useState([]);
 
-  const handleIncreaseQuantity = () => {
-      setQuantity(quantity + 1);
-  }
+  const [specifiedCrop, setSpecifiedCrop] = useState('');
 
-  const handleDecreaseQuantity = () => {
 
-      if (quantity > 0) {
-          setQuantity(quantity - 1);
-      } else {
-          alert(`Can't sell -1 ${cropType}'s!`)
-      }
-  }
 
   useEffect(  () => {
 
@@ -39,18 +30,14 @@ const CropForm = ( {cropType, farmsList} ) => {
       <form className='fof-labels-buttons-inputs'>
             <h4>Which crop would you like to purchase?</h4>
 
-            <select placeholder='Pick your crop!'>
+            <select placeholder='Pick your crop!'
+            onChange={(e) => setSpecifiedCrop(e.currentTarget.value)}>
             {
               cropList.map( (crop) => {
                 return <option key={crop.id}>{crop.name}</option>
               }
               )}
             </select>
-
-            <h4>How many crops shall we deliver?</h4>
-            <button type="button" onClick={handleDecreaseQuantity}>-</button>
-            <input type="text" name="tiny-field-quantity" placeholder="Quantity" value={quantity}/>
-            <button type="button" onClick={handleIncreaseQuantity}>+</button>
 
             <h3>Which farm should we deliver the goods to?</h3>
               <select placeholder="Pick your farm!">

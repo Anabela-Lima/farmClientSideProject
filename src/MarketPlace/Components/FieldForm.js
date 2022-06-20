@@ -6,18 +6,18 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
 
     const [quantity, setQuantity] = useState(0);
     const [fieldList, setFieldList] = useState([]);
+    const [fieldName, setFieldName] = useState({});
 
-    const handleIncreaseQuantity = () => {
-        setQuantity(quantity + 1);
-    }
 
-    const handleDecreaseQuantity = () => {
+    const handleFieldConfirmOrder = event => {
+        event.preventDefault();
 
-        if (quantity > 0) {
-            setQuantity(quantity - 1);
-        } else {
-            alert(`Can't sell -1 ${fieldType}'s!`)
-        }
+        const idfarm = 1;
+        const idfieldtype = 1;
+
+        axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
+            .then(result => console.log(result.data))
+            .catch( err => console.log(err))
     }
 
     useEffect( () =>  {
@@ -40,7 +40,8 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
 
                 <h4>Which field would you like to purchase?</h4>
 
-                <select placeholder='Pick your field!'>
+                <select placeholder='Pick your field!'
+                onChange={(e) => setFieldName(e.currentTarget.value)}>
                 {
                 fieldList.map( (field) => {
                     return <option key={field.id}>{field.name}</option>
@@ -48,19 +49,6 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
                 )}
                 </select>
 
-            </div>
-            
-
-            <div className='fieldQuantityInput'>
-
-                <h4>How many fields shall we deliver?</h4>
-
-                <div>
-                    <button type="button" onClick={handleDecreaseQuantity}>-</button>
-                    <input type="text" name="tiny-field-quantity" placeholder="Quantity" value={quantity}/>
-                   <button type="button" onClick={handleIncreaseQuantity}>+</button>
-                </div>
-               
             </div>
 
             
@@ -80,7 +68,7 @@ export const FieldForm = ( {fieldType, farmsList} ) => {
 
             <div className='confirm-or-reset'>
 
-                <button className='confirm-order-btn' type="button">Confirm Order ✅</button>
+                <button className='confirm-order-btn' type="button" onClick={handleFieldConfirmOrder}>Confirm Order ✅</button>
                 <button className='reset-order-btn' type="button">Reset Form 🔄</button>
             </div>
             
