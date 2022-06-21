@@ -10,6 +10,7 @@ export const FieldForm = ( {farmsList} ) => {
     const [fieldTypeChoice, setFieldTypeChoice] = useState('');
     const [farmToSendField, setFarmToSendField] = useState('');
 
+
     useEffect( () =>  {
 
         axios.get('http://127.0.0.1:8080/fieldtype/fieldtypes')

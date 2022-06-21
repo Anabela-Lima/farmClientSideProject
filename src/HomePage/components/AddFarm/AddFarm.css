@@ -2,35 +2,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .add-farm-form {
     border-radius: 0.5rem;
     padding: 1rem;
 
-    margin-top: 1rem;
     text-align: center;
 
-    background-color: lightblue;
+    background-color: #9DC183;
 }
 
-.add-farm-form > label, .add-farm-form > button, .add-farm-form > input {
+.add-farm-form>label,
+.add-farm-form>button,
+.add-farm-form>input {
     margin: 0 0.5rem;
     font-size: 1.6rem;
     border-radius: 0.5rem;
 }
 
-.add-farm-form > button {
+.add-farm-form>button {
     border: 1px solid burlywood;
     background-color: bisque;
 }
 
-.add-farm-form > button:hover {
+.add-farm-form>button:hover {
     border: 1px solid burlywood;
     background-color: rgb(241, 182, 111);
     cursor: pointer;
 }
 
-.add-farm-form > input {
+.add-farm-form>input {
     text-align: center;
 }
