@@ -1,3 +1,36 @@
-.HowToPlay {
+.InfoPage {
     font-family: 'GAMERIA', sans-serif;
+    
+}
+
+.th-bordered {
+    border: 5px thin rgb(105, 75, 50) !important;
+  }
+
+.table th{
+    color: rgb(24, 154, 48) !important;
+    background-color: rgb(42, 165, 144);
+    font-size:larger;
+  
+}
+
+#searchBar{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  position: relative;
+  right:1em;
+
+
+}
+
+
+#searchingFor{
+
+    position:relative;
+   bottom:2em;
+   left: 6.5em;
+   
+
 }

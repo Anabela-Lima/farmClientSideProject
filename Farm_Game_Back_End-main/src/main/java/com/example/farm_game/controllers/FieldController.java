@@ -56,15 +56,14 @@ public class FieldController {
         }
     }
 
-//    Editing patchMapping to return crop body
+
 
     @PatchMapping(value = "/CropInField")
-    public ResponseEntity<Crop> putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
+    public void putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
         if (cropService.getCrop(cropID) != null && fieldService.getField(fieldID) != null) {
             fieldService.putCropInField(fieldID, cropID);
 
         }
-        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
 
     };
 
