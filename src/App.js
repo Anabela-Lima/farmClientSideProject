@@ -14,6 +14,8 @@ import Footer from './ Footer/Footer';
 // importing my icon library
 
 import initFontAwesome from './ Footer/initFontAwesome.js'
+// importing crops page
+import InfoPage from './InfoPage/InfoPage';
 initFontAwesome();
 
 
@@ -32,6 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/marketplace" element={<MarketPlace />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
+          <Route path="/infopage" element={< InfoPage/>} />
         </Routes>
 
         <Footer/>

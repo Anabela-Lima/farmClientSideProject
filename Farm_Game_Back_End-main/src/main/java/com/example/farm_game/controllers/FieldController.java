@@ -34,6 +34,7 @@ public class FieldController {
     public ResponseEntity<List<Field>> getAllFields() {
         List<Field> fields = fieldService.getField();
         return ResponseEntity.ok().body(fields);
+
     }
 
     @GetMapping("/field/{id}")

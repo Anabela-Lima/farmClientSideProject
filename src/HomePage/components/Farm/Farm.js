@@ -52,6 +52,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
 
                 <section className= "inventory-section">
                     <CInventory/>
+                   
 
                 </section>
                 
