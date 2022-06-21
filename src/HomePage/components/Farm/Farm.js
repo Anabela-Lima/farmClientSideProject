@@ -42,7 +42,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                                             {/* <li>Days Left: {field.timeLeft}</li> */}
                                             <li className="minor-field-details">{field.soilType}</li>
                                             <li className="minor-field-details">{field.fieldType.name}</li>
-                                            <li>Crop</li>
+                                            <li>C</li>
                                         </ul>
                                     </li>)}
                                    
