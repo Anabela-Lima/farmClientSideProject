@@ -5,12 +5,14 @@
     color: black;
     font-size: 40px;
     font-family: 'GAMERIA', sans-serif;
+  
     
 }
 
 .navbar {
     background-color: gainsboro;
     overflow: hidden;
+  
   }
   
   /* css for the options  */

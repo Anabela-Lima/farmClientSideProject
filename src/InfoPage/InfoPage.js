@@ -115,8 +115,63 @@ const CropsPage = () => {
     
     }
 
-    //----------------[ Return ]--------------------
 
+    //-------------[ farms ]--------------------------
+
+
+    // get all crops : state
+    
+    const [farms, setFarms] = useState([])
+
+    // get all crops code
+
+    useEffect(() => {
+        let endpoint3 = "http://localhost:8080/farms/farms"
+        axios
+            .get(endpoint3)
+            .then(response => {
+                const data = response.data;
+                // add logic to filter data based on input
+                // use state with some properties for filtering data 
+                setFarms(data);
+            })
+            .catch(err => console.log(err ));
+    }, [])
+
+    const [searchTermFarms, setSearchTermFarms] = useState("");
+
+
+   //-------[ farms crops search ]-----------------
+
+
+    const getFarms = async (e) =>{
+        
+        e.preventDefault(); // prevent page refresh
+
+        // axios API request to backend
+        let response;
+        try {
+            response = await axios.get("http://localhost:8080/farms/farms")
+        }
+        catch(err) {
+            console.log(err);
+        }
+
+        const data = response.data;
+        console.log("data: ", data);
+        console.log(searchTermFarms);
+        console.log(farms);
+        
+        const filteredFarms = data.filter(farm => farm.name.toLowerCase().includes(searchTerm.toLowerCase()))
+        
+        // console.log(filteredCrops);
+
+        setCrops(filteredFarms); // sets the variable 'farms', also re-renders the component
+    
+    }
+
+
+    //----------------[ Return ]--------------------
 
 
   return (
@@ -133,7 +188,7 @@ const CropsPage = () => {
 
                             <form id= "new-crop-form" >
                                 <div>
-                                    <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInputCrops" type="text" placeholder= "carrots" name= "user-input"/>
+                                    <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInputCrops" type="text" placeholder= "carrots..." name= "user-input"/>
                                     <input  id="submitButton" type="submit" value="search" onClick={getCrop}></input>
                                 </div>
 
@@ -150,7 +205,7 @@ const CropsPage = () => {
 
                             <form id= "new-field-form" >
                                 <div>
-                                    <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userInputFieldType" type="text" placeholder= "field" name= "user-input"/>
+                                    <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userInputFieldType" type="text" placeholder= "field..." name= "user-input"/>
                                     <input  id="submitButtonFieldTypes" type="submit" value="search" onClick={getFieldTypes}></input>
                                 </div>
 
@@ -225,7 +280,7 @@ const CropsPage = () => {
                             </Table>
                 </ul>      
                 
-                
+                    
 
         
 
@@ -249,9 +304,6 @@ const CropsPage = () => {
                 
         </section>
         
-
-        
-
 
        
         <section id = "fieldTypesTable">       
@@ -287,11 +339,69 @@ const CropsPage = () => {
 
 
 
-
          </section> 
+
+         <section>
+
+
+
+
+        
+         <section id = "searchBarFarms">
+                    
+                    <p id= "searchingForFarms"> Searching for: <span id="user-farms"></span></p> 
+
+                            <form id= "new-farms-form" >
+                                <div>
+                                    <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userFarms" type="text" placeholder= "farm..." name= "user-input"/>
+                                    <input  id="submitButtonFarms" type="submit" value="search" onClick={getFarms}></input>
+                                </div>
+
+                            </form> 
+
+        </section>
+
+
+    </section>
+
+{/* 
+        <section id= "farmsTable">
+          <h2  id= "farmsTableTitle"> Farms </h2>
+          <h6  id= "farmsTableSubheader"> Lets see our available Farms: </h6>
+
+            <ul>
+                            <Table className="table table-striped" striped bordered hover variant="light">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Funds</th>
+                                        <th>Date</th>
+                                        <th>Own Fields</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        { Array.farms.prototype.map((farm) => (
+                                            <tr key= {farm.id}>
+                                            <td key= {farm.id}>{farm.name}</td>
+                                            <td key= {farm.id}>{farm.funds}</td>
+                                            <td key= {farm.id}>{farm.date}</td>
+                                            <td key= {farm.id}>{farm.ownFields}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </Table>
+                    </ul>   
+
+        </section> */}
+
 
 
          
+       
+
+
+         
+
 
 
 
