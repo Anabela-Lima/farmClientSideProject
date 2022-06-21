@@ -10,37 +10,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const CropsPage = () => {
 
-
-    // search
-
-    const [searchTerm, setSearchTerm] = useState("");
-    
-
-    // const handleSearch = (event) => {
-    //   setSearch(event.target.value);
-    // };
-  
-    
     // get all crops : state
     
     const [crops, setCrops] = useState([]);
 
     // get all crops code
 
-    useEffect( () => {
-        
-        let endpoint1=  "http://localhost:8080/crops/crops/"
-         axios.get(endpoint1)
-         .then(response => {
-             const data = response.data;
-
-             // add logic to filter data based on input
-             // use state with some properties for filtering data 
-             // 
-             setCrops(data);
-         })
-         .catch(err => console.log(err ));
-    })
+    useEffect(() => {
+        let endpoint1 = "http://localhost:8080/crops/crops/"
+        axios
+            .get(endpoint1)
+            .then(response => {
+                const data = response.data;
+                // add logic to filter data based on input
+                // use state with some properties for filtering data 
+                setCrops(data);
+            })
+            .catch(err => console.log(err ));
+    }, [])
 
 
     // get all fieldtypes : state
@@ -49,15 +36,15 @@ const CropsPage = () => {
 
     // get all fieldtypes
 
-    useEffect( () => {
+    useEffect(() => {
         
-        let endpoint2=  "http://localhost:8080/fieldtype/fieldtypes"
-         axios.get(endpoint2)
-         .then(response => {
-             const data = response.data;
-             setfieldTypes(data);
-         })
-         .catch(err => console.log(err ));
+        let endpoint2 = "http://localhost:8080/fieldtype/fieldtypes"
+            axios.get(endpoint2)
+                .then(response => {
+                    const data = response.data;
+                    setfieldTypes(data);
+                })
+                .catch(err => console.log(err ));
     })
 
 
@@ -65,45 +52,43 @@ const CropsPage = () => {
 
     // get specific crop:
 
+    const [searchTerm, setSearchTerm] = useState("");
+
     const [crops1, setCrops1] = useState([]);
+
 
    // code
 
-    const getCrop= () =>{
-       
-        //  name= document.getElementById("user-input").value;
-       
+    const getCrop = async (e) =>{
         
-        const endpoint1=  "http://localhost:8080/crops/crops"  //get all crops
-         fetch(endpoint1)
-         .then(response => {
-             const data = response.data;            // set data to be the response that comes out
-             setCrops1(data)                        // setcrops1 to be the data 
-        
-        })
-         .catch(err => console.log(err ));
-     
-        
+        e.preventDefault(); // prevent page refresh
 
+        // axios API request to backend
+        let response;
+        try {
+            response = await axios.get("http://localhost:8080/crops/crops")
+        }
+        catch(err) {
+            console.log(err);
+        }
 
-        // let endpoint2=  `http://localhost:8080/crops/crop/${}`
-        //  fetch(endpoint2)
-        //  .then(response => {
-        //      const specificCrop = response.data;
-        //      setSpecificCrop(specificCrop);
-        //  })
-        //  .catch(err => console.log(err ));
-    }
+        const data = response.data;
+        // console.log("data: ", data);
+        // console.log(searchTerm);
+        // console.log(crops);
         
+        const filteredCrops = data.filter(crop => crop.name.toLowerCase().includes(searchTerm.toLowerCase()))
+        
+        // console.log(filteredCrops);
+
+        setCrops(filteredCrops); // sets the variable 'crops', also re-renders the component
     
+    }
+
 
   return (
     <>
-
-    
-
         <section id = "allCropsTable">      
-        
             <h2 id= "cropsTableTitle"> Crops </h2>
             <h6  id= "cropsTableSubheader"> Take a look at our juicy crops, farming just got easier! </h6>
 
@@ -116,12 +101,51 @@ const CropsPage = () => {
                             <form id= "new-crop-form" >
                                 <div>
                                     <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInput" type="text" placeholder= "carrots" name= "user-input"/>
-                                    <input  id="submitButton" type="submit" value="search"></input>
+                                    <input  id="submitButton" type="submit" value="search" onClick={getCrop}></input>
                                 </div>
 
                             </form> 
 
                 </section>
+
+
+                {/* <ul>
+                        <Table className="table table-striped" striped bordered hover variant="light">
+                                <thead>
+                                <tr>
+                                    <th>Name1</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Soil Types</th>
+                                    <th>Grow Time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {crops1.filter((val) => {
+                                    if (searchTerm === "") {
+                                        return val;
+                                       } else if(val.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                                val.price.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                                val.stock.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                                val.soilTypes.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                                val.growTime.toLowerCase().includes(searchTerm.toLowerCase())
+                                    ){
+                                        return val
+                                    }
+
+                                }).map((crops) => (
+                                    <tr>
+                                    <td>{crops.name}</td>
+                                    <td>{crops.price}</td>
+                                    <td>{crops.stock}</td>
+                                    <td>{crops.soilTypes}</td>
+                                    <td>{crops.growTime}</td>
+                            
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </Table>
+                </ul>       */}
 
 
      
@@ -138,16 +162,16 @@ const CropsPage = () => {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {crops.map((crops) => (
-                                    <tr>
-                                    <td>{crops.name}</td>
-                                    <td>{crops.price}</td>
-                                    <td>{crops.stock}</td>
-                                    <td>{crops.soilTypes}</td>
-                                    <td>{crops.growTime}</td>
-                            
-                                    </tr>
-                                ))}
+                                    {crops.map((crops) => (
+                                        <tr>
+                                        <td>{crops.name}</td>
+                                        <td>{crops.price}</td>
+                                        <td>{crops.stock}</td>
+                                        <td>{crops.soilTypes}</td>
+                                        <td>{crops.growTime}</td>
+                                
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </Table>
                 </ul>      
@@ -170,14 +194,7 @@ const CropsPage = () => {
                     })}
                 </ul> */}
 
-                <ul>
-                     
-
-                </ul>      
-
-
-
-            
+        
 
 
                 

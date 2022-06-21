@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- change document title-->
+    <title>Fetch</title>
+    <!-- connect js file using script tag -->
+    <script src="fetch.js" defer> </script>      <!-- defer key word used to run html before the javascript-->
+
+    <!-- link css in-->
+    <link rel="stylesheet" href= "styles.css">
+
+</head>
+<body id = "body" onload="getAllCountries()"  >
+     <!-- Lab tasks
+
+     Take the output from your getCountryByName() function and make use of it on the webpage. 
+    
+     MY PLAN:
+    
+     I want to create an input box, where user can pass in a country
+     the user will also be able to see the country as theyre typing 
+     that country will then show up on the list of "my countries "
+     and there will be a button that they can press to delete the country removing it from the list 
+     -->
+
+
+
+        <h1 id="myHeader">Countries Explorer</h1>
+
+        <!-- we have a button that allows user to change background colour on click, it will call function changeColour defined in js file-->
+    
+        <button id="backgroundChange" onclick="changeColour()" > change Background </button>
+
+        <!-- a little break-->
+        <br></br>
+
+        <section> <img src="https://thumbs.gfycat.com/DopeyFinishedGoldfinch-max-1mb.gif" width="250" height ="200" alt=""></section>
+         <section>
+    
+        <p>Type a country</p>  <!-- p element -->
+
+        <p> Your country is: <span id="user-country"></span></p>    <!-- p elemennt-->
+
+        <!-- a form where user can submit their own country-->
+        <form id ="new-country-form" onsubmit="filter()">     <!-- when form is submitted, call filter function-->
+            <div> 
+                <!-- user input  -->
+             <input id="user-input" type="text" placeholder="A country" name="user-input" >
+                <!-- submit button -->
+             <input id="submitButton" type="submit" value= "add-Country" >
+            <div>  
+        
+        </form>
+
+        
+        <!-- adding a little break line between the items -->
+
+        <br><br>
+
+
+        <!-- button for clearing -->
+
+        <button id="clear" type="button" value="clear" > clear </button>
+
+        <!-- bit of a break-->
+        <br></br>
+
+        <!-- a div with some text, that will show up and clear when moues hovers and moves out-->
+
+        <div id="approach-clear-button" onmouseover="clearButtonSpeak()"    onmouseout="clearButtonQuiet()"> <h5> hover here for info </div><h4></div>  
+
+        <!-- bit of a break-->
+        <br></br>
+
+       <!-- wanted to add a label, also used div to move it slightly downwards as a new segment. b tag for emboldening stylistic effect-->
+       <div><b><label for="myCountriesList" style="margin-left:1.5em"> 🗺 My Countries  🗺 :</label></b></div>  <!-- added style margin to left so text my countries could be more centered over box--> 
+
+       <!-- adding a box for mycountries -->
+       <div id= box class="box" contenteditable="false">   <!-- dont box to be editable so i assigned it a value of false-->
+        
+       <!-- list of countries inputted -->
+        <ul id = "myCountriesList"> </ul>
+       </div>
+
+
+       <!-- a little break-->
+       <br></br>
+        <!-- added a new section for info about client inputted country  -->
+    
+        <!-- this is the label for its info-->
+    
+        <label for="countryInfo"> 💡 Info 💡</label>
+    
+        <!-- a little break-->
+        <br></br>
+        
+        <!-- client inputted country  -->
+        <section id="section1"></section>
+        <!-- h3 heading for world countries list-->
+
+        <h3 id="box2"style="margin-left:0.5em"  > <div id="worldCountries"> World countries</div></h3>
+     
+      
+        <!-- adding a new section for all the countries-->
+        <section id="allCountries" >   </section> 
+
+        <!-- add a little break section-->
+        <br><br>
+        
+
+    
+
+        
+        
+    </section>
+
+    
+
+    <section></section>
+
+    <section><h6> Ana Bela Lima Ⓒ </h6></section>
+
+</body>
+</html>
