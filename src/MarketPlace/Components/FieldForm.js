@@ -10,17 +10,6 @@ export const FieldForm = ( {farmsList} ) => {
     const [fieldTypeChoice, setFieldTypeChoice] = useState('');
     const [farmToSendField, setFarmToSendField] = useState('');
 
-    // const [numberOfFields, setNumberOfFields] = useState(0);
-    // useEffect( () => {
-
-    //     axios.get('http://127.0.0.1:8080/fields/fields')
-    //         .then( res => {
-    //             const fieldsLength = res.data.length;
-    //             setNumberOfFields(fieldsLength);
-    //         })
-    //         .catch( err => console.log(err) )
-
-    // })
 
     useEffect( () =>  {
 
@@ -47,12 +36,6 @@ export const FieldForm = ( {farmsList} ) => {
             resolve(idNameConfirmed);
         })
     }
-
-    // const confirmFarmAdded = () => {
-    //     return new Promise ( (resolve) => {
-
-    //     })
-    // }
 
 
     const handleFieldConfirmOrder = async (event) => {
@@ -116,26 +99,26 @@ export const FieldForm = ( {farmsList} ) => {
 
             <h4 className='fieldSelector'>Which field would you like to purchase?</h4>
 
-            <select placeholder='Pick your field!'
+            <select 
                     onChange={(e) => setFieldTypeChoice(e.target.value)}
                     className='fieldSelector'
             >
-                <optgroup>
+            <option value="none" selected disabled hidden>Select a field</option>  
             {
             fieldList.map( (field) => {
                 return <option key={field.id} className="field-options">{field.name}</option>
             }
             )}
-                </optgroup>
+               
             </select>
 
 
             <h4 className='deliverGoodsToFarm'>Which farm should we deliver the goods to?</h4>
 
-            <select placeholder="Pick your farm!"
+            <select
                     className='deliverGoodsToFarm'
                     onChange={(e) => setFarmToSendField(e.target.value)}>
-                <option hidden disabled>Pick your farm!</option>
+                    <option value="none" selected disabled hidden>Select a farm</option>
                 {
                 farmsList.map(farm =>
                     <option key={farm.id}
