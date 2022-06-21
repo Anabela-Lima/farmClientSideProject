@@ -1,23 +1,26 @@
-.button{
-    
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    text-align: center;
-   font-family:  'GAMERIA', sans-serif;
-    outline: none;
-    color: black;
-    background-color: #9DC183;;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .button:hover {background-color: #3e8e41}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+.button {
+
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'GAMERIA', sans-serif;
+  outline: none;
+  color: black;
+  background-color: #9DC183;
+  ;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px #999;
+}
+
+.button:hover {
+  background-color: #3e8e41
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
