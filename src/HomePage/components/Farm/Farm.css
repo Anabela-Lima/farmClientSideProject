@@ -88,11 +88,6 @@
     background-color: lightgoldenrodyellow;
 }
 
-
-
-
-
-
 .field {
     background-color: #bea189;
     width: 100px;
@@ -112,6 +107,19 @@
     margin-bottom: 0.5rem;
 }
 
+.delete-field {
+    padding: 0.25rem;
+    background-color: rgb(241, 117, 117);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: none;
+
+    margin: 0;
+}
+
+.delete-field:hover {
+    background-color: rgb(183, 59, 59);
+}
 
 
 

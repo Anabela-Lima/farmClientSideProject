@@ -3,6 +3,7 @@ import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
 import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
+import DeleteField from "./DeleteField.js/DeleteField";
 import "./Farm.css";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
@@ -32,6 +33,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                     <ul id="list-fields-with-info">
                         {ownedFields.map( (field, index) => {
                             return <li key={index} className="field-sections-details">
+                                        <DeleteField fieldId={field.id} />
                                         <div className="field">
                                         </div>
                                         <ul>
@@ -50,7 +52,6 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
             </section>
 
             <section className="farmFooter">
-                <h3>Add Field: xxx</h3>
                 <h3>Add Crop: xxx</h3>
                 <NewDay farmId={farmId}
                         farmDaysPassed={farmDaysPassed}
