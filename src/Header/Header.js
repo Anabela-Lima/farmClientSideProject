@@ -26,7 +26,8 @@ const Header = () => {
 
             <li><Link to="/" >Home</Link></li>
 
-            <li><a href="myfarms" >My Farms</a></li>
+            <li><a href="myfarms.asp" >My Farms</a></li>
+            <li><Link to="/infopage" activeStyle> Info</Link></li>
 
 
             <li><Link to="/marketplace" activestyle>Market Place</Link></li>

@@ -24,7 +24,8 @@ const Crop = () => {
      // plant crop in field
 
      const [crop2, setCrop2] = useState([]);
-    //  const [field, setField] = useState([])
+     
+     const [field, setField] = useState([])
     
 
     // get specific crop code
@@ -62,11 +63,11 @@ const Crop = () => {
     
     useEffect( () => {
         
-        let endpoint3=  `http://localhost:8080/crops/deleteCrop/1`
-         axios.get(endpoint3)
+        let endpoint3=  `http://localhost:8080/deleteCrop/2`
+         axios.delete(endpoint3)
          .then(response => {
              const specificCropDelete = response.data;
-             setSpecificCrop(specificCropDelete);
+             setSpecificCropDelete(specificCropDelete);
          })
          .catch(err => console.log(err ));
     })
@@ -89,22 +90,22 @@ const Crop = () => {
 
 
 
-    // useEffect( () => {
+    useEffect( () => {
         
-    //     let endpoint4=   'http://localhost:8080/fields/CropInField?fieldID=1&cropID=5'
+        let endpoint4=   'http://localhost:8080/fields/CropInField?fieldID=1&cropID=5'
         
-    //       axios.patch(endpoint4)
-    //      .then(response => {
-    //          const crop2 = response.data;
-    //          setCrop2(crop2)
+          axios.patch(endpoint4)
+         .then(response => {
+             const crop2 = response.data;
+             setCrop2(crop2)
 
-    //          let endpoint5 = "http://localhost:8080/fields/field/{id}?id=1"
-    //      axios.get(endpoint5) 
-    //      .then(response => {const field = response.data;
-    //      setField(field)} )
-    //      })
-    //      .catch(err => console.log(err ));
-    // })
+             let endpoint5 = "http://localhost:8080/fields/field/{id}?id=1"
+         axios.get(endpoint5) 
+         .then(response => {const field = response.data;
+         setField(field)} )
+         })
+         .catch(err => console.log(err ));
+    })
 
 
 
@@ -112,9 +113,8 @@ const Crop = () => {
   return (
     <>
 
-     <h3> This is a crop</h3>
      <h3>  This crop {specificCrop.name} has an id of {specificCrop.id}</h3>
-     <h3> 📦 You have removed {specificCropDelete.name} crop from your inventory  </h3>
+     <h3> ❌ Your chosen crop  has been removed </h3>
  { 
      <ul>
 
@@ -131,7 +131,7 @@ const Crop = () => {
 
      </ul> } 
 
-    <h3> patch : {crop2.name}  </h3>
+    <h3> ✅ You have planted {crop2.name} in your field  </h3>
 
 
 

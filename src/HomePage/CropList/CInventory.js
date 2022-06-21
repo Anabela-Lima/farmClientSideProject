@@ -138,7 +138,7 @@ const CInventory= () => {
   const handleClick = async () => {
     setIsLoading(true);
     try {
-      const {data} = await axios.get('https://reqres.in/api/users', {
+      const {data} = await axios.get('http://localhost:8080/crops/crops/', {
         headers: {
           Accept: 'application/json',
         },
@@ -162,20 +162,6 @@ const CInventory= () => {
     <div>
 
 
-      { 
-       
-
-       <form id= "new-crop-form" onsubmit={cropById}>
-          <div>
-            <input id= "userInput" type="text" placeholder= "search Inventory" name= "user-input"/>
-            <input  id="submitButton" type="submit" value="search-Inventory"></input>
-          </div>
-
-       </form>
-
-
-    }
-      
       {err && <h2>{err}</h2>}
 
       <button onClick={handleClick}>Fetch data</button>

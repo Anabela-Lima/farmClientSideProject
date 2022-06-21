@@ -34,6 +34,7 @@ public class FieldController {
     public ResponseEntity<List<Field>> getAllFields() {
         List<Field> fields = fieldService.getField();
         return ResponseEntity.ok().body(fields);
+
     }
 
     @GetMapping("/field/{id}")
@@ -55,16 +56,19 @@ public class FieldController {
         }
     }
 
-//    Editing patchMapping to return crop body
+
 
     @PatchMapping(value = "/CropInField")
-    public ResponseEntity<Crop> putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
+    public void putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
         if (cropService.getCrop(cropID) != null && fieldService.getField(fieldID) != null) {
             fieldService.putCropInField(fieldID, cropID);
 
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
+=======
+>>>>>>> Ana_Branch
 
     };
 

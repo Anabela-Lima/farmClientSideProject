@@ -47,8 +47,10 @@ public class CropController {
         cropService.saveCrop(newCrop);
     }
 
+    // edited to get body
     @DeleteMapping("/deleteCrop/{id}")
-    public void deleteCrop(@PathVariable Long id){cropService.deleteCrop(cropService.getCrop(id));
+    public  ResponseEntity<Crop> deleteCrop(@PathVariable Long id){cropService.deleteCrop(cropService.getCrop(id));
+        return ResponseEntity.ok().body(cropService.getCrop(id));
     }
 
     @PutMapping("/updateCrop/{id}")
