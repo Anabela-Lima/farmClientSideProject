@@ -10,6 +10,8 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
     const [money, setMoney] = useState(farmFunds);
     const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
 
+    const [fieldCropName, setFieldCropName] = useState("");
+
   return (
     <>
         <section className="farm-container">
@@ -27,7 +29,9 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                     <img src={farmHouseClipart} alt="Your farmhouse" height="300px" width="300px"/>
                 </section>
 
-                <FieldList ownedFields={ownedFields}/>
+                <FieldList ownedFields={ownedFields}
+                           fieldCropName={fieldCropName}
+                           setFieldCropName={setFieldCropName}/>
 
             </section>
 
@@ -37,6 +41,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                             money={money}
                             setMoney={setMoney}
                             ownedFields={ownedFields}
+                            setFieldCropName={setFieldCropName}
                             />
 
         </section>

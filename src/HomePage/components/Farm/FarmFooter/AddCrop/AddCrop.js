@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-const AddCrop = ( {ownedFields, allCropsAvailable} ) => {
+const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
 
     const [fieldTypeChoice, setFieldTypeChoice] = useState('');
     const [cropTypeChoice, setCropTypeChoice] = useState('');
@@ -21,27 +21,32 @@ const AddCrop = ( {ownedFields, allCropsAvailable} ) => {
     //     })
     // }
 
-    // const handlePlantCropInField = async (event) => {
-    //     event.preventDefault();
+    const handlePlantCropInField = (event) => {
+        event.preventDefault();
 
-    //     console.log("1...")
+        console.log("1...")
 
-    //     // const fieldID = await getFieldIdViaName()
-    //     const fieldID = 1;
+        // const fieldID = await getFieldIdViaName()
+        const fieldID = 1;
+        
 
-    //     console.log("2...")
+        console.log("2...")
 
-    //     // const cropID = await getCropIdViaName()
-    //     const cropID = 1;
+        // const cropID = await getCropIdViaName()
+        const cropID = 1;
+        
 
-    //     console.log("3...")
+        console.log("3...")
 
-    //     axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
-    //         .then( result => console.log(result.data))
-    //         .catch( err => console.log(err) )
+        axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
+            .then( result => {
+                console.log(result.data)
+                setFieldCropName(result.data.name);
+            })
+            .catch( err => console.log(err) )
 
-    //     alert("Planted!")
-    // }
+        alert("Planted!")
+    }
 
   return (
     <>
@@ -52,7 +57,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable} ) => {
                 onChange={(e) => setFieldTypeChoice(e.target.value)}
                 className='fieldSelector'
         >
-        <option value="none" selected disabled hidden>Select a field</option>  
+        <option value="none" defaultValue={"Select a field"} disabled hidden>Select a field</option>  
         {
         ownedFields.map( (field) => {
             return <option key={field.id} className="field-options">{field.name}</option>
@@ -69,7 +74,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable} ) => {
                 onChange={(e) => setFieldTypeChoice(e.target.value)}
                 className='fieldSelector'
         >
-        <option value="none" selected disabled hidden>Select a crop</option>  
+        <option value="none" defaultValue={"Select a crop"} disabled hidden>Select a crop</option>  
         {
         allCropsAvailable.map( (crop, index) => {
             return <option key={index} className="field-options">{crop.name}</option>
@@ -78,7 +83,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable} ) => {
             
         </select>
 
-        <button onSubmit={"handlePlantCropInField"}>Plant Me!</button>
+        <button onClick={handlePlantCropInField}>Plant Me!</button>
     </>
   )
 }

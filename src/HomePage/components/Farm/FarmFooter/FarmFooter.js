@@ -4,7 +4,7 @@ import AddCrop from "./AddCrop/AddCrop";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney, ownedFields}) => {
+const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney, ownedFields, setFieldCropName}) => {
 
     const [allCropsAvailable, setAllCropsAvailable] = useState([]);
 
@@ -22,7 +22,9 @@ const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney
     <>
         <section className="farmFooter">
                 
-                <AddCrop ownedFields={ownedFields} allCropsAvailable={allCropsAvailable}/>
+                <AddCrop ownedFields={ownedFields} 
+                        allCropsAvailable={allCropsAvailable}
+                        setFieldCropName={setFieldCropName}/>
                 <NewDay farmId={farmId}
                         farmDaysPassed={farmDaysPassed}
                         setFarmDaysPassed={setFarmDaysPassed}

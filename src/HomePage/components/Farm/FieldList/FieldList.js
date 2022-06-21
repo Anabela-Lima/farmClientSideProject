@@ -2,12 +2,13 @@ import DeleteField from "../DeleteField.js/DeleteField.js";
 import "./FieldList.css";
 
 
-const FieldList = ( {ownedFields} ) => {
+const FieldList = ( {ownedFields, setFieldCropName} ) => {
 
 
     const getCropName = (field) => {
         if (field.crop) {
-            return field.crop.name
+            setFieldCropName(field.crop.name)
+            return field.crop.name;
         } else {
             return "No Crop";
         }
