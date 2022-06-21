@@ -3,8 +3,8 @@ import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
 import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
-import DeleteField from "./DeleteField.js/DeleteField";
 import "./Farm.css";
+import FieldList from "./FieldList/FieldList";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
@@ -28,29 +28,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                     <img src={farmHouseClipart} alt="Your farmhouse" height="300px" width="300px"/>
                 </section>
 
-                <section className="fields-section">
-
-                    {ownedFields.length > 0 ? <ul id="list-fields-with-info">
-                        
-                        {ownedFields.map( (field, index) => 
-                                    <li key={index} className="field-sections-details">
-                                        <DeleteField fieldId={field.id} />
-                                        <div className="field">
-                                        </div>
-                                        <ul>
-                                            <li className="field-name">{field.name}</li>
-                                            {/* <li>Days Left: {field.timeLeft}</li> */}
-                                            <li className="minor-field-details">{field.soilType}</li>
-                                            <li className="minor-field-details">{field.fieldType.name}</li>
-                                            <li>C</li>
-                                        </ul>
-                                    </li>)}
-                                   
-                         
-                       
-                        </ul> : <p className="no-farms-marketplace-prompt">You have no fields - head to the marketplace and we'll deliver some fields to your farm! 🚚💨</p>}
-                         
-                </section>
+                <FieldList ownedFields={ownedFields}/>
 
             </section>
 
