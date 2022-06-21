@@ -24,9 +24,10 @@ const HowToPlay = () => {
     {/* just real basic for now, add images/screenshots */}
 
 
-
+    </>
     )
 }
+
 
 export default HowToPlay;
 
