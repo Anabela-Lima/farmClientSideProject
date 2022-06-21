@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Header from './Header/Header.js';
@@ -15,13 +15,13 @@ import Footer from './ Footer/Footer';
 
 import initFontAwesome from './ Footer/initFontAwesome.js'
 initFontAwesome();
-
-
 // importing my icon library
 
 
 
 function App() {
+
+  
   return (
     <>
       <Router>
@@ -37,6 +37,8 @@ function App() {
         <Footer/>
     
       </Router>
+
+     
       
     </>
   );
