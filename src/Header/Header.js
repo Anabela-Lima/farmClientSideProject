@@ -1,17 +1,14 @@
 import React from 'react';
 import './Header.css';
 import logo from './logoimage.jpg';
-import filterFarms from './Search';
-import { Search } from 'react-router-dom';
+import filterFarms from '../HomePage/components/Search';
+import { useState } from 'react';
 
 import { NavLink as Link } from 'react-router-dom';
 
 const Header = () => {
 
-  function handleSubmit(event) {
-    event.preventDefault();
-   
-  }
+
 
   return(
       <div className="Main-Header">
@@ -36,11 +33,7 @@ const Header = () => {
             <li><a href="help.asp" >Help</a></li>
             </ul>
 
-      <form className="search" role="search" onSubmit={handleSubmit}>
-        <label className="search__label" htmlFor="search__input">Search for your farm:</label>
-        <input type="search" placeholder="Enter farm name..." id="search__input" onChange={event => setsearchTerm(event.target.value)}></input>
-        <input type="submit" value="Submit" className="search__submit"/>
-      </form>
+            
 
           
         </div>
