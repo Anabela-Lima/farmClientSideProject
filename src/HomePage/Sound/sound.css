@@ -1,4 +1,4 @@
-.button {
+.sound-button {
 
   display: inline-block;
   padding: 10px 20px;
@@ -9,17 +9,19 @@
   outline: none;
   color: black;
   background-color: #9DC183;
-  ;
+
   border: none;
   border-radius: 10px;
   box-shadow: 5px 5px #999;
+
+  margin: 0 0.25rem;
 }
 
-.button:hover {
+.sound-button:hover {
   background-color: #3e8e41
 }
 
-.button:active {
+.sound-button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
