@@ -33,16 +33,33 @@
   justify-content: right;
   position: relative;
   right:1em;
+  top:36em;
+
+  
 
 
 }
 
 
-#searchingFor{
+#searchingForCrops{
 
-    position:relative;
-   bottom:2em;
-   left: 6.5em;
-   
+   position:relative;
+   left: -1em;
+   top:0.3em;
 
 }
+
+
+#searchingForFieldTypes{
+
+ position:relative;
+ left: -1em;
+ top:0.3em;
+  
+ 
+ 
+
+}
+
+
+

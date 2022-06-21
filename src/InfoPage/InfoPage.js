@@ -129,7 +129,7 @@ const CropsPage = () => {
 
                 <section id = "searchBarCrops">
                     
-                    <p id= "searchingFor"> Searching for: <span id="user-crop"></span></p> 
+                    <p id= "searchingForCrops"> Searching for: <span id="user-crop"></span></p> 
 
                             <form id= "new-crop-form" >
                                 <div>
