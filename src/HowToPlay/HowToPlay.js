@@ -2,9 +2,11 @@ import React from 'react';
 import './HowToPlay.css';
 import dance from './dancing-happy.gif'
 
+
 const HowToPlay = () => {
     return (
     
+
     <>
       <img src={dance} alt="dancing farm img"></img>
     <h1>Welcome Farmer, are you ready to create your own farm?</h1>
@@ -23,11 +25,7 @@ const HowToPlay = () => {
 
 
 
-
-    
-
-
-    </>);
+    )
 }
 
 export default HowToPlay;

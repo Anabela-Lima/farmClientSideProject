@@ -1,6 +1,7 @@
 package com.example.farm_game.controllers;
 
 import com.example.farm_game.enums.SoilTypes;
+import com.example.farm_game.models.Crop;
 import com.example.farm_game.models.Field;
 import com.example.farm_game.service.CropService;
 import com.example.farm_game.service.FarmService;
@@ -54,12 +55,26 @@ public class FieldController {
         }
     }
 
+//    Editing patchMapping to return crop body
+
     @PatchMapping(value = "/CropInField")
-    public void putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
+    public ResponseEntity<Crop> putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
         if (cropService.getCrop(cropID) != null && fieldService.getField(fieldID) != null) {
             fieldService.putCropInField(fieldID, cropID);
+
         }
+<<<<<<< HEAD
+        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
+
+    };
+
+
+
+=======
+
+        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
     }
+>>>>>>> 3f3d73b7f8a77a8771d577cf6a8826f21c559e25
 
     @DeleteMapping("/deleteField/{id}")
     public void deleteField(@PathVariable Long id){fieldService.deleteField(fieldService.getField(id));

@@ -1,0 +1,475 @@
+/* entire footer- blue background */
+
+#backgroundBlue {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(153, 191, 210);
+  background-size: cover;
+  padding-top: 1em;
+  padding-bottom: 5em;
+  position: relative;
+  top: 40em;
+  height: 15em;
+
+}
+
+
+/*   individual list items */
+a {
+  float: left;
+  background-color: rgb(132, 177, 40);
+  /* moving the list items to the right */
+  position: relative;
+  left: 0.2em;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+#cowPic {
+  position: relative;
+  left: 48em;
+  width: 200px;
+  height: 110px;
+  bottom: .5em;
+  border-radius: 0.2em;
+
+
+}
+
+#farmLogo {
+  position: relative;
+  right: 40em;
+  width: 200px;
+  height: 150px;
+  opacity: 100%;
+  top: 1em;
+
+}
+
+/* rounding off edges */
+
+#anchor1 {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#anchor2 {
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+/* icon block */
+
+.allIcon .icon {
+  position: relative;
+  /* change icon background colour to white */
+  background-color: #ffffff;
+  /* round off the edges */
+  border-radius: 20%;
+  /* space out the icons using margin */
+  margin: 10px;
+  /* widen the icon block using width */
+  width: 50px;
+  /* modify height */
+  height: 50px;
+  /* modify social icon size */
+  font-size: 25px;
+  /* specify a horizontal and vertical shawdow  i.e. ___| + a blur effect through last parameter (5px)  */
+
+  /* a b c  : a= shadow to right, b =  down, c =blur effect intensity */
+
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+  /* colour the icons in  */
+  color: green;
+
+  /* moving icons to desired location on the page */
+
+  /* top: 18em;
+    left:44em; */
+}
+
+/* lets take a look at the socialNameBox section
+    selection items with allIcon class followed by a class of socialNameBox - i.e icon overhead text */
+
+.allIcon .socialNameBox {
+
+  position: absolute;
+  top: 0;
+  /* changing size of the social name box */
+  line-height: 1.5;
+  /* changing font size */
+  font-size: 14px;
+  /* added vertical and horizontal padding */
+  padding: 5px 20px;
+  /* round off corners */
+  border-radius: 5px;
+  /* added a shadow with blur effect colour mint */
+  box-shadow: 0 10px 0px rgba(99, 208, 116, 0.1);
+  /* adding opacity to make the socialtag  text completely transparent when hover is off */
+  opacity: 0;
+
+
+  /* defining the transition using the easing function-
+    easing functions are defined by 4 real numbers  */
+  /*    
+    cubic-bezier(x1,y1,x2,y2), x1 & x2 are real numbers between 0 and 1 */
+
+  /* x1- how long it takes to appear- delay */
+  /* y1 = the bounce */
+  /* x2 */
+  /* y2- how high it jumps */
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
+
+}
+
+
+/* adding a pointy part-  for the socialNameBox*/
+
+.allIcon .socialNameBox::before {
+  position: absolute;
+  /* / pointy part is added upon conent value being empty/ */
+  content: "";
+  /* to create pointy part we'll create a box and rotate it  */
+  height: 8px;
+  width: 8px;
+  /* moving it up abit */
+  bottom: -3px;
+  /* moving it to the right*/
+  left: 2em;
+  /* rotate it to be at 45 degrees + therefore show only pointy part */
+  transform: rotate(45deg);
+}
+
+/* when we hover over the icon, i want the socialNameBox to be visisble */
+.allIcon .icon:hover .socialNameBox {
+
+  /* lets position it from the bottom to be 45 px */
+  top: -50px;
+  /* and i want it to be visible on hover so opacity value =1 */
+  opacity: 1;
+
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to blue + icon + icon socialNameBox text to white  */
+.allIcon .facebook:hover,
+.allIcon .facebook:hover .socialNameBox,
+.allIcon .facebook:hover .socialNameBox::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to light blue, + icon + icon socialNameBox text to white  */
+.allIcon .twitter:hover,
+.allIcon .twitter:hover .socialNameBox,
+.allIcon .twitter:hover .socialNameBox::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to red + icon + icon socialNameBox text to white */
+.allIcon .instagram:hover,
+.allIcon .instagram:hover .socialNameBox,
+.allIcon .instagram:hover .socialNameBox::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to black + icon + icon socialNameBox text to white */
+.allIcon .github:hover,
+.allIcon .github:hover .socialNameBox,
+.allIcon .github:hover .socialNameBox::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to red + icon + icon socialNameBox text to white */
+.allIcon .youtube:hover,
+.allIcon .youtube:hover .socialNameBox,
+.allIcon .youtube:hover .socialNameBox::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+/* enlarging actual icons- using class */
+.iconSize {
+  width: 2em;
+  height: 1.8em;
+  position: relative;
+  top: 0.25em;
+  left: 0.04m;
+
+}
+
+/* moving all social tags to the correct location */
+
+.allIcon {
+  position: relative;
+  left: 65em;
+  top: 25em;
+
+
+}
+
+
+
+#copyright {
+  text-decoration: #3b5999;
+  font-size: xx-large;
+  font-family: 'GAMERIA';
+  position: relative;
+  right: 10em;
+  top: 18.5em;
+  color: green;
+  text-shadow: 2px 2px #583232;
+
+}
+
+/* code for subsribe starts here */
+
+
+#subForm {
+
+  position: relative;
+  top: 61em;
+  /* bringing element to front- overlay */
+  z-index: 1;
+  left: 36em;
+
+
+
+}
+
+/* #pForm{
+  position: relative;
+  bottom: -1.25em;
+  right:14em;
+  font-size:medium;
+  color: rgb(159, 159, 87);
+  outline: #333333;
+ 
+
+} */
+
+
+/* code for ad starts here */
+
+
+#ad1 {
+  width: 330px;
+  height: 100px;
+
+  position: relative;
+  top: 54em;
+  left: 66em;
+  /* bringing element to front- overlay */
+  z-index: 1;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.581);
+
+}
+
+
+/* 
+new dropdown starts here */
+
+
+
+/*  */
+
+/* variables for colours */
+
+:root {
+  --primary-color: rgb(132, 177, 40);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* width & height properties  */
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #f4f4f4; */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+
+}
+
+/* changing properties of navbar */
+
+#navbar {
+  width: 470px;
+  padding-left: 4em;
+  border-radius: 0.5em;
+  background: var(--primary-color);
+  position: relative;
+  left: 6em;
+  top: 24em;
+  float: left;
+
+
+
+
+}
+
+
+#navbar ul li {
+  color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+
+
+}
+
+#navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Dont show the nested unordered list- default */
+
+#navbar ul li ul {
+  display: none;
+
+
+}
+
+
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+
+
+
+}
+
+#navbar ul li:hover a {
+  color: #fff;
+
+
+}
+
+/* Nested Dropdown Show */
+
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+
+
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: var(--primary-color);
+  width: 8em;
+
+}
+
+
+
+#navbar ul li:hover ul li a {
+  color: #333;
+
+}
+
+#navbar ul li:hover ul li:hover {
+  /* background: #e0e0e0; */
+  color: inherit;
+
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 5px;
+
+}
+
+#navbar ul li:hover ul li:hover span {
+  background-color: rgb(35, 169, 195);
+  text-decoration-line: overline;
+  text-shadow: 2px 2px #583232;
+
+
+}
+
+
+#showcase h1,
+#showcase p {
+  color: #fff;
+
+
+}
+
+#navbar ul li:first-child {
+  background-color: var(--primary-color);
+
+
+}
+
+
+@media (max-width: 600px) {
+  #navbar ul li {
+    display: block;
+
+  }
+
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+
+
+
+  }
+
+}
+
+/* 
+changes colour of titles upon hover */
+
+
+.titles:hover {
+  background-color: rgb(35, 169, 195);
+  text-decoration-line: overline;
+  text-shadow: 2px 2px #583232;
+  position: relative;
+
+}
+
+
+/* overriding background colour on text */
+
+.textDropMenu {
+  background: var(--primary-color);
+  box-shadow: none;
+
+
+
+}
+
+
+.textDropMenu:hover {
+  background: var(--primary-color);
+  /* background: #e0e0e0; */
+  --primary-color: rgb(132, 177, 40);
+
+}

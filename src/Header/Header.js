@@ -15,16 +15,19 @@ const Header = () => {
       
         <div className="title">
         <img src ={logo} alt="farm-logo"></img>
+
           <h2>FARM TYCOON </h2>
+
         </div>
 
         
         <div className="navbar">
           <ul>
 
-            <li><Link to="/" activeStyle>Home</Link></li>
+            <li><Link to="/" >Home</Link></li>
 
-            <li><a href="myfarms.asp" >My Farms</a></li>
+            <li><a href="myfarms" >My Farms</a></li>
+
 
             <li><Link to="/marketplace" activestyle>Market Place</Link></li>
 
@@ -39,6 +42,7 @@ const Header = () => {
         </div>
 
         <div>
+
 
 
 
