@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import DeleteField from "../DeleteField.js/DeleteField.js";
 import "./FieldList.css";
 

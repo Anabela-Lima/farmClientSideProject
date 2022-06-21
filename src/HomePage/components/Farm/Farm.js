@@ -1,9 +1,8 @@
 import { useState } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
-import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
-import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
+import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
@@ -32,15 +31,12 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
             </section>
 
-            <section className="farmFooter">
-                <h3>Add Crop: xxx</h3>
-                <NewDay farmId={farmId}
-                        farmDaysPassed={farmDaysPassed}
-                        setFarmDaysPassed={setFarmDaysPassed}
-                        money={money}
-                        setMoney={setMoney} />
-                <DeleteFarm farmId={farmId} />
-            </section>
+            <FarmFooter farmId={farmId}
+                            farmDaysPassed={farmDaysPassed}
+                            setFarmDaysPassed={setFarmDaysPassed}
+                            money={money}
+                            setMoney={setMoney}
+                            />
 
         </section>
     </>
