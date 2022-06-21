@@ -10,6 +10,60 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const CropsPage = () => {
 
+    //-------------- [FieldTypes]------------------
+
+    
+    // get all fieldtypes : state
+    
+    const [fieldTypes, setfieldTypes] = useState([]);
+    const [searchTermFieldTypes, setSearchTermFields] = useState("");
+
+    
+    // get all fieltypes code:
+
+    useEffect(() => {
+        let endpoint2 = "http://localhost:8080/fieldtype/fieldtypes"
+        axios
+            .get(endpoint2)
+            .then(response => {
+                const data = response.data;
+                setfieldTypes(data);
+            })
+            .catch(err => console.log(err ));
+    }, [])
+
+
+    //-------[ specific fieldTypes search ]-------------
+
+    const getFieldTypes= async (e) =>{
+        
+        e.preventDefault(); // prevent page refresh
+
+        // axios API request to backend
+        let response;
+        try {
+            response = await axios.get("http://localhost:8080/fieldtype/fieldtypes")
+        }
+        catch(err) {
+            console.log(err);
+        }
+
+        const data = response.data;
+        console.log("data: ", data);
+        console.log(searchTermFieldTypes);
+        console.log(fieldTypes);
+        
+        const filteredFieldTypes = data.filter(fieldType => fieldType.name.toLowerCase().includes(searchTermFieldTypes.toLowerCase()))
+
+        // console.log(filteredCrops);
+
+        setfieldTypes(filteredFieldTypes); // sets the variable 'fieldTypes', also re-renders the component
+    
+    }
+
+    //-------------[ Crops ]--------------------------
+
+
     // get all crops : state
     
     const [crops, setCrops] = useState([]);
@@ -29,35 +83,11 @@ const CropsPage = () => {
             .catch(err => console.log(err ));
     }, [])
 
-
-    // get all fieldtypes : state
-    
-    const [fieldTypes, setfieldTypes] = useState([]);
-
-    // get all fieldtypes
-
-    useEffect(() => {
-        
-        let endpoint2 = "http://localhost:8080/fieldtype/fieldtypes"
-            axios.get(endpoint2)
-                .then(response => {
-                    const data = response.data;
-                    setfieldTypes(data);
-                })
-                .catch(err => console.log(err ));
-    })
-
-
-    //---------------------------------------
-
-    // get specific crop:
-
     const [searchTerm, setSearchTerm] = useState("");
 
-    const [crops1, setCrops1] = useState([]);
 
+   //-------[ specific crops search ]-----------------
 
-   // code
 
     const getCrop = async (e) =>{
         
@@ -85,6 +115,9 @@ const CropsPage = () => {
     
     }
 
+    //----------------[ Return ]--------------------
+
+
 
   return (
     <>
@@ -94,13 +127,13 @@ const CropsPage = () => {
 
 
 
-                <section id = "searchBar">
+                <section id = "searchBarCrops">
                     
                     <p id= "searchingFor"> Searching for: <span id="user-crop"></span></p> 
 
                             <form id= "new-crop-form" >
                                 <div>
-                                    <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInput" type="text" placeholder= "carrots" name= "user-input"/>
+                                    <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInputCrops" type="text" placeholder= "carrots" name= "user-input"/>
                                     <input  id="submitButton" type="submit" value="search" onClick={getCrop}></input>
                                 </div>
 
@@ -108,6 +141,22 @@ const CropsPage = () => {
 
                 </section>
 
+
+
+
+                <section id = "searchBarFieldTypes">
+                    
+                    <p id= "searchingForFieldTypes"> Searching for: <span id="user-fieldType"></span></p> 
+
+                            <form id= "new-field-form" >
+                                <div>
+                                    <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userInputFieldType" type="text" placeholder= "field" name= "user-input"/>
+                                    <input  id="submitButtonFieldTypes" type="submit" value="search" onClick={getFieldTypes}></input>
+                                </div>
+
+                            </form> 
+
+                </section>
 
                 {/* <ul>
                         <Table className="table table-striped" striped bordered hover variant="light">
