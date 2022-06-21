@@ -7,6 +7,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
 
+import { useEffect } from 'react';
+
 
 const Footer = () => {
 
@@ -20,6 +22,11 @@ const Footer = () => {
       ]
     );
   }
+
+  useEffect(() => {
+    // scrolling to top
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
   
 
@@ -35,8 +42,7 @@ const Footer = () => {
             <img id="farmLogo" src= "https://hayday.com/graphics/misc/headline_comp.png" alt="Cow logo"></img>
 
             {/* company logo  */}
-            <span id= "copyright"> © FarmPlay  </span>
-
+            <span id= "copyright"> © FarmPlay  </span>      
         </div>
   
 
@@ -84,6 +90,21 @@ const Footer = () => {
             <input type="email" required placeholder="abc@example.com"></input>
             <button  onClick={sub}>Subscribe <span id="button icon"></span></button>
         </form>
+
+
+
+        <div>
+             <center>
+                {/*scroll to top on button click */}
+                    <button id="scrollToTop"
+                        onClick={() => {
+                        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                        }} > ^ Back to Top
+                    </button>
+                </center>
+             </div>  
+            
+
          
          </section>
          
