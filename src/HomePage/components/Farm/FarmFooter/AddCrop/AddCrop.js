@@ -21,32 +21,32 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
     //     })
     // }
 
-    const handlePlantCropInField = (event) => {
-        event.preventDefault();
+    // const handlePlantCropInField = (event) => {
+    //     event.preventDefault();
 
-        console.log("1...")
+    //     console.log("1...")
 
-        // const fieldID = await getFieldIdViaName()
-        const fieldID = 1;
+    //     // const fieldID = await getFieldIdViaName()
+    //     const fieldID = 1;
         
 
-        console.log("2...")
+    //     console.log("2...")
 
-        // const cropID = await getCropIdViaName()
-        const cropID = 1;
+    //     // const cropID = await getCropIdViaName()
+    //     const cropID = 1;
         
 
-        console.log("3...")
+    //     console.log("3...")
 
-        axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
-            .then( result => {
-                console.log(result.data)
-                setFieldCropName(result.data.name);
-            })
-            .catch( err => console.log(err) )
+    //     axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
+    //         .then( result => {
+    //             console.log(result.data)
+    //             setFieldCropName(result.data.name);
+    //         })
+    //         .catch( err => console.log(err) )
 
-        alert("Planted!")
-    }
+    //     alert("Planted!")
+    // }
 
   return (
     <>
@@ -83,7 +83,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
             
         </select>
 
-        <button onClick={handlePlantCropInField}>Plant Me!</button>
+        <button onClick={"handlePlantCropInField"}>Plant Me!</button>
     </>
   )
 }
