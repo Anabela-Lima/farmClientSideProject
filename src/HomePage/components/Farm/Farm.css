@@ -51,21 +51,10 @@
     width: 300px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .fields-section {
     background-image: url("./grass-background-1-Farm.jpeg");
     border-radius: 1rem;
+    max-width: 70%;
 }
 
 #list-fields-with-info {
@@ -122,13 +111,11 @@
 }
 
 
-
-
-
-
-
-
-
+.no-farms-marketplace-prompt {
+    padding: 2rem;
+    background-color: lightblue;
+    border-radius: 0.5rem;
+}
 
 
 

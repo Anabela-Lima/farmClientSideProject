@@ -30,9 +30,10 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
                 <section className="fields-section">
 
-                    <ul id="list-fields-with-info">
-                        {ownedFields.map( (field, index) => {
-                            return <li key={index} className="field-sections-details">
+                    {ownedFields.length > 0 ? <ul id="list-fields-with-info">
+                        
+                        {ownedFields.map( (field, index) => 
+                                    <li key={index} className="field-sections-details">
                                         <DeleteField fieldId={field.id} />
                                         <div className="field">
                                         </div>
@@ -43,10 +44,12 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                                             <li className="minor-field-details">{field.fieldType.name}</li>
                                             <li>Crop</li>
                                         </ul>
-                                    </li>
-                        })}
-                    </ul>
-
+                                    </li>)}
+                                   
+                         
+                       
+                        </ul> : <p className="no-farms-marketplace-prompt">You have no fields - head to the marketplace and we'll deliver some fields to your farm! 🚚💨</p>}
+                         
                 </section>
 
             </section>
