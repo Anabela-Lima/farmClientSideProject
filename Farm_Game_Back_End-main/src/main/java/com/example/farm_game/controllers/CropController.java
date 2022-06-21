@@ -38,7 +38,7 @@ public class CropController {
         return ResponseEntity.ok().body(crop);
     }
 
-    @PostMapping("/crops")
+    @PostMapping("/postCrop")
     public void createCrop(@RequestParam String cropName, @RequestParam int price, @RequestParam int stock,
                            @RequestParam int growTime, @RequestParam int sellPrice,
                            @RequestParam(required = false) List<SoilTypes> soilTypes,

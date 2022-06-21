@@ -1,9 +1,84 @@
+import axios from "axios";
+import { useState } from "react";
+
+const AddCrop = ( {ownedFields, allCropsAvailable} ) => {
+
+    const [fieldTypeChoice, setFieldTypeChoice] = useState('');
+    const [cropTypeChoice, setCropTypeChoice] = useState('');
 
 
-const AddCrop = () => {
+    // const getFieldIdViaName = () => {
+    //     return new Promise ( (resolve) => {
+    //         const idNameConfirmed = fieldList.find( field => field.name === fieldTypeChoice )
+    //         resolve(idNameConfirmed);
+    //     })
+    // }
+
+    // const getCropIdViaName = () => {
+    //     return new Promise ( (resolve) => {
+    //         const idNameConfirmed = cropList.find( crop => crop.name === cropTypeChoice )
+    //         resolve(idNameConfirmed);
+    //     })
+    // }
+
+    // const handlePlantCropInField = async (event) => {
+    //     event.preventDefault();
+
+    //     console.log("1...")
+
+    //     // const fieldID = await getFieldIdViaName()
+    //     const fieldID = 1;
+
+    //     console.log("2...")
+
+    //     // const cropID = await getCropIdViaName()
+    //     const cropID = 1;
+
+    //     console.log("3...")
+
+    //     axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
+    //         .then( result => console.log(result.data))
+    //         .catch( err => console.log(err) )
+
+    //     alert("Planted!")
+    // }
+
   return (
     <>
-        <h3>Add Crop: xxx</h3>
+
+        <h4 className='fieldSelector'>Which field would you like to plant in?</h4>
+
+        <select 
+                onChange={(e) => setFieldTypeChoice(e.target.value)}
+                className='fieldSelector'
+        >
+        <option value="none" selected disabled hidden>Select a field</option>  
+        {
+        ownedFields.map( (field) => {
+            return <option key={field.id} className="field-options">{field.name}</option>
+        }
+        )}
+            
+        </select>
+
+
+
+        <h4 className='fieldSelector'>Which crop would you like to plant?</h4>
+
+        <select 
+                onChange={(e) => setFieldTypeChoice(e.target.value)}
+                className='fieldSelector'
+        >
+        <option value="none" selected disabled hidden>Select a crop</option>  
+        {
+        allCropsAvailable.map( (crop, index) => {
+            return <option key={index} className="field-options">{crop.name}</option>
+        }
+        )}
+            
+        </select>
+
+        <button onSubmit={"handlePlantCropInField"}>Plant Me!</button>
     </>
   )
 }

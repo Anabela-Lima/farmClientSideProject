@@ -36,6 +36,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                             setFarmDaysPassed={setFarmDaysPassed}
                             money={money}
                             setMoney={setMoney}
+                            ownedFields={ownedFields}
                             />
 
         </section>
