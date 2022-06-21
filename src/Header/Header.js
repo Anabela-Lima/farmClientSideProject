@@ -10,8 +10,15 @@ const Header = () => {
       <div className="Main-Header">
       
         <div className="title">
-        <img src ={logo} alt="farm-logo"></img>
-          <h2>Farm Tycoon</h2>
+          <img src ={logo} alt="farm-logo"></img>
+          <h2>🌾 Farm Tycoon 🌾</h2>
+
+          <div className='Author-Names'>
+            <h3>Proudly made by:</h3>
+            <span>Peace Akib</span>
+            <span>Lewis Broadhurst</span>
+            <span>Ana Bela Moreno Lima</span>
+          </div>
         </div>
 
         
@@ -30,6 +37,8 @@ const Header = () => {
 
           </ul>
         </div>
+
+      
       </div>
   )
 }
