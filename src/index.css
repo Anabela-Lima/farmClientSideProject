@@ -1,3 +1,6 @@
-html, button {
+html,
+button,
+select,
+input[type="text"] {
     font-family: gameria;
 }

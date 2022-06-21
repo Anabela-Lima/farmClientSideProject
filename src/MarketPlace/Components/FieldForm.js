@@ -10,6 +10,17 @@ export const FieldForm = ( {farmsList} ) => {
     const [fieldTypeChoice, setFieldTypeChoice] = useState('');
     const [farmToSendField, setFarmToSendField] = useState('');
 
+    // const [numberOfFields, setNumberOfFields] = useState(0);
+    // useEffect( () => {
+
+    //     axios.get('http://127.0.0.1:8080/fields/fields')
+    //         .then( res => {
+    //             const fieldsLength = res.data.length;
+    //             setNumberOfFields(fieldsLength);
+    //         })
+    //         .catch( err => console.log(err) )
+
+    // })
 
     useEffect( () =>  {
 
@@ -37,12 +48,11 @@ export const FieldForm = ( {farmsList} ) => {
         })
     }
 
+    // const confirmFarmAdded = () => {
+    //     return new Promise ( (resolve) => {
 
-
-
-
-
-
+    //     })
+    // }
 
 
     const handleFieldConfirmOrder = async (event) => {
@@ -65,6 +75,18 @@ export const FieldForm = ( {farmsList} ) => {
 
         console.log(pleaseWork2);
 
+        if (fieldName === "") {
+            return alert("Please enter a name for your field 😀")
+        } 
+
+        if (pleaseWork === undefined) {
+            return alert("Please select a valid farm 😀")
+        } 
+
+        if (pleaseWork2 == null) {
+            return alert("Please enter a valid field type 😀")
+        } 
+
 
 
         const idfarm = pleaseWork.id;
@@ -73,6 +95,9 @@ export const FieldForm = ( {farmsList} ) => {
         axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
             .then(result => console.log(result.data))
             .catch( err => console.log(err))
+
+        
+        alert("We're on the way 🚀")
     }
 
 
