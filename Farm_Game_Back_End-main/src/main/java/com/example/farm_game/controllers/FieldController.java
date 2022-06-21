@@ -37,12 +37,12 @@ public class FieldController {
     }
 
     @GetMapping("/field/{id}")
-    public ResponseEntity<Field> getSpecificField(Long id) {
+    public ResponseEntity<Field> getSpecificField(@PathVariable Long id) {
         Field field = fieldService.getField(id);
         return ResponseEntity.ok().body(field);
     }
 
-    @PostMapping("/fields")
+    @PostMapping("/postfields")
     public void createField(@RequestParam String fieldName, @RequestParam SoilTypes soilType,
                             @RequestParam Long farmID,
                             @RequestParam Long fieldTypeID) {

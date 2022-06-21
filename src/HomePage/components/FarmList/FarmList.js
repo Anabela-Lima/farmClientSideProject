@@ -19,6 +19,17 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
 
   });
 
+  // const [searchTerm, setSearchTerm] = useState("");
+
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   filterFarms(searchTerm);
+
+  // console.log("SEARCH TERM", searchTerm); //print what the name being searched 
+  // const filtered = farmsList.filter(farm => farm.farmName.includes(searchTerm));
+  // setFarmsList(filtered)
+  // }
+
   return (
     <>
         
