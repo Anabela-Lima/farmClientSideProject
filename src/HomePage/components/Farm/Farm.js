@@ -5,7 +5,7 @@ import FarmHeader from "../FarmHeader/FarmHeader";
 import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
 
-const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
+const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
     const [money, setMoney] = useState(farmFunds);
     const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
@@ -28,16 +28,23 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                 </section>
 
                 <section className="fields-section">
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
+
+                    <ul id="list-fields-with-info">
+                        {ownedFields.map( (field, index) => {
+                            return <li key={index} className="field-sections-details">
+                                        <div className="field">
+                                        </div>
+                                        <ul>
+                                            <li className="field-name">{field.name}</li>
+                                            {/* <li>Days Left: {field.timeLeft}</li> */}
+                                            <li className="minor-field-details">{field.soilType}</li>
+                                            <li className="minor-field-details">{field.fieldType.name}</li>
+                                            <li>Crop</li>
+                                        </ul>
+                                    </li>
+                        })}
+                    </ul>
+
                 </section>
 
             </section>

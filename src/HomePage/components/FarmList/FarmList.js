@@ -29,7 +29,7 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
                                   farmName={farm.name}
                                   farmFunds={farm.funds}
                                   farmDate={farm.date}
-                                  farmFields={farm.fields}
+                                  ownedFields={farm.ownFields}
                                   farmId={farm.id}
                                   /></li>
                                 )}</ul> :
