@@ -91,7 +91,7 @@ export const FieldForm = ( {farmsList} ) => {
 
             <label className='name-field-form-label' htmlFor="">What is the name of your field?</label>
 
-            <input type="text" placeholder='Field name' 
+            <input  type="text" placeholder='Field name' 
                     value={fieldName}
                     className='name-field-form-input'
                     onChange={(e) => setFieldName(e.target.value)} />
