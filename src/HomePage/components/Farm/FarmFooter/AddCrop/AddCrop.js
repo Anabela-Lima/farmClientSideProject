@@ -65,8 +65,9 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName0} ) => {
         <select 
                 onChange={(e) => setFieldTypeChoice(e.target.value)}
                 className='add-fc-selector'
-        >
-        <option value="none" defaultValue={"Select a field"} disabled hidden>Select a field</option>  
+                defaultValue={"Select a field"}
+        > 
+        <option value="Select a field" defaultValue={"Select a field"} disabled hidden>Select a field</option>  
         {
         ownedFields.map( (field) => {
             return <option key={field.id} className="field-options">{field.name}</option>
@@ -83,6 +84,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName0} ) => {
         <select 
                 onChange={(e) => setCropTypeChoice(e.target.value)}
                 className='crop-selector'
+                defaultValue={"none"}
         >
         <option value="none" defaultValue={"Select a crop"} disabled hidden>Select a crop</option>  
         {
