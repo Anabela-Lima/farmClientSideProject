@@ -1,3 +1,4 @@
+
 import DeleteField from "../DeleteField.js/DeleteField.js";
 import "./FieldList.css";
 
@@ -5,14 +6,14 @@ import "./FieldList.css";
 const FieldList = ( {ownedFields, setFieldCropName} ) => {
 
 
-    const getCropName = (field) => {
-        if (field.crop) {
-            setFieldCropName(field.crop.name)
-            return field.crop.name;
-        } else {
-            return "No Crop";
-        }
-    }
+    // const getCropName = (field) => {
+    //     if (field.crop) {
+    //         setFieldCropName(field.crop.name)
+    //         return field.crop.name;
+    //     } else {
+    //         return "No Crop";
+    //     }
+    // }
 
 
 
@@ -32,7 +33,7 @@ const FieldList = ( {ownedFields, setFieldCropName} ) => {
                                     <li className="field-name">{field.name}</li>
                                     <li className="minor-field-details">{field.soilType}</li>
                                     <li className="minor-field-details">{field.fieldType.name}</li>
-                                    <li>{getCropName(field)}</li>
+                                    {/* <li>{getCropName(field)}</li> */}
                                 </ul>
                             </li>)}
             

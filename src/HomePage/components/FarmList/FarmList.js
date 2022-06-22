@@ -1,23 +1,9 @@
-import { useEffect } from "react";
-import axios from 'axios'; 
 import Farm from "../Farm/Farm";
 import noFarmsGif from "./no-farms-gif.gif";
 import "./FarmList.css";
 
 
-const FarmList = ( {farmsList, setFarmsList} ) => {
-
-
-  useEffect( () => {
-
-    axios.get('http://127.0.0.1:8080/farms/farms')
-      .then(res => {
-        const farmsList = res.data;
-        setFarmsList(farmsList);
-      })
-      .catch(err => console.log(err));
-
-  });
+const FarmList = ( {farmsList} ) => {
 
   // const [searchTerm, setSearchTerm] = useState("");
 
@@ -39,7 +25,7 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
               <li key={farm.id}><Farm 
                                   farmName={farm.name}
                                   farmFunds={farm.funds}
-                                  farmDate={farm.date}
+                                  farmDate0={farm.date}
                                   ownedFields={farm.ownFields}
                                   farmId={farm.id}
                                   /></li>
