@@ -1,0 +1,96 @@
+#fieldformGridCont {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.name-field-form-label {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.name-field-form-input {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.fieldSelector h4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.fieldSelector select {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.deliverGoodsToFarm h4 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.deliverGoodsToFarm select {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.confirm-or-reset .reset-order-btn {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.confirm-or-reset .confirm-order-btn {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.name-field-form-label,
+.fieldSelector,
+.deliverGoodsToFarm {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.name-field-form-label,
+.fieldSelector,
+.deliverGoodsToFarm,
+.name-field-form-input,
+.fieldSelector,
+.deliverGoodsToFarm,
+.confirm-or-reset.confirm-order-btn {
+    display: flex;
+    margin: 1rem;
+}
+
+input[type="text"].name-field-form-input {
+    font-size: 1.4rem;
+    box-shadow: none;
+    border: none;
+}
+
+select.deliverGoodsToFarm,
+select.fieldSelector,
+input.name-field-form-input {
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0.25rem;
+}
+
+.confirm-order-btn.confirm-or-reset {
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(185, 255, 116);
+    border: none;
+    border-radius: 0.25rem;
+
+    padding-bottom: 0;
+}
+
+.confirm-order-btn.confirm-or-reset:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+}

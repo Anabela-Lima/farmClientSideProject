@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Header from './Header/Header.js';
@@ -17,13 +17,13 @@ import initFontAwesome from './ Footer/initFontAwesome.js'
 // importing crops page
 import InfoPage from './InfoPage/InfoPage';
 initFontAwesome();
-
-
 // importing my icon library
 
 
 
 function App() {
+
+  
   return (
     <>
       <Router>
@@ -40,6 +40,8 @@ function App() {
         <Footer/>
     
       </Router>
+
+     
       
     </>
   );

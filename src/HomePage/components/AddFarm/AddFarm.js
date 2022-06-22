@@ -44,6 +44,7 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
                 <button type="submit">Add Farm 🌾</button>
             </form>
         </section>
+        
     </>
   )
 }

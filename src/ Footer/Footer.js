@@ -63,7 +63,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                   <div className='titles'> Languages <i class="fas fa-angle-down"></i></div>
+                   <div className='titles'> Languages <i className="fas fa-angle-down"></i></div>
         
                      <ul>
                     <li><a className= "textDropMenu" href="#">Portuguese</a></li>

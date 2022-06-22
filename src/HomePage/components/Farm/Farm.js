@@ -1,21 +1,20 @@
 import { useState } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
-import DeleteFarm from "../DeleteFarm.js/DeleteFarm";
 import FarmHeader from "../FarmHeader/FarmHeader";
-import NewDay from "../NewDay/NewDay";
 import "./Farm.css";
+import FarmFooter from "./FarmFooter/FarmFooter";
+import FieldList from "./FieldList/FieldList";
+import Fields from "../Field.js/Field";
 import Crop from "../../FieldList/Crop";
-import CInventory from "../../CropList/CInventory";
+import CInventory from  "../../FieldList/CInventory";
 import CInventoryCss from  "../../FieldList/CInventoryCss.css";
 
-
-
-
-
-const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
+const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
     const [money, setMoney] = useState(farmFunds);
     const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
+
+    const [fieldCropName, setFieldCropName] = useState("");
 
   return (
     <>
@@ -34,42 +33,20 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId} ) => {
                     <img src={farmHouseClipart} alt="Your farmhouse" height="300px" width="300px"/>
                 </section>
 
-                <section className="fields-section">
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <div className="field"></div>
-                    <Crop/>
-             
-                  
-                    
-                </section>  
-
-                <section className= "inventory-section">
-                    <CInventory/>
-                   
-
-                </section>
-                
-               
+                <FieldList ownedFields={ownedFields}
+                           fieldCropName={fieldCropName}
+                           setFieldCropName={setFieldCropName}/>
 
             </section>
 
-            <section className="farmFooter">
-                <h3>Add Field: xxx</h3>
-                <h3>Add Crop: xxx</h3>
-                <NewDay farmId={farmId}
-                        farmDaysPassed={farmDaysPassed}
-                        setFarmDaysPassed={setFarmDaysPassed}
-                        money={money}
-                        setMoney={setMoney} />
-                <DeleteFarm farmId={farmId} />
-            </section>
+            <FarmFooter farmId={farmId}
+                            farmDaysPassed={farmDaysPassed}
+                            setFarmDaysPassed={setFarmDaysPassed}
+                            money={money}
+                            setMoney={setMoney}
+                            ownedFields={ownedFields}
+                            setFieldCropName={setFieldCropName}
+                            />
 
         </section>
     </>

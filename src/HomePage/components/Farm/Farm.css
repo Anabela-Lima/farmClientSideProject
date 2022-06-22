@@ -4,6 +4,9 @@
     border-radius: 1rem;
 
     background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(137, 113, 81);
+    padding-bottom: 2rem;
 }
 
 .farmHeader {
@@ -52,16 +55,29 @@
 }
 
 .fields-section {
+    background-image: url("./grass-background-1-Farm.jpeg");
+    border-radius: 1rem;
+    max-width: 70%;
+}
+
+#list-fields-with-info {
     display: flex;
     flex-direction: row;
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+
+.field-sections-details {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 
-    max-width: 50%;
-    height: 300px;
-    border-radius: 1rem;
-
-    background-image: url("./grass-background-1-Farm.jpeg");
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: lightgoldenrodyellow;
 }
 
 .field {
@@ -71,25 +87,35 @@
     margin: 1rem;
     border-radius: 0.5rem;
 
-    background-image: repeating-linear-gradient(#C29B6C,  #674422 33%, #C29B6C 33%);
+    background-image: repeating-linear-gradient(#C29B6C, #674422 33%, #C29B6C 33%);
 }
 
-.farmFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    font-size: 2.2rem;
-    margin: 0 4rem;
-    margin-bottom: 2rem;
+.minor-field-details {
+    font-size: 1.2rem;
 }
 
-.farmFooter > h3 {
-    background-color: lightblue;
-    padding: 1rem;
-    border-radius: 1rem;;
+.field-name {
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
 }
 
-.farmFooter > h3 + h3 + h3 {
+.delete-field {
+    padding: 0.25rem;
     background-color: rgb(241, 117, 117);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: none;
+
+    margin: 0;
+}
+
+.delete-field:hover {
+    background-color: rgb(183, 59, 59);
+}
+
+
+.no-farms-marketplace-prompt {
+    padding: 2rem;
+    background-color: lightblue;
+    border-radius: 0.5rem;
 }

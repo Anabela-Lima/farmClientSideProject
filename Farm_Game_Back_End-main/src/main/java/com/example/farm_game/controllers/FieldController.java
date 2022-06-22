@@ -38,12 +38,12 @@ public class FieldController {
     }
 
     @GetMapping("/field/{id}")
-    public ResponseEntity<Field> getSpecificField(Long id) {
+    public ResponseEntity<Field> getSpecificField(@PathVariable Long id) {
         Field field = fieldService.getField(id);
         return ResponseEntity.ok().body(field);
     }
 
-    @PostMapping("/fields")
+    @PostMapping("/postfields")
     public void createField(@RequestParam String fieldName, @RequestParam SoilTypes soilType,
                             @RequestParam Long farmID,
                             @RequestParam Long fieldTypeID) {
@@ -64,11 +64,21 @@ public class FieldController {
             fieldService.putCropInField(fieldID, cropID);
 
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
+=======
+>>>>>>> Ana_Branch
 
     };
 
 
 
+=======
+
+        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
+    }
+>>>>>>> 3f3d73b7f8a77a8771d577cf6a8826f21c559e25
 
     @DeleteMapping("/deleteField/{id}")
     public void deleteField(@PathVariable Long id){fieldService.deleteField(fieldService.getField(id));

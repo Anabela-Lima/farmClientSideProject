@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import axios from 'axios'; 
-import Farm from "./Farm";
+import Field from "../components/Field.js/Field";
+import Farm from "../components/Farm/Farm";
+
 
 const FieldList = ( {fieldList, setFieldList} ) => {
 
-            useEffect( () => { axios.get('http://127.0.0.1:8080/fields')
+            useEffect( () => { axios.get('http://127.0.0.1:8080/fields/fields')
             .then(res => {const fieldList = res.data;
             setFieldList(fieldList);
              }).catch(err => console.log(err)); 

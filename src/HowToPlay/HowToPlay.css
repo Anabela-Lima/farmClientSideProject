@@ -1,3 +1,31 @@
 .HowToPlay {
     font-family: 'GAMERIA', sans-serif;
 }
+
+img {
+
+    width: 300px;
+    height: 300px;
+    position:relative;
+
+    color: black;
+    
+}
+
+.HowToPlayText{
+
+    color: black;
+}
+
+.Title{
+    text-align: center;
+    font-size: x-large;
+    vertical-align: top;
+}
+.Gif1{
+    margin: auto;
+    padding: 30px;
+    height: 300px;
+    width:300px
+}
+
