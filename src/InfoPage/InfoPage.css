@@ -1,18 +1,79 @@
 .InfoPage {
     font-family: 'GAMERIA', sans-serif;
 
+
 }
 
-.th-bordered {
-    border: 5px thin rgb(105, 75, 50) !important;
+  table {
+    width: 80%;
+    position:relative;
+    font-family:'Times New Roman', Times, serif;
+    position:relative;
+    left:10em;
+    text-align: center;
+    border-radius: 2em;
+    background-color: rgb(248, 236, 191);
+
+ 
   }
 
+
 .table th{
-    color: rgb(24, 154, 48) !important;
-    background-color: rgb(42, 165, 144);
-    font-size:larger;
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(70, 113, 105);
+  font-size:larger;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
   
+} 
+
+
+table, th, td {
+  border: 1px solid;
+  padding-top: 0.8em;
+  font-family:'Times New Roman', Times, serif;
+  color:rgb(1, 1, 1);
+
 }
+
+
+/* 
+th{
+  border-radius:  0em  2em 0em 0em;
+} */
+
+
+.growTimeTh{
+  border-radius:  0em  2em 0em 0em;
+
+
+}
+
+.cropsTh{
+  border-radius:  0em  2em 0em 0em;
+
+
+}
+
+
+.nameTh{
+  border-radius:  2em  0em 0em 0em;
+
+}
+
+
+th, td {
+  padding: 0.8em;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-width: 0.5px;
+  border-top: 2px solid white; 
+  border-right-color: white;
+  border-left-color:white;
+
+
+}
+
+
 
 #searchBarCrops{
 
@@ -21,6 +82,7 @@
   justify-content: right;
   position: relative;
   right:1em;
+  bottom:35em;
 
 
 }
@@ -33,17 +95,16 @@
   justify-content: right;
   position: relative;
   right:1em;
-  top:36em;
+  /* top:36em; */
 
 
 }
-
 
 #searchingForCrops{
 
    position:relative;
    left: -1em;
-   top:0.3em;
+   bottom: 20em;
 
 }
 
@@ -53,20 +114,11 @@
  position:relative;
  left: -1em;
  top:0.3em;
-  
- 
- 
 
 }
 
 
 
-.body{
-
-
-  background-image: url('https://media.istockphoto.com/vectors/school-chalkboard-background-vector-id937187548?b=1&k=20&m=937187548&s=170667a&w=0&h=Tzg73DmCTaS0P6Z_LoFIoiOygsD6xk_THcgN-eGoLM0=') ; 
-}
-
-#allCropsTable{
-  background-color:beige;
+tr{
+  border-radius: 2em;
 }
