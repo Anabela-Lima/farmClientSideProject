@@ -10,6 +10,10 @@
     grid-column: 1;
     grid-row: 1;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .add-fc-selector {
@@ -21,6 +25,10 @@
     grid-column: 1;
     grid-row: 2;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .crop-selector {
@@ -58,6 +66,10 @@
 .confirm-crop-plant {
     text-align: center;
     font-size: 1.6rem;
-    border: none;
+    border: solid 2px rgb(249, 220, 183);
     border-radius: 0.25rem;
+}
+
+.confirm-crop-plant {
+    border: none;
 }
