@@ -1,34 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import axios from 'axios'; 
 import Farm from "../Farm/Farm";
 import noFarmsGif from "./no-farms-gif.gif";
 import "./FarmList.css";
+import { Context } from "../../../context";
 
 
 const FarmList = ( {farmsList, setFarmsList} ) => {
 
+    
+  const [context, setContext] = useContext(Context);
 
   useEffect( () => {
-
+    // if(context) {
+    //   alert(context);
+    // } else {
+    //   alert('empty search');
+    // }
     axios.get('http://127.0.0.1:8080/farms/farms')
       .then(res => {
-        const farmsList = res.data;
+        let farmsList = res.data;
+        // if context is not empty - filter by context
+        if(context){
+          let filteredFarms = farmsList.filter(farm => farm.farmName.includes(context));
+          // return filteredFarms if the array is not empty, all farms otherwise
+          farmsList = filteredFarms.length > 0 ? filteredFarms : farmsList;
+        }
         setFarmsList(farmsList);
       })
       .catch(err => console.log(err));
 
   });
 
-  // const [searchTerm, setSearchTerm] = useState("");
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   filterFarms(searchTerm);
-
-  // console.log("SEARCH TERM", searchTerm); //print what the name being searched 
-  // const filtered = farmsList.filter(farm => farm.farmName.includes(searchTerm));
-  // setFarmsList(filtered)
-  // }
+  
 
   return (
     <>
