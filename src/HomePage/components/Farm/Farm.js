@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import "./Farm.css";
 import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
+import axios from "axios";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
     const [money, setMoney] = useState(farmFunds);
     const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
     const [fieldCropName, setFieldCropName2] = useState("");
+    const [allCropsAvailable, setAllCropsAvailable] = useState([]);
+
+    useEffect( () => {
+
+        axios.get('http://127.0.0.1:8080/crops/crops')
+            .then( res => {
+                setAllCropsAvailable(res.data);
+            })
+            .catch(err => console.log(err));
+
+    })
 
     
 
@@ -43,6 +55,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                             setMoney={setMoney}
                             ownedFields={ownedFields}
                             setFieldCropName1={setFieldCropName2}
+                            allCropsAvailable={allCropsAvailable}
                             />
 
         </section>
