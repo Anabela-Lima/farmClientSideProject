@@ -1,20 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import farmHouseClipart from "../../images/farm-clipart-transparent-20.png";
 import FarmHeader from "../FarmHeader/FarmHeader";
 import "./Farm.css";
 import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
-import Fields from "../Field.js/Field";
-import Crop from "../../FieldList/Crop";
-import CInventory from  "../../FieldList/CInventory";
-import CInventoryCss from  "../../FieldList/CInventoryCss.css";
+import axios from "axios";
 
-const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
+const Farm = ( {farmName, farmFunds, farmId, ownedFields, farmDate0} ) => {
 
     const [money, setMoney] = useState(farmFunds);
-    const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
+    const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate0);
+    const [fieldCropName, setFieldCropName2] = useState("");
+    const [allCropsAvailable, setAllCropsAvailable] = useState([]);
 
-    const [fieldCropName, setFieldCropName] = useState("");
+
+    useEffect( () => {
+
+        axios.get('http://127.0.0.1:8080/crops/crops')
+            .then( res => {
+                setAllCropsAvailable(res.data);
+            })
+            .catch(err => console.log(err));
+
+    });
+
 
   return (
     <>
@@ -24,7 +33,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                 farmName={farmName} 
                 money={money}
                 setMoney={setMoney}
-                farmDate={farmDate}
+                farmDaysPassed1={farmDaysPassed}
             />
 
             <section className="main-farm-and-fields">
@@ -35,17 +44,17 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
                 <FieldList ownedFields={ownedFields}
                            fieldCropName={fieldCropName}
-                           setFieldCropName={setFieldCropName}/>
+                           setFieldCropName={setFieldCropName2}/>
 
             </section>
 
             <FarmFooter farmId={farmId}
-                            farmDaysPassed={farmDaysPassed}
-                            setFarmDaysPassed={setFarmDaysPassed}
+                            setFarmDaysPassed1={setFarmDaysPassed}
                             money={money}
                             setMoney={setMoney}
                             ownedFields={ownedFields}
-                            setFieldCropName={setFieldCropName}
+                            setFieldCropName1={setFieldCropName2}
+                            allCropsAvailable={allCropsAvailable}
                             />
 
         </section>

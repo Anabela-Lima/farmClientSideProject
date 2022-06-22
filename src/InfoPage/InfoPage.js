@@ -340,7 +340,7 @@ const CropsPage = () => {
          <h1 className='infoTitle' className="white"> Information  </h1>
 
 
-         <p id="infoPageText" className="white"> <span id="infoText"> Live the good life on a humble new farm in FarmTycoon. Build your farm from its roots, make it attractive to please your workers, and produce fresh livestock and crops to sell into the community!</span> </p>
+         <p id="infoPageText" className="white"> <span id="infoText"> Live the good life on a humble new farm in FarmTycoon.Build your farm from its roots, make it attractive to please your workers, and produce fresh livestock and crops to sell into the community!</span> </p>
 
              <section id = "allCrops">    
              

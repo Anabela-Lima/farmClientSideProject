@@ -65,13 +65,9 @@ public class FieldController {
 
         }
 
-
         return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
 
     };
-
-
-
 
 
     @DeleteMapping("/deleteField/{id}")

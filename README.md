@@ -1,70 +1,47 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Farm Tycoon
 
-## Available Scripts
+A fun farming simulator; plant & harvest crops, earn money, and become a farming tycoon!
 
-In the project directory, you can run:
+## The Project Description 
 
-### `npm start`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and acts as the front end appplication to a given farm game server-side API. Focusing on javaScript, React, HTML and CSS, this project aims to bring to life the vision of the back end team. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Farm Tycoon gives users the ability to enjoy a fantasy world where they are in control of their own farms. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Our inital wireframe
+![image](https://user-images.githubusercontent.com/99202770/175096376-fc746bda-790a-423d-9361-774b52e49727.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the wireframe, both individual and reusable components were identified before the overall page was further broken down into more distinct sections (header, containers, footer etc) for more in depth decriptions.
 
-### `npm run build`
+### Our final react component sketch
+![image](https://user-images.githubusercontent.com/99202770/175095918-fb81b5ad-18fd-4c5c-adcd-5b82319845cb.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Our component relationship diagram highlights how our components interact with one another. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1 - Open the server-side repository in Intellij and run the SpringBoot application [(Farm_Game_Back_End-main)](https://github.com/LMBroadhurst/farmClientSideProject/tree/main/Farm_Game_Back_End-main)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2 - Open the client-side repository in VSCode and run the following commands:
+npm install
+npm start
+npm install axios
+npm install use-sound
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### How to make the most of this project 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ This application allows you to take on the role of a farm tycoon, buying fields and crops to sell and become rich! 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The first step is to create your own farm, or build on one of those already set in the game.
+You are then able to go to the marketplace to purchase your choice of fields which will be sent down to the selected farms. From there, you can purchase the crop that you wish to harvest in your fields. After 20 ‘days’, your crops will be ready to sell of and in exchange, your money counter will increase. 
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Our Group
+- [Lewis Broadhurst](https://github.com/LMBroadhurst)
+- [Ana Bela Lima](https://github.com/Anabela-Lima)
+- [Peace Akib]( https://github.com/pe-a-ce ) 
