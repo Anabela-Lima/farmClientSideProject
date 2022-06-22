@@ -6,6 +6,7 @@
     background-color: burlywood;
     border-radius: 10px;
     box-shadow: 5px 5px rgb(137, 113, 81);
+    padding-bottom: 2rem;
 }
 
 .farmHeader {
@@ -117,28 +118,4 @@
     padding: 2rem;
     background-color: lightblue;
     border-radius: 0.5rem;
-}
-
-
-
-
-.farmFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    font-size: 2.2rem;
-    margin: 0 4rem;
-    margin-bottom: 2rem;
-}
-
-.farmFooter>h3 {
-    background-color: lightblue;
-    padding: 1rem;
-    border-radius: 1rem;
-    ;
-}
-
-.farmFooter>h3+h3+h3 {
-    background-color: rgb(241, 117, 117);
 }

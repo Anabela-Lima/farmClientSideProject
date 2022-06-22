@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import "./AddCrop.css";
 
 const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
 
@@ -21,41 +22,42 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
     //     })
     // }
 
-    // const handlePlantCropInField = (event) => {
-    //     event.preventDefault();
+    const handlePlantCropInField = (event) => {
+        event.preventDefault();
 
-    //     console.log("1...")
+        console.log("1...")
 
-    //     // const fieldID = await getFieldIdViaName()
-    //     const fieldID = 1;
+        // const fieldID = await getFieldIdViaName()
+        const fieldID = 1;
         
 
-    //     console.log("2...")
+        console.log("2...")
 
-    //     // const cropID = await getCropIdViaName()
-    //     const cropID = 1;
+        // const cropID = await getCropIdViaName()
+        const cropID = 1;
         
 
-    //     console.log("3...")
+        console.log("3...")
 
-    //     axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
-    //         .then( result => {
-    //             console.log(result.data)
-    //             setFieldCropName(result.data.name);
-    //         })
-    //         .catch( err => console.log(err) )
+        axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
+            .then( result => {
+                console.log(result.data)
+                setFieldCropName(result.data.name);
+            })
+            .catch( err => console.log(err) )
 
-    //     alert("Planted!")
-    // }
+        alert("Planted!")
+    }
 
   return (
     <>
+      <section id="patch-fc-grid">
 
-        <h4 className='fieldSelector'>Which field would you like to plant in?</h4>
+        <h4 className='add-2field-h4'>Which field would you like to plant in?</h4>
 
         <select 
                 onChange={(e) => setFieldTypeChoice(e.target.value)}
-                className='fieldSelector'
+                className='add-fc-selector'
         >
         <option value="none" defaultValue={"Select a field"} disabled hidden>Select a field</option>  
         {
@@ -68,11 +70,12 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
 
 
 
-        <h4 className='fieldSelector'>Which crop would you like to plant?</h4>
+
+        <h4 className='plant-crop-h4'>Which crop would you like to plant?</h4>
 
         <select 
                 onChange={(e) => setFieldTypeChoice(e.target.value)}
-                className='fieldSelector'
+                className='crop-selector'
         >
         <option value="none" defaultValue={"Select a crop"} disabled hidden>Select a crop</option>  
         {
@@ -83,7 +86,13 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
             
         </select>
 
-        <button onClick={"handlePlantCropInField"}>Plant Me!</button>
+
+
+
+        <button onClick={handlePlantCropInField}
+                className="confirm-crop-plant">Plant Me!</button>
+
+      </section>
     </>
   )
 }

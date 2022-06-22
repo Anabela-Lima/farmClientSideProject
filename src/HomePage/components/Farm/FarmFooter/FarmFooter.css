@@ -1,0 +1,19 @@
+.farmFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+    background-color: lightgoldenrodyellow;
+    margin: 0 4rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.newday-deletefarm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    font-size: 2rem;
+}
