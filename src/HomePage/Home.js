@@ -1,12 +1,11 @@
 import FarmContainer from "./containers/FarmContainer";
-import PlaySound from './Sound/sound';
 
 
-const Home = () => {
+const Home = ( {farmsList, setFarmsList} ) => {
   return (
     <>
 
-      <FarmContainer />
+      <FarmContainer farmsList={farmsList} setFarmsList={setFarmsList} />
     
     </>
     

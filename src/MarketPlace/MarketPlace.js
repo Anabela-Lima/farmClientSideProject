@@ -1,23 +1,8 @@
 import { FieldForm } from "./Components/FieldForm";
 import "./MarketPlace.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
 
-const MarketPlace = () => {
 
-  const [farmsList, setFarmsList] = useState([]);
-
-  useEffect( () => {
-
-        axios.get('http://127.0.0.1:8080/farms/farms')
-      .then(res => {
-        const farmsList = res.data;
-        setFarmsList(farmsList);
-      })
-      .catch(err => console.log(err))
-      
-    });
-
+const MarketPlace = ({farmsList}) => {
 
   return (
     <>

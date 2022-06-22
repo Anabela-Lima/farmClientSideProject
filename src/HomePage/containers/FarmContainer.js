@@ -1,24 +1,12 @@
 import FarmList from "../components/FarmList/FarmList";
-import { useState, useEffect } from "react";
 import "./FarmContainer.css";
 import AddFarm from "../components/AddFarm/AddFarm";
 import PlaySound from "../Sound/sound";
-import axios from "axios";
 
 
-const FarmContainer = () => {
 
-  const [farmsList, setFarmsList] = useState([]);
+const FarmContainer = ( {farmsList, setFarmsList} ) => {
 
-  useEffect( () => {
-
-    axios.get('http://127.0.0.1:8080/farms/farms')
-      .then(res => {
-        setFarmsList(res.data);
-      })
-      .catch(err => console.log(err));
-
-  });
 
   return (
     <> 
