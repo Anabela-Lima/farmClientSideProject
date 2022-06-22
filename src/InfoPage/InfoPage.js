@@ -391,6 +391,7 @@ const CropsPage = () => {
 
     
        
+
         <section id = "fieldTypes">      
 
                     <section id = "searchBarFieldTypes">
@@ -449,7 +450,9 @@ const CropsPage = () => {
 
 
 
-         <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
+         <h2  id= "fieldsTableTitle"> Fields </h2>
+
+        <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
                 <ul>
                         <Table id= "fieldsTable"striped bordered hover variant="light">
                                 <thead>
