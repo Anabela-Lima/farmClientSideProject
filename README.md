@@ -38,3 +38,7 @@ npm install use-sound
 The first step is to create your own farm, or build on one of those already set in the game.
 You are then able to go to the marketplace to purchase your choice of fields which will be sent down to the selected farms. From there, you can purchase the crop that you wish to harvest in your fields. After 20 ‘days’, your crops will be ready to sell of and in exchange, your money counter will increase. 
 
+### Our Group
+- [Lewis Broadhurst](https://github.com/LMBroadhurst)
+- [Ana Bela Lima](https://github.com/Anabela-Lima)
+- [Peace Akib]( https://github.com/pe-a-ce ) 
