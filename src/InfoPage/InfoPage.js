@@ -192,42 +192,136 @@ const CropsPage = () => {
 
   return (
     <>
-        <section id = "allCropsTable">      
-            <h2 id= "cropsTableTitle"> Crops </h2>
-            <h6  id= "cropsTableSubheader"> Take a look at our juicy crops, farming just got easier! </h6>
+
+    
+        <section id = "allTables">    
+
+             <section id = "allCrops">    
+             
+                <h2 id= "cropsTableTitle"> Crops </h2>
+                <h6  id= "cropsTableSubheader"> Take a look at our juicy crops, farming just got easier! </h6>
+                    <section>
+                    <ul>
+                            <Table id= "allCropsTable" className="table table-striped" striped bordered hover variant="light">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Soil Types</th>
+                                        <th>Grow Time</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        {crops.map((crops) => (
+                                            <tr>
+                                            <td>{crops.name}</td>
+                                            <td>{crops.price}</td>
+                                            <td>{crops.stock}</td>
+                                            <td>{crops.soilTypes}</td>
+                                            <td>{crops.growTime}</td>
+                                    
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </Table>
+                    </ul>      
+                    </section>
+                
+
+
+                    <section id = "searchBarCrops">
+                        
+                        <p id= "searchingForCrops"> Searching for: <span id="user-crop"></span></p> 
+
+                                <form id= "new-crop-form" >
+                                    <div>
+                                        <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInputCrops" type="text" placeholder= "carrots..." name= "user-input"/>
+                                        <input  id="submitButton" type="submit" value="search" onClick={getCrop}></input>
+                                    </div>
+
+                                </form> 
+
+                    </section>
+
+        </section>
+
+    
+       
+        <section id = "fieldTypes">      
+
+                    <section id = "searchBarFieldTypes">
+                        
+                        <p id= "searchingForFieldTypes"> Searching for: <span id="user-fieldType"></span></p> 
+
+                                <form id= "new-field-form" >
+                                    <div>
+                                        <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userInputFieldType" type="text" placeholder= "field..." name= "user-input"/>
+                                        <input  id="submitButtonFieldTypes" type="submit" value="search" onClick={getFieldTypes}></input>
+                                    </div>
+
+                                </form> 
+
+                    </section>
+ 
+            <h2  id= "fieldsTableTitle"> FieldTypes </h2>
+
+            <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
+                <ul>
+                        <Table id= "fieldTypesTable"striped bordered hover variant="light">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Size</th>
+                                    <th>Cost</th>
+                                    <th>Soil Types</th>
+                                    <th> Crops </th>
+                            
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {fieldTypes.map((fieldtypes) => (
+                                
+
+                                    <tr>
+                                    <td>{fieldtypes.name}</td>
+                                    <td>{fieldtypes.size}</td>
+                                    <td>{fieldtypes.cost}</td>
+                                    <td>{fieldtypes.soilTypes}</td>
+                                    <td><button onClick={buttonClickHandler}> Show Crops</button></td>
+                                    
+                                
+                            
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </Table>
+                </ul>       
 
 
 
-                <section id = "searchBarCrops">
+         </section> 
+
+
+            {/* 
                     
-                    <p id= "searchingForCrops"> Searching for: <span id="user-crop"></span></p> 
+                    <section id = "searchBarFarms">
+                                
+                                <p id= "searchingForFarms"> Searching for: <span id="user-farms"></span></p> 
 
-                            <form id= "new-crop-form" >
-                                <div>
-                                    <input onChange={(e)=> {setSearchTerm(e.target.value)}} id= "userInputCrops" type="text" placeholder= "carrots..." name= "user-input"/>
-                                    <input  id="submitButton" type="submit" value="search" onClick={getCrop}></input>
-                                </div>
+                                        <form id= "new-farms-form" >
+                                            <div>
+                                                <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userFarms" type="text" placeholder= "farm..." name= "user-input"/>
+                                                <input  id="submitButtonFarms" type="submit" value="search" onClick={getFarms}></input>
+                                            </div>
 
-                            </form> 
+                                        </form> 
 
-                </section>
-
-
+                    </section> */}
 
 
-                <section id = "searchBarFieldTypes">
-                    
-                    <p id= "searchingForFieldTypes"> Searching for: <span id="user-fieldType"></span></p> 
 
-                            <form id= "new-field-form" >
-                                <div>
-                                    <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userInputFieldType" type="text" placeholder= "field..." name= "user-input"/>
-                                    <input  id="submitButtonFieldTypes" type="submit" value="search" onClick={getFieldTypes}></input>
-                                </div>
 
-                            </form> 
-
-                </section>
 
                 {/* <ul>
                         <Table className="table table-striped" striped bordered hover variant="light">
@@ -268,119 +362,25 @@ const CropsPage = () => {
                 </ul>       */}
 
 
-     
-
-                <ul>
-                        <Table className="table table-striped" striped bordered hover variant="light">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Stock</th>
-                                    <th>Soil Types</th>
-                                    <th>Grow Time</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    {crops.map((crops) => (
-                                        <tr>
-                                        <td>{crops.name}</td>
-                                        <td>{crops.price}</td>
-                                        <td>{crops.stock}</td>
-                                        <td>{crops.soilTypes}</td>
-                                        <td>{crops.growTime}</td>
-                                
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </Table>
-                </ul>      
-                
                     
 
-        
-
-{/* 
-
-                <ul>
-                    {crops1.filter((c,name) => {
-                        let output ;
-                        if(c.name=== name){
-                            output=( <li key = {crops1.id}>   
-                                {`Name: ${crops1.name},  Price: ${crops1.price}, Stock: ${crops1.stock} Soil Types: ${crops1.soilTypes} Soil Effects: ${crops1.soilEffects} Grow Time: ${crops1.growTime}` }
-                        </li>)
-                        }
-                        return(output)
-                    })}
-                </ul> */}
-
-        
-
-
-                
-        </section>
-        
-
-       
-        <section id = "fieldTypesTable">       
-            <h2  id= "fieldsTableTitle"> FieldTypes </h2>
-            <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
-                <ul>
-                        <Table striped bordered hover variant="light">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Size</th>
-                                    <th>Cost</th>
-                                    <th>Soil Types</th>
-                                    <th> Crops </th>
-                            
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {fieldTypes.map((fieldtypes) => (
-                                
-
-                                    <tr>
-                                    <td>{fieldtypes.name}</td>
-                                    <td>{fieldtypes.size}</td>
-                                    <td>{fieldtypes.cost}</td>
-                                    <td>{fieldtypes.soilTypes}</td>
-                                    <td><button onClick={buttonClickHandler}> Show Crops</button></td>
                                     
-                                
-                            
-                                    </tr>
-                                ))}
-                                </tbody>
-                            </Table>
-                </ul>       
+                {/* 
+
+                                <ul>
+                                    {crops1.filter((c,name) => {
+                                        let output ;
+                                        if(c.name=== name){
+                                            output=( <li key = {crops1.id}>   
+                                                {`Name: ${crops1.name},  Price: ${crops1.price}, Stock: ${crops1.stock} Soil Types: ${crops1.soilTypes} Soil Effects: ${crops1.soilEffects} Grow Time: ${crops1.growTime}` }
+                                        </li>)
+                                        }
+                                        return(output)
+                                    })}
+                                </ul> */}
 
 
-
-         </section> 
-
-         <section>
-
-
-
-
-        
-         <section id = "searchBarFarms">
-                    
-                    <p id= "searchingForFarms"> Searching for: <span id="user-farms"></span></p> 
-
-                            <form id= "new-farms-form" >
-                                <div>
-                                    <input onChange={(e)=> {setSearchTermFields(e.target.value)}} id= "userFarms" type="text" placeholder= "farm..." name= "user-input"/>
-                                    <input  id="submitButtonFarms" type="submit" value="search" onClick={getFarms}></input>
-                                </div>
-
-                            </form> 
-
-        </section>
-
-
+     
     </section>
 
      </>
