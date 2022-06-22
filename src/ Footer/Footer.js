@@ -39,28 +39,37 @@ const Footer = () => {
 
           <section className= "centreFooter">
 
-            <nav id="footerNavbar">
+            <nav className="footerNavbar">
 
-              <ul>
-                <li>Terms of use</li>
-                <li>Privacy Policy</li>
-                <li>Information</li>
-                <li>Cookies</li>
-              </ul>
+              <div className='dropup'>
+                <span>Company Info</span>
+                <ul className='dropup-items'>
+                  <li>Terms of use</li>
+                  <li>Privacy Policy</li>
+                  <li>Information</li>
+                  <li>Cookies</li>
+                </ul>
+              </div>
 
-              <ul>
-                <li>Portuguese</li>
-                <li>Spanish</li>
-                <li>Russian</li>
-                <li>French</li>
-              </ul>
+              <div className='dropup'>
+                <span>Languages</span>
+                <ul className='dropup-items'>
+                  <li>Portuguese</li>
+                  <li>Spanish</li>
+                  <li>Russian</li>
+                  <li>French</li>
+                </ul>
+              </div>
 
-              <ul>
-                <li>FAQ</li>
-                <li>Forums</li>
-                <li>Competitions</li>
-                <li>Our Projects</li>
-              </ul>
+              <div className='dropup'>
+                <span>Support</span>
+                <ul className='dropup-items'>
+                  <li>FAQ</li>
+                  <li>Forums</li>
+                  <li>Competitions</li>
+                  <li>Our Projects</li>
+                </ul>
+              </div>
 
             </nav>
 

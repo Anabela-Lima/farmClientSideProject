@@ -1,3 +1,7 @@
+#footer {
+    margin-top: -1rem;
+}
+
 #footer>footer {
     display: flex;
     flex-direction: row;
@@ -77,11 +81,53 @@
 
 /* DROPUPS */
 
-#footerNavbar>ul {
+
+
+.centreFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerNavbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
-    padding: 0rem 3rem;
+    padding: 1rem;
     border-radius: 0.5rem;
+
+    font-size: 2rem;
+}
+
+.dropup span {
+    padding: 1rem 4rem;
+    background-color: red;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}
+
+.dropup:hover {
+    margin-top: 1rem;
+}
+
+.dropup span:hover {
+    background-color: #630909;
+}
+
+
+
+.dropup ul {
+    background-color: green;
+    text-align: center;
+    padding: 1.25rem 0.5rem;
+    padding-bottom: 0;
+    margin: 0.5rem;
+}
+
+.dropup-items {
+    display: none;
+}
+
+.dropup:hover .dropup-items {
+    display: flex;
+    flex-direction: column;
 }
