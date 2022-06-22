@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const CropsPage = () => {
 
-    //-------------- [FieldTypes]------------------
+    //-------------------[FieldTypes]------------------------------
 
     
     // get all fieldtypes : state
@@ -33,7 +33,7 @@ const CropsPage = () => {
     }, [])
 
 
-    //-------[ specific fieldTypes search ]-------------
+    //------------------[ specific fieldTypes search ]-------------
 
     const getFieldTypes= async (e) =>{
         
@@ -61,7 +61,7 @@ const CropsPage = () => {
     
     }
 
-    //-------------[ Crops ]--------------------------
+    //-------------------------[ Crops ]------------------------------
 
 
     // get all crops : state
@@ -86,7 +86,7 @@ const CropsPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
 
 
-   //-------[ specific crops search ]-----------------
+   //---------------------------[ specific crops search ]--------------------------------
 
 
     const getCrop = async (e) =>{
@@ -116,7 +116,7 @@ const CropsPage = () => {
     }
 
 
-    //-------------[ farms ]--------------------------
+    //----------------------------- farms ]----------------------------
 
 
     // get all crops : state
@@ -141,7 +141,7 @@ const CropsPage = () => {
     const [searchTermFarms, setSearchTermFarms] = useState("");
 
 
-   //-------[ farms crops search ]-----------------
+   //-----------------[ farms crops search ]----------------------------------
 
 
     const getFarms = async (e) =>{
@@ -171,7 +171,25 @@ const CropsPage = () => {
     }
 
 
-    //----------------[ Return ]--------------------
+    //----------------[ Arrow function for buttonclick]-------------------
+
+        const buttonClickHandler= (e) => {
+
+            e.preventDefault();
+            alert("still to be implemented");
+
+            // on button click
+
+            // call 
+
+        }
+
+
+
+    //----------------------------[ Return ]----------------------------------
+
+
+
 
 
   return (
@@ -317,6 +335,7 @@ const CropsPage = () => {
                                     <th>Size</th>
                                     <th>Cost</th>
                                     <th>Soil Types</th>
+                                    <th> Crops </th>
                             
                                 </tr>
                                 </thead>
@@ -329,6 +348,8 @@ const CropsPage = () => {
                                     <td>{fieldtypes.size}</td>
                                     <td>{fieldtypes.cost}</td>
                                     <td>{fieldtypes.soilTypes}</td>
+                                    <td><button onClick={buttonClickHandler}> Show Crops</button></td>
+                                    
                                 
                             
                                     </tr>
@@ -364,48 +385,6 @@ const CropsPage = () => {
 
     </section>
 
-{/* 
-        <section id= "farmsTable">
-          <h2  id= "farmsTableTitle"> Farms </h2>
-          <h6  id= "farmsTableSubheader"> Lets see our available Farms: </h6>
-
-            <ul>
-                            <Table className="table table-striped" striped bordered hover variant="light">
-                                    <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Funds</th>
-                                        <th>Date</th>
-                                        <th>Own Fields</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                        { Array.farms.prototype.map((farm) => (
-                                            <tr key= {farm.id}>
-                                            <td key= {farm.id}>{farm.name}</td>
-                                            <td key= {farm.id}>{farm.funds}</td>
-                                            <td key= {farm.id}>{farm.date}</td>
-                                            <td key= {farm.id}>{farm.ownFields}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </Table>
-                    </ul>   
-
-        </section> */}
-
-
-
-         
-       
-
-
-         
-
-
-
-
-    
      </>
    )
 
