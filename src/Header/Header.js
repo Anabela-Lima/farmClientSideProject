@@ -18,10 +18,17 @@ const Header = () => {
   };
 
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setContext(searchTerm);
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   // setContext(searchTerm);
+  //   if (searchTerm === "") {
+  //     return alert("Please enter a name for your farm 🚀")
+  //   }
 
+  const handleSubmit = event => {
+    event.preventDefault();
+
+  
   }
 
 
@@ -55,12 +62,12 @@ const Header = () => {
             <li><a href="help.asp" >Help</a></li>
             </ul>
 
-          {/* <form className="search" role="search" onSubmit={handleSubmit}>
+          <form className="search" role="search" onSubmit={handleSubmit}>
           <label className="search__label" htmlFor="search__input">Search for your farm:</label>
-          <input type="search" placeholder="Enter farm name..." id="search__input" onChange={(e) => { setSearchTerm(e.target.value) }}></input>
+          <input type="search" placeholder="function is in progress!" id="search__input" onChange={(e) => { setSearchTerm(e.target.value) }}></input>
           <input type="submit" value="Submit" className="search__submit" />
 
-        </form> */}
+        </form>
         
 
             

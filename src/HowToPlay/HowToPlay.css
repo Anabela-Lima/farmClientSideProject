@@ -7,9 +7,13 @@ margin: auto;
 width: 50%;
 padding: 20px;
 line-height: 200px;
+text-align: center;
 
 }
 
+#welcome{
+    text-align: center;
+}
 
 #HowToPlayimg {
     width: 400px;

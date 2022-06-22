@@ -15,8 +15,9 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
     // if(context) {
     //   alert(context);
     // } else {
-    //   alert('empty search');
+    //   alert('search bar needs to be implemented fully!');
     // }
+    
     axios.get('http://127.0.0.1:8080/farms/farms')
       .then(res => {
         let farmsList = res.data;

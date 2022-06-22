@@ -16,7 +16,7 @@ const HowToPlay = () => {
       
       <div className="HowToPlayText">
               
-              <h1> Welcome Farmers</h1>
+              <h1 id="welcome"> Welcome Farmers</h1>
               <h1> are you ready to create your own farm?</h1>
               <p className="Spacing">
               <h3>Start by selecting a farm name</h3>

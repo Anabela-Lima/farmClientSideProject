@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { Table } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 

@@ -6,7 +6,7 @@ function HelpPage() {
   return (
     <section className="FAQ-container">
             <div className="FAQText">
-                     <h1>Here are some FAQs</h1>
+                    <u> <h1>Here are some FAQs</h1></u>
             <p className='paragraph-container'>
                      <h2> 1. My game is not loading! What should I do?</h2> 
 
@@ -14,7 +14,7 @@ function HelpPage() {
                         <ul>
                             <li>✷ Npm install axios</li>
                             <li>✷ Npm install use-sound</li>
-                            <li>✷ Npm install-react-bootstrap bootstrap</li>
+                            
                         </ul>
                         Then refresh the site and become a farm tycoon🎉
                      </h3>
