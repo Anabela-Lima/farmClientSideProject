@@ -3,8 +3,8 @@ import './Header.css';
 import logo from './logoimage.jpg';
 import filterFarms from '../HomePage/components/Search';
 import { useState } from 'react';
-
 import { NavLink as Link } from 'react-router-dom';
+
 
 const Header = () => {
 
@@ -31,7 +31,8 @@ const Header = () => {
 
             <li><Link to="/" >Home</Link></li>
 
-            <li><Link to="/marketplace" >Market Place</Link></li>
+            <li><Link to="/infoPage" activestyle>InfoPage</Link></li>
+          
 
             <li><Link to="/marketplace" activestyle>Market Place</Link></li>
 

@@ -1,6 +1,6 @@
 .InfoPage {
     font-family: 'GAMERIA', sans-serif;
-    
+
 }
 
 .th-bordered {
@@ -33,16 +33,40 @@
   justify-content: right;
   position: relative;
   right:1em;
+  top:36em;
 
 
 }
 
 
-#searchingFor{
+#searchingForCrops{
 
-    position:relative;
-   bottom:2em;
-   left: 6.5em;
-   
+   position:relative;
+   left: -1em;
+   top:0.3em;
 
+}
+
+
+#searchingForFieldTypes{
+
+ position:relative;
+ left: -1em;
+ top:0.3em;
+  
+ 
+ 
+
+}
+
+
+
+.body{
+
+
+  background-image: url('https://media.istockphoto.com/vectors/school-chalkboard-background-vector-id937187548?b=1&k=20&m=937187548&s=170667a&w=0&h=Tzg73DmCTaS0P6Z_LoFIoiOygsD6xk_THcgN-eGoLM0=') ; 
+}
+
+#allCropsTable{
+  background-color:beige;
 }
