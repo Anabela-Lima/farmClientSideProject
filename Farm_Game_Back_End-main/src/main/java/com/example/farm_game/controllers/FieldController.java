@@ -59,26 +59,16 @@ public class FieldController {
 
 
     @PatchMapping(value = "/CropInField")
-    public void putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
+    public ResponseEntity<Crop> putCropInField(@RequestParam Long fieldID, @RequestParam Long cropID) {
         if (cropService.getCrop(cropID) != null && fieldService.getField(fieldID) != null) {
             fieldService.putCropInField(fieldID, cropID);
 
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
-=======
->>>>>>> Ana_Branch
 
     };
 
-
-
-=======
-
-        return ResponseEntity.ok().body(fieldService.getField(cropID).getCrop());
-    }
->>>>>>> 3f3d73b7f8a77a8771d577cf6a8826f21c559e25
 
     @DeleteMapping("/deleteField/{id}")
     public void deleteField(@PathVariable Long id){fieldService.deleteField(fieldService.getField(id));

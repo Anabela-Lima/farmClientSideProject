@@ -1,31 +1,71 @@
-.HowToPlay {
-    font-family: 'GAMERIA', sans-serif;
+
+.HowToPlayText{
+margin: 100px;
+color: black;
+font-family: 'GAMERIA', sans-serif;
+margin: auto;
+width: 50%;
+padding: 20px;
+line-height: 200px;
+text-align: center;
+
 }
 
-img {
+#welcome{
+    text-align: center;
+}
 
-    width: 300px;
-    height: 300px;
+#HowToPlayimg {
+    width: 400px;
+    height: 400px;
     position:relative;
+    left: 50em;
 
     color: black;
     
 }
 
-.HowToPlayText{
 
-    color: black;
+#Namegif{
+    width:800px;
+    height: 100px;
 }
+
+#Fieldgif{
+    width:800px;
+    height: 300px;
+}
+
+#Cropgif{
+    width:800px;
+    height: 300px;
+}
+
+#Moneygif{
+    width:800px;
+    height: 300px;
+}
+
+.Spacing{
+    padding: 2rem 0;
+}
+
 
 .Title{
     text-align: center;
     font-size: x-large;
     vertical-align: top;
 }
-.Gif1{
-    margin: auto;
-    padding: 30px;
-    height: 300px;
-    width:300px
+
+.HowToPlay-container {
+    margin: 2rem 10rem;
+    border: 2px solid #aa7e38;
+    border-radius: 1rem;
+
+    background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(137, 113, 81);
+    padding-bottom: 2rem;
 }
+
 
