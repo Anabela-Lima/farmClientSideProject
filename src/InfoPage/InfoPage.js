@@ -212,7 +212,120 @@ const CropsPage = () => {
 
         }
 
- 
+
+     
+//------------------------[ Crop Buttons ]----------------------------------------
+
+
+    const scb1= (e) => {
+
+        e.preventDefault();
+        alert(" 🥬 name: Cabbages, price: 20, stock: 300, soilTypes: [], soilEffects: [], growTime: 20 🥬");
+
+
+        // on button click
+
+        // call 
+
+    }
+
+
+    const scb2= (e) => {
+
+        e.preventDefault();
+        alert(" 🌻 name: Sunflowers, price: 20, stock: 248, soilTypes: [], soilEffects: [], growTime: 20 🌻" );
+
+        // on button click
+
+        // call 
+
+    }
+
+    const scb3= (e) => {
+
+        e.preventDefault();
+        alert(" 🌾 name: Rice, price: 20, stock: 300, soilTypes: [], soilEffects: [], growTime: 20🌾");
+
+
+        // on button click
+
+        // call 
+
+    }
+
+    //------------------------[ Field Buttons ]----------------------------------------
+
+
+
+    // bFT1= button to show field type info
+    const bFT1= (e) => {
+
+        e.preventDefault();
+        alert(" 🌳 name: medium field, size: 4,cost: 20,soilType: null 🌳");
+
+    
+
+        // on button click
+
+        // call 
+
+    }
+
+
+    // bFT1= button to show field type info
+
+    const bFT2= (e) => {
+
+        e.preventDefault();
+        alert(" 🌱 name: huge field, size: 16,cost: 80,soilType: null 🌱");
+
+    
+
+        // on button click
+
+        // call 
+
+    }
+
+
+
+    const bFT3= (e) => {
+
+        e.preventDefault();
+        alert(" 🌿name: tiny field, size: 1,cost: 5,soilType: null 🌿");
+
+    
+
+        // on button click
+
+        // call 
+
+    }
+
+
+    //------------------------[ Farm Buttons ]----------------------------------------
+
+
+
+
+
+    // bFT1= button to show field type info
+
+    const bFa= (e) => {
+
+        e.preventDefault();
+        alert(" 🐷 name: High Mill, funds: 200, date: 0🐷");
+
+        // on button click
+
+        // call 
+
+    }
+
+
+
+
+
 
 
     //----------------------------[ Return ]----------------------------------
@@ -304,20 +417,20 @@ const CropsPage = () => {
                                     <th className= "nameTh">Name</th>
                                     <th>Size</th>
                                     <th>Cost</th>
-                                    <th>Soil Types</th>
-                                    <th className="cropsTh"> Crops </th>
+                                    <th className="cropsTh">Soil Types</th>
+                                    {/* <th className="cropsTh"> Crops </th> */}
                             
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {fieldTypes.map((fieldtypes) => (
                                     <tr>
-                                    <td className="">{fieldtypes.name}</td>
+                                    <td>{fieldtypes.name}</td>
                                     <td>{fieldtypes.size}</td>
                                     <td>{fieldtypes.cost}</td>
-                                    <td>{fieldtypes.soilTypes}</td>
-
-                                    <td><button onClick={buttonClickHandler}> Show Crops</button></td>
+                                    <td >{fieldtypes.soilTypes}</td>
+{/* 
+                                    <td><button onClick={buttonClickHandler}> Show Crops</button></td> */}
                                     
                                 
                             
@@ -331,22 +444,22 @@ const CropsPage = () => {
 
          </section> 
 
-{/* 
+ 
          <section>
 
 
 
          <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
                 <ul>
-                        <Table id= "fieldTypesTable"striped bordered hover variant="light">
+                        <Table id= "fieldsTable"striped bordered hover variant="light">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>TimeLeft</th>
-                                    <th>SoilType</th>
+                                    <th className="nameTh">Name</th>
+                                    <th className="timeLeft">TimeLeft</th>
+                                    <th className="timeLeft">SoilType</th>
                                     <th>FieldType</th>
                                     <th> Crop </th>
-                                    <th> Farm </th>
+                                    <th className="cropsTh"> Farm </th>
                             
                                 </tr>
                                 </thead>
@@ -356,25 +469,59 @@ const CropsPage = () => {
                                     <tr>
                                    
                                     <td>flat meadow</td> 
-                                    <th> 0</th>
-                                    <th>SILTYCLAY</th>
+                                    <td> 0</td>
+                                    <td>SILTYCLAY</td>
 
-                                    <td><button onClick={buttonClickHandler}> Show FieldType</button></td>
-                                    
-                                    
+                                    <td><button onClick={bFT1}> Show FieldType</button></td>
+                                    <td><button onClick={scb1}> Show Crops</button></td>
+                                    <td><button onClick={bFa}> Show Farm</button></td>
 
+                                  
+                                    
                                    
-                                    <td><button onClick={buttonClickHandler}> Show Crops</button></td>
+{/* 
+                                    <td><button onClick={bFT2}> Show FieldType</button></td>
+                                    <td><button onClick={""}> Show Crops</button></td>
+                                    
+                                    
                                     
                                 
-                            
+                             */}
                                     </tr>
                          
                                 </tbody>
+
+                                <tbody>
+
+                                <td>Just a field</td> 
+                                    <td> 0</td>
+                                    <td>SAND</td>
+
+                                    <td><button onClick={bFT2}> Show FieldType</button></td>
+                                    <td><button onClick={scb2}> Show Crops</button></td>
+                                    <td><button onClick={bFa}> Show Farm</button></td>
+
+                                </tbody>
+
+                                 <tbody>
+
+                                <td>Field not found</td> 
+                                    <td> 0</td>
+                                    <td>SANDYCLAY</td>
+
+                                    <td><button onClick={bFT3}> Show FieldType</button></td>
+                                    <td><button onClick={scb3}> Show Crops</button></td>
+                                    <td><button onClick={bFa}> Show Farm</button></td>
+
+                                </tbody>
+
+                                
+
+                                
                             </Table>
                 </ul>       
 
-         </section> */}
+         </section> 
 
 
 
