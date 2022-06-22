@@ -1,0 +1,455 @@
+/* importing for my social tags */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+#footer > footer { 
+    /* > any direct children of id footer  */
+
+    /* flexbox begins */
+
+    display: flex;
+    /* direction content flows */
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    padding-bottom:4em;
+    background:#bbd6e2;
+
+}
+
+
+.footerLeft {
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+   
+}
+
+
+.centreFooter {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#footerNavbar > ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.footerRight {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items:center;
+
+
+}
+
+
+.footerRight > div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ 
+#farmLogo{
+    height:120px;
+    width: 160px;
+    opacity:100%;
+    position:relative;
+    top:1em;
+    left:1.6em;
+    z-index: 1;
+}
+
+
+/* Navbar */
+
+:root {
+    --primary-color:rgba(165, 188, 118, 0.533);
+    --secondary-color: chocolate;
+}
+  
+
+#footerNavbar {
+
+    width:1500px;
+    padding-left:1em;
+  
+    border-radius: 0.5em;
+    background: var(--primary-color);
+    position: relative;
+    right:12em;
+
+}
+
+ 
+.centreFooter > nav ul li {
+    color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  
+
+}
+
+.centreFooter ul li a {
+  color: #333;
+  text-decoration: none;
+
+}
+
+/* Dont show the nested unordered list- default */
+
+
+
+.centreFooter> nav ul li ul {
+    display: none;
+
+}
+
+
+.centreFooter > nav ul li:hover {
+
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+
+}
+
+.centreFooter > nav ul li a {
+    color: #fff;
+}
+
+
+/* Nested Dropdown Show */
+
+
+.centreFooter > nav ul li:hover ul {
+
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+.centreFooter > nav ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+  width:8em;
+
+}
+
+.centreFooter > nav ul li:hover ul li a{
+    color: #333;
+}
+
+.centreFooter > nav ul li:hover ul li:hover {
+
+    background: #e0e0e0;
+    color: inherit;
+}
+
+.centreFooter > nav ul li span {
+
+    float: right;
+    color: #fff;
+    background: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+
+.centreFooter > nav ul li:hover ul li:hover span {
+
+    background: var(--secondary-color);
+    background-color: rgb(35,169,195);
+    text-decoration-line: overline;
+    text-shadow: 2px 2px #583232;
+  
+
+}
+
+
+.centreFooter ul li:first-child {
+    background-color: var(--primary-color);
+
+}
+
+
+@media (max-width: 600px) {
+    .centreFooter > nav ul li {
+        display: block;  
+    }
+    .centreFooter > nav ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+
+}
+
+
+.titles:hover  {
+    background-color: rgb(35,169,195);
+    text-decoration-line: overline;
+    text-shadow: 2px 2px #583232;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
+}
+
+
+/* code for icons */
+ 
+.allIcon .icon{
+    position: relative;
+    /* change icon background colour to white */
+    background-color: #ffffff;
+    /* round off the edges */
+    border-radius: 50%;
+    /* space out the icons using margin */
+    margin: 10px;
+    /* widen the icon block using width */
+    width: 40px;
+    /* modify height */
+    height: 40px;
+    /* modify social icon size */
+    font-size: 25px;
+    /* specify a horizontal and vertical shawdow  i.e. ___| + a blur effect through last parameter (5px)  */
+   
+    /* a b c  : a= shadow to right, b =  down, c =blur effect intensity */
+   
+    box-shadow:  10px 2px 10px rgba(28, 102, 102, 0.566);
+
+    /* colour the icons in  */
+    color: rgb(6, 105, 6);
+    
+    /* moving icons to desired location on the page */
+    
+    right:22em;
+    bottom:0.28em;
+    
+
+} 
+
+
+.allIcon .socialNameBox {
+  
+    position: absolute;
+    top: 0;
+    /* changing size of the social name box */
+    line-height: 1.5;
+    /* changing font size */
+    font-size: 14px;
+   /* added vertical and horizontal padding */
+    padding: 5px 20px;
+    /* round off corners */
+    border-radius: 5px;
+    /* added a shadow with blur effect colour mint */
+    box-shadow: 0 10px 0px rgba(99, 208, 116, 0.1);
+    /* adding opacity to make the socialtag  text completely transparent when hover is off */
+    opacity: 0;
+    
+
+    /* defining the transition using the easing function-
+    easing functions are defined by 4 real numbers  */
+    /*    
+    cubic-bezier(x1,y1,x2,y2), x1 & x2 are real numbers between 0 and 1 */
+
+    /* x1- how long it takes to appear- delay */
+    /* y1 = the bounce */
+    /* x2 */
+    /* y2- how high it jumps */
+    transition: all 0.3s cubic-bezier(0.68, -0.3, 0.265, 1);
+
+}
+
+
+/* adding a pointy part-  for the socialNameBox*/
+
+.allIcon .socialNameBox::before {
+    position: absolute;
+    /* / pointy part is added upon conent value being empty/ */
+    content: "";
+    /* to create pointy part we'll create a box and rotate it  */
+    height: 8px;
+    width: 8px;
+    /* moving it up abit */
+    bottom: -3px;
+    /* moving it to the right*/
+    left: 2em;
+    /* rotate it to be at 45 degrees + therefore show only pointy part */
+    transform: rotate(45deg); 
+} 
+
+/* when we hover over the icon, i want the socialNameBox to be visisble */
+.allIcon .icon:hover .socialNameBox {
+    
+    /* lets position it from the bottom to be 45 px */
+    top: -50px;
+    /* and i want it to be visible on hover so opacity value =1 */
+    opacity: 1;
+ 
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to blue + icon + icon socialNameBox text to white  */
+    .allIcon .facebook:hover,
+    .allIcon .facebook:hover .socialNameBox,
+    .allIcon .facebook:hover .socialNameBox::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to light blue, + icon + icon socialNameBox text to white  */
+ .allIcon .twitter:hover,
+ .allIcon .twitter:hover .socialNameBox,
+ .allIcon .twitter:hover .socialNameBox::before {
+   background-color: #46c1f6;
+   color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to red + icon + icon socialNameBox text to white */
+ .allIcon .instagram:hover,
+ .allIcon .instagram:hover .socialNameBox,
+ .allIcon .instagram:hover .socialNameBox::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to black + icon + icon socialNameBox text to white */
+  .allIcon .github:hover,
+  .allIcon .github:hover .socialNameBox,
+  .allIcon .github:hover .socialNameBox::before {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
+/*  on hover- icon background,the socialNameBox and blue pointy box  changes to red + icon + icon socialNameBox text to white */
+  .allIcon .youtube:hover,
+  .allIcon .youtube:hover .socialNameBox,
+  .allIcon .youtube:hover .socialNameBox::before {
+    background-color: #de463b;
+    color: #ffffff;
+}
+
+
+/* enlarging actual icons- using class */
+  .iconSize{
+    width:1.5em;
+    height:1.8em;
+    position: relative;
+    top: -0.07em;
+    left: 0.06em;
+
+
+        
+}
+
+
+#ad1{
+    width:220px;
+    height:85px;
+    position:relative;
+    top:2.5em;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.581);
+    /* opacity:80%; */
+    right:33em;
+}
+    
+
+
+#subForm{
+
+   position:relative;
+   left: 28em;
+   top:2em;
+   
+    
+}
+
+
+
+#copyright{
+    text-decoration: #3b5999;
+    font-size:x-large;
+    font-family: 'GAMERIA';
+    color: green;
+    text-shadow: 2px 2px  #630909;
+    position: relative;
+    top:2em;  
+    left:1.3em;
+    
+  
+}
+
+
+
+#scrollToTop {
+
+    position: relative;
+    left:
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* showing ways to target things */
+
+
+/* example of targeting specificity  */
+/* .allIcon .socialNameBoxFb{
+
+    font-size: 3rem;
+} */
+
+/* targeting siblings  */
+/* a + a + a + a + a{ 
+    color: pink;
+} */
+
+/* direct-parent child */
+/* 
+div > div {
+
+    color: red;
+}
+ */
+
+
