@@ -4,6 +4,10 @@ import FarmHeader from "../FarmHeader/FarmHeader";
 import "./Farm.css";
 import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
+import Fields from "../Field.js/Field";
+import Crop from "../../FieldList/Crop";
+import CInventory from  "../../FieldList/CInventory";
+import CInventoryCss from  "../../FieldList/CInventoryCss.css";
 
 const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
