@@ -28,9 +28,12 @@ const AddFarm = ( {farmsList, setFarmsList}) => {
             })
             .catch( (err) => console.log(err) )
 
+        alert(`You have created a farm called ${farmName}... Moo 🐄`)
+
         
         setFarmName('');
         clearInput(document.querySelector(".add-form-input"));
+
 
     }
 
