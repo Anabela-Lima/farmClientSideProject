@@ -146,6 +146,51 @@ body h2{
   font-family: 'GAMERIA', sans-serif;
   font-size:x-large;
 
-
 }
 
+h1{
+  font-family: 'GAMERIA', sans-serif;
+  font-size:xx-large;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 3em;
+
+  
+}
+
+
+.white{
+  color: white;
+}
+
+
+
+
+#allTables {
+  background-image:url(" https://static.vecteezy.com/system/resources/previews/000/229/736/original/vector-fantasy-landscape-illustration.jpg");
+ 
+  
+}
+
+#fieldsTable{
+  margin-top:15em;
+  margin-bottom:15em;
+  position: relative;
+  top:5em;
+  box-shadow:  10px 10px 10px rgba(77, 138, 138, 0.896);
+}
+
+#cropsTable{
+
+  margin-bottom:15em;
+  margin-top:15em;
+  box-shadow:  10px 10px 10px rgba(77, 138, 138, 0.896);
+}
+
+#fieldTypesTable{
+  margin-bottom:15em;
+  margin-top:15em;
+  box-shadow:  10px 10px 10px rgba(252, 252, 252, 0.896)
+
+}

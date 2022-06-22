@@ -334,16 +334,18 @@ const CropsPage = () => {
   return (
     <>
 
+       
     
         <section id = "allTables">    
+         <h1 className='infoTitle' className="white"> Information  </h1>
 
              <section id = "allCrops">    
              
-                <h2 id= "cropsTableTitle"> Crops </h2>
-                <h6  id= "cropsTableSubheader"> Take a look at our juicy crops, farming just got easier! </h6>
+                <h2 id= "cropsTableTitle" className='white'> Crops </h2>
+                <h6  id= "cropsTableSubheader" className='white'> Take a look at our juicy crops, farming just got easier! </h6>
                     <section>
                     <ul>
-                            <Table id= "allCropsTable" className="table table-striped" striped bordered hover variant="light">
+                            <Table id= "cropsTable" className="table table-striped" striped bordered hover variant="light">
                                     <thead>
                                     <tr>
                                         {/* <th>Image</th> */}
@@ -408,9 +410,9 @@ const CropsPage = () => {
 
                     </section>
  
-            <h2  id= "fieldTypesTableTitle"> FieldTypes </h2>
+            <h2  id= "fieldTypesTableTitle"  className='white'> FieldTypes </h2>
 
-            <h6  id= "fieldTypesTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
+            <h6  id= "fieldTypesTableSubheader" className='white'> We choose only the best fields for your farm, take a look: </h6>
                 <ul>
                         <Table id= "fieldTypesTable"striped bordered hover variant="light">
                                 <thead>
@@ -450,9 +452,9 @@ const CropsPage = () => {
 
 
 
-         <h2  id= "fieldsTableTitle"> Fields </h2>
+         <h2  id= "fieldsTableTitle" className='white'> Fields </h2>
 
-        <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
+        <h6  id= "fieldsTableSubheader" className='white'> We choose only the best fields for your farm, take a look: </h6>
                 <ul>
                         <Table id= "fieldsTable"striped bordered hover variant="light">
                                 <thead>
@@ -523,6 +525,10 @@ const CropsPage = () => {
                                 
                             </Table>
                 </ul>       
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
 
          </section> 
 
