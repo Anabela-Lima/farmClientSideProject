@@ -102,8 +102,11 @@ export const FieldForm = ( {farmsList} ) => {
             <select 
                     onChange={(e) => setFieldTypeChoice(e.target.value)}
                     className='fieldSelector'
+                    defaultValue={"Select a field"}
             >
-            <option value="none" selected disabled hidden>Select a field</option>  
+
+            <option value="Select a field"  disabled hidden>Select a field</option>
+
             {
             fieldList.map( (field) => {
                 return <option key={field.id} className="field-options">{field.name}</option>
@@ -117,8 +120,10 @@ export const FieldForm = ( {farmsList} ) => {
 
             <select
                     className='deliverGoodsToFarm'
-                    onChange={(e) => setFarmToSendField(e.target.value)}>
-                    <option value="none" selected disabled hidden>Select a farm</option>
+                    onChange={(e) => setFarmToSendField(e.target.value)}
+                    defaultValue="Select a farm">
+                    <option value="Select a farm" disabled hidden>Select a farm</option>  
+                    
                 {
                 farmsList.map(farm =>
                     <option key={farm.id}

@@ -1,8 +1,6 @@
 import NewDay from "../../NewDay/NewDay";
 import DeleteFarm from "../../DeleteFarm.js/DeleteFarm";
 import AddCrop from "./AddCrop/AddCrop";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "./FarmFooter.css";
 
 const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney, ownedFields, setFieldCropName1, allCropsAvailable}) => {

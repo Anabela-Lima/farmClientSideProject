@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import axios from 'axios'; 
 import Farm from "../Farm/Farm";
 import noFarmsGif from "./no-farms-gif.gif";
 import "./FarmList.css";
