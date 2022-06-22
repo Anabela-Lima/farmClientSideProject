@@ -3,7 +3,7 @@ import DeleteFarm from "../../DeleteFarm.js/DeleteFarm";
 import AddCrop from "./AddCrop/AddCrop";
 import "./FarmFooter.css";
 
-const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney, ownedFields, setFieldCropName1, allCropsAvailable}) => {
+const FarmFooter = ( {farmId, setFarmDaysPassed1, money, setMoney, ownedFields, setFieldCropName1, allCropsAvailable}) => {
 
     
 
@@ -18,8 +18,7 @@ const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney
           <section className="newday-deletefarm">
 
             <NewDay farmId={farmId}
-                    farmDaysPassed={farmDaysPassed}
-                    setFarmDaysPassed={setFarmDaysPassed}
+                    setFarmDaysPassed2={setFarmDaysPassed1}
                     money={money}
                     setMoney={setMoney} />
 

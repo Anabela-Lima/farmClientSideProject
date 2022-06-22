@@ -6,10 +6,10 @@ import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
 import axios from "axios";
 
-const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
+const Farm = ( {farmName, farmFunds, farmId, ownedFields} ) => {
 
     const [money, setMoney] = useState(farmFunds);
-    const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
+    const [farmDaysPassed, setFarmDaysPassed] = useState(0);
     const [fieldCropName, setFieldCropName2] = useState("");
     const [allCropsAvailable, setAllCropsAvailable] = useState([]);
 
@@ -33,7 +33,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                 farmName={farmName} 
                 money={money}
                 setMoney={setMoney}
-                farmDate={farmDate}
+                farmDaysPassed1={farmDaysPassed}
             />
 
             <section className="main-farm-and-fields">
@@ -49,8 +49,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
             </section>
 
             <FarmFooter farmId={farmId}
-                            farmDaysPassed={farmDaysPassed}
-                            setFarmDaysPassed={setFarmDaysPassed}
+                            setFarmDaysPassed1={setFarmDaysPassed}
                             money={money}
                             setMoney={setMoney}
                             ownedFields={ownedFields}
