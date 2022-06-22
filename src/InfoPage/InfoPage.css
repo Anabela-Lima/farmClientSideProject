@@ -86,8 +86,8 @@ th, td {
   flex-direction: row;
   justify-content: right; 
   position: relative;
-  right:1em;
-  bottom:35em;
+  right:4em;
+  bottom:55em;
 
 
 }
@@ -100,6 +100,7 @@ th, td {
   justify-content: right;
   position: relative;
   right:1em;
+  bottom:8em;
 
 }
 
@@ -110,7 +111,9 @@ th, td {
   justify-content: center;
    position:relative;
    left: -1em;
-   top:0.25em;
+   color:white;
+   font-size: large;
+   top:0.20em;
 
 }
 
@@ -119,7 +122,9 @@ th, td {
 
  position:relative;
  left: -1em;
- top:0.3em;
+ color:white;
+ font-size: large;
+
 
 }
 
@@ -174,7 +179,7 @@ h1{
 }
 
 #fieldsTable{
-  margin-top:15em;
+  margin-top:4em;
   margin-bottom:15em;
   position: relative;
   top:5em;
@@ -184,13 +189,97 @@ h1{
 #cropsTable{
 
   margin-bottom:15em;
-  margin-top:15em;
+  margin-top:12em;
   box-shadow:  10px 10px 10px rgba(77, 138, 138, 0.896);
 }
 
 #fieldTypesTable{
   margin-bottom:15em;
-  margin-top:15em;
+  margin-top:-4em;
   box-shadow:  10px 10px 10px rgba(252, 252, 252, 0.896)
 
 }
+
+
+#infoPageText{
+
+  background-color: rgb(223, 223, 223);
+  width:800px;
+  height:50px;
+  border-radius: 0.5em;
+  padding: 2em;
+  opacity:90%;
+  position:relative;
+  left:34em;
+  top:2em;
+  border-color: white;
+
+
+
+}
+
+#infoText{
+  color: black;
+  font-size: larger;
+}
+
+
+
+#cropsTableTitle{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom:-4em;
+}
+
+
+#cropsTableSubheader{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom:-7em;
+
+}
+
+
+  
+
+#fieldTypesTableTitle{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom:8em;
+}
+
+
+#fieldTypesTableSubheader{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom:9.5em;
+
+}
+
+
+#fieldsTableTitle{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom:-1em;
+}
+
+
+#fieldsTableSubheader{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom:-3em;
+
+}
+
