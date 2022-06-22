@@ -6,6 +6,7 @@ import { useState, useContext } from 'react';
 import { Context } from '../context';
 import { NavLink as Link } from 'react-router-dom';
 
+
 const Header = () => {
 
   const [context, setContext] = useContext(Context);
@@ -21,9 +22,7 @@ const Header = () => {
   // function handleSubmit(e) {
   //   e.preventDefault();
   //   // setContext(searchTerm);
-  //   if (searchTerm === "") {
-  //     return alert("Please enter a name for your farm 🚀")
-  //   }
+ 
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -53,7 +52,8 @@ const Header = () => {
 
             <li><Link to="/" >Home</Link></li>
 
-            <li><Link to="/marketplace" >Market Place</Link></li>
+            <li><Link to="/infoPage" activestyle>InfoPage</Link></li>
+          
 
             <li><Link to="/marketplace" activestyle>Market Place</Link></li>
 

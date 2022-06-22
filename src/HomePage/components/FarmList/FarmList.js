@@ -1,3 +1,4 @@
+
 import { useEffect, useContext } from "react";
 import axios from 'axios'; 
 import Farm from "../Farm/Farm";
@@ -33,8 +34,8 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
 
   });
 
+const FarmList = ( {farmsList} ) => {
 
-  
 
   return (
     <>
@@ -45,7 +46,7 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
               <li key={farm.id}><Farm 
                                   farmName={farm.name}
                                   farmFunds={farm.funds}
-                                  farmDate={farm.date}
+                                  farmDate0={farm.date}
                                   ownedFields={farm.ownFields}
                                   farmId={farm.id}
                                   /></li>
