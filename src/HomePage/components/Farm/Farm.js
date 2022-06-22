@@ -10,7 +10,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
     const [money, setMoney] = useState(farmFunds);
     const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
 
-    const [fieldCropName, setFieldCropName] = useState("");
+    const [fieldCropName, setFieldCropName2] = useState("");
 
   return (
     <>
@@ -31,7 +31,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
                 <FieldList ownedFields={ownedFields}
                            fieldCropName={fieldCropName}
-                           setFieldCropName={setFieldCropName}/>
+                           setFieldCropName={setFieldCropName2}/>
 
             </section>
 
@@ -41,7 +41,7 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
                             money={money}
                             setMoney={setMoney}
                             ownedFields={ownedFields}
-                            setFieldCropName={setFieldCropName}
+                            setFieldCropName1={setFieldCropName2}
                             />
 
         </section>

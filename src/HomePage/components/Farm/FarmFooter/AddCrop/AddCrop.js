@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import "./AddCrop.css";
 
-const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
+const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName0} ) => {
 
     const [fieldTypeChoice, setFieldTypeChoice] = useState('');
     const [cropTypeChoice, setCropTypeChoice] = useState('');
@@ -27,8 +27,10 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
 
         console.log("1...")
 
+        console.log("Hello world!")
+
         // const fieldID = await getFieldIdViaName()
-        const fieldID = 1;
+        const fieldID = 2;
         
 
         console.log("2...")
@@ -42,7 +44,9 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
         axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
             .then( result => {
                 console.log(result.data)
-                setFieldCropName(result.data.name);
+                console.log(result.data.name)
+                setFieldCropName0(result.data.name);
+                console.log(result.data.name)
             })
             .catch( err => console.log(err) )
 
@@ -56,7 +60,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName} ) => {
         <h4 className='add-2field-h4'>Which field would you like to plant in?</h4>
 
         <select 
-                onChange={(e) => setFieldTypeChoice(e.target.value)}
+                onChange={(e) => setCropTypeChoice(e.target.value)}
                 className='add-fc-selector'
         >
         <option value="none" defaultValue={"Select a field"} disabled hidden>Select a field</option>  
