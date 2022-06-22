@@ -5,18 +5,21 @@ A fun farming simulator; plant & harvest crops, earn money, and become a farming
 
 ## The Project Description 
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and acts as the front end appplication to a given farm game server-side API. Focusing on javaScript, React, HTML and CSS, this project aims to bring to life the vision of the back end team. 
+
+Farm Tycoon gives users the ability to enjoy a fantasy world where they are in control of their own farms. 
+
 
 ### Our inital wireframe
 ![image](https://user-images.githubusercontent.com/99202770/175096376-fc746bda-790a-423d-9361-774b52e49727.png)
 
-
+In the wireframe, both individual and reusable components were identified before the overall page was further broken down into more distinct sections (header, containers, footer etc) for more in depth decriptions.
 
 ### Our final react component sketch
 ![image](https://user-images.githubusercontent.com/99202770/175095918-fb81b5ad-18fd-4c5c-adcd-5b82319845cb.png)
 
 
-
-
+Our component relationship diagram highlights how our components interact with one another. 
 
 
 ## Installation instructions
