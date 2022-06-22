@@ -34,8 +34,6 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
 
   });
 
-const FarmList = ( {farmsList} ) => {
-
 
   return (
     <>
@@ -70,4 +68,5 @@ const FarmList = ( {farmsList} ) => {
   )
 }
 
-export default FarmList
+
+export default FarmList;
