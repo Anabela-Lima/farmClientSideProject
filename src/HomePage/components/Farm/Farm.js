@@ -9,8 +9,9 @@ const Farm = ( {farmName, farmFunds, farmDate, farmId, ownedFields} ) => {
 
     const [money, setMoney] = useState(farmFunds);
     const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate);
-
     const [fieldCropName, setFieldCropName2] = useState("");
+
+    
 
   return (
     <>

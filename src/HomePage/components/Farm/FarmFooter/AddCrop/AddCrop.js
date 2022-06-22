@@ -8,38 +8,41 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName0} ) => {
     const [cropTypeChoice, setCropTypeChoice] = useState('');
 
 
-    // const getFieldIdViaName = () => {
-    //     return new Promise ( (resolve) => {
-    //         const idNameConfirmed = fieldList.find( field => field.name === fieldTypeChoice )
-    //         resolve(idNameConfirmed);
-    //     })
-    // }
+    const getFIdViaName = () => {
+        return new Promise ( (resolve) => {
+            const getFieldID = ownedFields.find( field => field.name === fieldTypeChoice )
+            console.log(fieldTypeChoice);
+            console.log(ownedFields);
+            resolve(getFieldID);
+        })
+    }
 
-    // const getCropIdViaName = () => {
-    //     return new Promise ( (resolve) => {
-    //         const idNameConfirmed = cropList.find( crop => crop.name === cropTypeChoice )
-    //         resolve(idNameConfirmed);
-    //     })
-    // }
+    const getCropIdViaName = () => {
+        return new Promise ( (resolve) => {
+            const getCropID = allCropsAvailable.find( crop => crop.name === cropTypeChoice )
+            console.log(cropTypeChoice);
+            console.log(allCropsAvailable);
+            resolve(getCropID);
+        })
+    }
 
-    const handlePlantCropInField = (event) => {
+
+    const handlePlantCropInField = async (event) => {
         event.preventDefault();
 
-        console.log("1...")
+        console.log("1...");
 
-        console.log("Hello world!")
-
-        // const fieldID = await getFieldIdViaName()
-        const fieldID = 2;
+        const fieldName = await getFIdViaName();
         
-
         console.log("2...")
-
-        // const cropID = await getCropIdViaName()
-        const cropID = 1;
         
-
+        const cropName = await getCropIdViaName();
+        
         console.log("3...")
+
+        const fieldID = fieldName.id;
+        const cropID = cropName.id;
+        
 
         axios.patch(`http://127.0.0.1:8080/fields/CropInField`, null, { params: {fieldID, cropID}})
             .then( result => {
@@ -60,7 +63,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName0} ) => {
         <h4 className='add-2field-h4'>Which field would you like to plant in?</h4>
 
         <select 
-                onChange={(e) => setCropTypeChoice(e.target.value)}
+                onChange={(e) => setFieldTypeChoice(e.target.value)}
                 className='add-fc-selector'
         >
         <option value="none" defaultValue={"Select a field"} disabled hidden>Select a field</option>  
@@ -78,7 +81,7 @@ const AddCrop = ( {ownedFields, allCropsAvailable, setFieldCropName0} ) => {
         <h4 className='plant-crop-h4'>Which crop would you like to plant?</h4>
 
         <select 
-                onChange={(e) => setFieldTypeChoice(e.target.value)}
+                onChange={(e) => setCropTypeChoice(e.target.value)}
                 className='crop-selector'
         >
         <option value="none" defaultValue={"Select a crop"} disabled hidden>Select a crop</option>  
