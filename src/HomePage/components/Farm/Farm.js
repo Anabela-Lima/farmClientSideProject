@@ -6,12 +6,13 @@ import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
 import axios from "axios";
 
-const Farm = ( {farmName, farmFunds, farmId, ownedFields} ) => {
+const Farm = ( {farmName, farmFunds, farmId, ownedFields, farmDate0} ) => {
 
     const [money, setMoney] = useState(farmFunds);
-    const [farmDaysPassed, setFarmDaysPassed] = useState(0);
+    const [farmDaysPassed, setFarmDaysPassed] = useState(farmDate0);
     const [fieldCropName, setFieldCropName2] = useState("");
     const [allCropsAvailable, setAllCropsAvailable] = useState([]);
+
 
     useEffect( () => {
 
@@ -21,9 +22,8 @@ const Farm = ( {farmName, farmFunds, farmId, ownedFields} ) => {
             })
             .catch(err => console.log(err));
 
-    })
+    });
 
-    
 
   return (
     <>
