@@ -10,7 +10,7 @@ const FarmContainer = ( {farmsList, setFarmsList} ) => {
 
   return (
     <> 
-      <main>
+      <main id="main">
           <div className="addTask-Sound">
 
             <PlaySound />
