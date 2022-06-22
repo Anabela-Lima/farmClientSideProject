@@ -407,9 +407,9 @@ const CropsPage = () => {
 
                     </section>
  
-            <h2  id= "fieldsTableTitle"> FieldTypes </h2>
+            <h2  id= "fieldTypesTableTitle"> FieldTypes </h2>
 
-            <h6  id= "fieldsTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
+            <h6  id= "fieldTypesTableSubheader"> We choose only the best fields for your farm, take a look: </h6>
                 <ul>
                         <Table id= "fieldTypesTable"striped bordered hover variant="light">
                                 <thead>
@@ -468,7 +468,7 @@ const CropsPage = () => {
                         
                                     <tr>
                                    
-                                    <td>flat meadow</td> 
+                                    <td>Flat meadow</td> 
                                     <td> 0</td>
                                     <td>SILTYCLAY</td>
 
