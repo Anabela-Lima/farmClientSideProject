@@ -1,8 +1,6 @@
 import React from 'react';
 import './Header.css';
 import logo from './logoimage.jpg';
-import filterFarms from '../HomePage/components/Search';
-import { useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
 
