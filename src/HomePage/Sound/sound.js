@@ -10,11 +10,11 @@ const PlaySound = () => {
       
         return (
             <div>
-          <button onClick={() => play()} className="button" >
+          <button onClick={() => play()} className="sound-button" >
           <span role="img" aria-label="play"> ▶️ </span> Play
           </button>
 
-          <button onClick={() => stop()} className="button" >
+          <button onClick={() => stop()} className="sound-button" >
           <span role="img" aria-label="pause"> ⏸️ </span> Pause
         </button>
         </div>

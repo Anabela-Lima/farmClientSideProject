@@ -1,5 +1,15 @@
+.background-styling {
+    color: black;
+    background-image: url("../HomePage/images/website-background.webp");
+    padding: 3rem 0;
+    color: white;
+
+    font-family: 'Fredericka the Great', cursive;
+
+}
+
 .marketplace-main {
-    margin: 1rem 0rem;
+    margin: 0rem 20rem;
 
     display: flex;
     flex-direction: column;
@@ -7,7 +17,11 @@
     align-items: center;
     align-content: center;
 
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    background-image: url("../HomePage/images/chalk.jpeg");
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    border-radius: 1rem;
 
 }
 
@@ -28,11 +42,13 @@
     align-items: center;
     align-content: center;
 
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
 
     padding: 2rem;
     border-radius: 1rem;
     margin: 1rem;
+
+    padding-bottom: 0;
 
 }
 
@@ -40,12 +56,4 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     text-decoration: underline;
-}
-
-.crop-field-section-container {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
 }

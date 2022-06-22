@@ -1,0 +1,12 @@
+main {
+    background-image: url(../images/website-background.webp);
+}
+
+.addTask-Sound {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 1rem;
+}

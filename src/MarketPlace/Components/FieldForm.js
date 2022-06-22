@@ -10,6 +10,7 @@ export const FieldForm = ( {farmsList} ) => {
     const [fieldTypeChoice, setFieldTypeChoice] = useState('');
     const [farmToSendField, setFarmToSendField] = useState('');
 
+
     useEffect( () =>  {
 
         axios.get('http://127.0.0.1:8080/fieldtype/fieldtypes')
@@ -37,13 +38,6 @@ export const FieldForm = ( {farmsList} ) => {
     }
 
 
-
-
-
-
-
-
-
     const handleFieldConfirmOrder = async (event) => {
         event.preventDefault();
 
@@ -64,6 +58,18 @@ export const FieldForm = ( {farmsList} ) => {
 
         console.log(pleaseWork2);
 
+        if (fieldName === "") {
+            return alert("Please enter a name for your field 😀")
+        } 
+
+        if (pleaseWork === undefined) {
+            return alert("Please select a valid farm 😀")
+        } 
+
+        if (pleaseWork2 == null) {
+            return alert("Please enter a valid field type 😀")
+        } 
+
 
 
         const idfarm = pleaseWork.id;
@@ -72,6 +78,9 @@ export const FieldForm = ( {farmsList} ) => {
         axios.put(`http://127.0.0.1:8080/farms/farm/buyfield`, null, { params: {fieldName, idfieldtype, idfarm} })
             .then(result => console.log(result.data))
             .catch( err => console.log(err))
+
+        
+        alert("We're on the way 🚀")
     }
 
 
@@ -82,7 +91,7 @@ export const FieldForm = ( {farmsList} ) => {
 
             <label className='name-field-form-label' htmlFor="">What is the name of your field?</label>
 
-            <input type="text" placeholder='Field name' 
+            <input  type="text" placeholder='Field name' 
                     value={fieldName}
                     className='name-field-form-input'
                     onChange={(e) => setFieldName(e.target.value)} />
@@ -90,26 +99,26 @@ export const FieldForm = ( {farmsList} ) => {
 
             <h4 className='fieldSelector'>Which field would you like to purchase?</h4>
 
-            <select placeholder='Pick your field!'
+            <select 
                     onChange={(e) => setFieldTypeChoice(e.target.value)}
                     className='fieldSelector'
             >
-                <optgroup>
+            <option value="none" selected disabled hidden>Select a field</option>  
             {
             fieldList.map( (field) => {
                 return <option key={field.id} className="field-options">{field.name}</option>
             }
             )}
-                </optgroup>
+               
             </select>
 
 
             <h4 className='deliverGoodsToFarm'>Which farm should we deliver the goods to?</h4>
 
-            <select placeholder="Pick your farm!"
+            <select
                     className='deliverGoodsToFarm'
                     onChange={(e) => setFarmToSendField(e.target.value)}>
-                <option hidden disabled>Pick your farm!</option>
+                    <option value="none" selected disabled hidden>Select a farm</option>
                 {
                 farmsList.map(farm =>
                     <option key={farm.id}

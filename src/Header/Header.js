@@ -14,10 +14,15 @@ const Header = () => {
       <div className="Main-Header">
       
         <div className="title">
-        <img src ={logo} alt="farm-logo"></img>
+          <img src ={logo} alt="farm-logo"></img>
+          <h2>🌾 Farm Tycoon 🌾</h2>
 
-          <h2>FARM TYCOON </h2>
-
+          <div className='Author-Names'>
+            <h3>Proudly developed by:</h3>
+            <span>Peace Akib</span>
+            <span>Lewis Broadhurst</span>
+            <span>Ana Bela Moreno Lima</span>
+          </div>
         </div>
 
         
@@ -26,9 +31,7 @@ const Header = () => {
 
             <li><Link to="/" >Home</Link></li>
 
-            <li><a href="myfarms.asp" >My Farms</a></li>
-            <li><Link to="/infopage" activeStyle> Info</Link></li>
-
+            <li><Link to="/marketplace" >Market Place</Link></li>
 
             <li><Link to="/marketplace" activestyle>Market Place</Link></li>
 
@@ -48,6 +51,8 @@ const Header = () => {
 
 
         </div>
+
+      
       </div>
   )
 

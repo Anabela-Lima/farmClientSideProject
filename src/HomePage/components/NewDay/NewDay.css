@@ -1,5 +1,8 @@
 #new-day-tab {
     background-color: lightblue;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
 }
 
 #new-day-tab:hover {
