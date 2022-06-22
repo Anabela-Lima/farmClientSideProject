@@ -5,19 +5,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./FarmFooter.css";
 
-const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney, ownedFields, setFieldCropName1}) => {
+const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney, ownedFields, setFieldCropName1, allCropsAvailable}) => {
 
-    const [allCropsAvailable, setAllCropsAvailable] = useState([]);
-
-    useEffect( () => {
-
-        axios.get('http://127.0.0.1:8080/crops/crops')
-            .then( res => {
-                setAllCropsAvailable(res.data);
-            })
-            .catch(err => console.log(err));
-
-    })
 
   return (
     <>

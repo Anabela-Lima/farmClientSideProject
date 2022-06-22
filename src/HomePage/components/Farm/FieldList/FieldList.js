@@ -12,7 +12,10 @@ const FieldList = ( {ownedFields, setFieldCropName} ) => {
         } else {
             return "No Crop";
         }
-    }
+    };
+
+
+    let ownedFieldsMap = ownedFields;
 
 
 
@@ -20,9 +23,9 @@ const FieldList = ( {ownedFields, setFieldCropName} ) => {
     <>
         <section className="fields-section">
 
-            {ownedFields.length > 0 ? <ul id="list-fields-with-info">
+            {ownedFieldsMap.length > 0 ? <ul id="list-fields-with-info">
                 
-                {ownedFields.map( (field, index) => 
+                {ownedFieldsMap.map( (field, index) => 
                             <li key={index} className="field-sections-details">
                                 <DeleteField fieldId={field.id} />
                                 <div id="field" className="field">
