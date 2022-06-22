@@ -176,7 +176,8 @@ const CropsPage = () => {
         const buttonClickHandler= (e) => {
 
             e.preventDefault();
-            alert("still to be implemented");
+            alert("still to be implemented"  + getFieldTypes());
+        
 
             // on button click
 
@@ -187,9 +188,6 @@ const CropsPage = () => {
 
 
     //----------------------------[ Return ]----------------------------------
-
-
-
 
 
   return (
