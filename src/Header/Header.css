@@ -51,7 +51,9 @@ img.title {
 
 /* css for the options  */
 .navbar a {
-  float: left;
+  /* float: left; */
+  display: flex;
+  flex-direction: row;
   color: black;
   text-align: center;
   padding: 14px 16px;
@@ -86,3 +88,4 @@ img {
   height: 100px;
   width: 100px;
 }
+
