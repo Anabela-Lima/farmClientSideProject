@@ -1,3 +1,6 @@
+
+
+
 .title {
   padding: 1rem;
   text-align: center;
@@ -23,6 +26,7 @@ img.title {
 
   align-self: flex-start;
   align-content: flex-start;
+  
 }
 
 .title>h2 {
@@ -89,3 +93,8 @@ img {
   width: 100px;
 }
 
+
+#logoImage{
+  width:100px;
+  height:100px;
+}

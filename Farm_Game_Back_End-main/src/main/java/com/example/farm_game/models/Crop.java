@@ -45,12 +45,15 @@ public class Crop {
     @Column(name = "SELLPRICE")
     private int sellPrice;
 
+    @Column(name = "IMAGE")
+    private String image;
+
     @JsonIgnore
     @OneToMany(mappedBy = "crop", cascade = CascadeType.REMOVE)
     private List<Field> fields;
 
 
-    public Crop(Long id, String name, int price, int stock, int growtime, int sellPrice,
+    public Crop(Long id, String name, int price, int stock, int growtime, int sellPrice,String image,
         List<SoilTypes> soilTypes, List<SoilEffects> soilEffects, List<Field> fields) {
         this.id = id;
         this.name = name;
@@ -61,9 +64,14 @@ public class Crop {
         this.soilEffects = soilEffects;
         this.fields = fields;
         this.sellPrice = sellPrice;
+        this.image=image;
     }
 
     public Crop() {
+    }
+
+    public Crop(Object o, String cropName, int price, int stock, int growTime, int sellPrice, List<SoilTypes> soilTypes, List<SoilEffects> soilEffects, Object o1) {
+
     }
 
     public Long getId() {
@@ -136,5 +144,13 @@ public class Crop {
 
     public void deleteField(int fieldId) {
         this.fields.remove(fieldId);
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

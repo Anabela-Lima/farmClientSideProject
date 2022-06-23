@@ -35,7 +35,7 @@ const Header = () => {
       <div className="Main-Header">
       
         <div className="title">
-          <img src ={logo} alt="farm-logo"></img>
+          <img id= "logoImage"src ={logo} alt="farm-logo"></img>
           <h2>🌾 Farm Tycoon 🌾</h2>
 
           <div className='Author-Names'>

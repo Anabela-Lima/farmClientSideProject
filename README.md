@@ -19,7 +19,7 @@ In the wireframe, both individual and reusable components were identified before
 ![image](https://user-images.githubusercontent.com/99202770/175095918-fb81b5ad-18fd-4c5c-adcd-5b82319845cb.png)
 
 
-Our component relationship diagram highlights how our components interact with one another. 
+The component relationship diagram highlights how our components interact with one another across the different levels. 
 
 
 ## Installation instructions
@@ -27,10 +27,10 @@ Our component relationship diagram highlights how our components interact with o
 1 - Open the server-side repository in Intellij and run the SpringBoot application [(Farm_Game_Back_End-main)](https://github.com/LMBroadhurst/farmClientSideProject/tree/main/Farm_Game_Back_End-main)
 
 2 - Open the client-side repository in VSCode and run the following commands:
-npm install
-npm start
-npm install axios
-npm install use-sound
+- ### `npm install`
+- ### `npm start`
+- ### `npm install axios`
+- ### `npm install use-sound`
 
 
 
