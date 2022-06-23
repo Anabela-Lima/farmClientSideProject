@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faBoxesPacking } from '@fortawesome/free-solid-svg-icons';
 
 import { useEffect } from 'react';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 
 const Footer = () => {
@@ -28,6 +29,19 @@ const Footer = () => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }, []);
 
+
+
+  // on nav hover 
+
+
+  const navHover = () =>{
+    let textbox= document.querySelector("#footerTextbox")
+    
+    let navbar= document.querySelector("footerNavbar")
+
+    textbox.innerHTML=""
+
+  }
   
 
 
@@ -49,7 +63,7 @@ const Footer = () => {
 
       <section className= "centreFooter">
 
-        <nav id="footerNavbar">
+        <nav id="footerNavbar" onMouseOver={navHover}>
               <ul>
                 <li >
                   <div className='titles' id="company"> Company Info </div>
