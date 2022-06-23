@@ -32,6 +32,14 @@ function HelpPage() {
                         <h3 className="FAQBodyText"> Firstly, Im sure it was really good!</h3>
                         <h3 className="FAQBodyText">If you're really not happy, you can either delete your entire farm or just a specific field and retry!</h3>
                     </p>
+
+
+                    <p className='paragraph-container'>
+
+                        <h2 className="FAQtitle">4. Is there a way to see what crops and fields I can buy?</h2> <br/>       
+                        <h3 className="FAQBodyText"> You can check out our info page, which will show you everything available! <a href="./infoPage">Click me!</a></h3>
+                        
+                    </p>
             </div>
     
     </section>
