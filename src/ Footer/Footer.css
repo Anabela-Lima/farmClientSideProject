@@ -90,6 +90,8 @@ a {
 
   /* top: 18em;
     left:44em; */
+
+
 }
 
 /* lets take a look at the socialNameBox section
@@ -205,8 +207,7 @@ a {
   height: 1.8em;
   position: relative;
   top: 0.25em;
-  left: 0.04m;
-
+  left: 0.04em;
 }
 
 /* moving all social tags to the correct location */
@@ -215,10 +216,7 @@ a {
   position: relative;
   left: 65em;
   top: 25em;
-
-
 }
-
 
 
 #copyright {
@@ -241,11 +239,7 @@ a {
   position: relative;
   top: 61em;
   /* bringing element to front- overlay */
-  z-index: 1;
   left: 36em;
-
-
-
 }
 
 /* #pForm{
