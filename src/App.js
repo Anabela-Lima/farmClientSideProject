@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Routes, Route}
 import HowToPlay from './HowToPlay/HowToPlay';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Footer from "./BackUpFooter/Footer"
+import Footer from "./BackUpFooter/Footer";
+import InfoPage from "./InfoPage/InfoPage";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" element={<Home farmsList={farmsList} setFarmsList={setFarmsList} />} />
           <Route path="/marketplace" element={<MarketPlace farmsList={farmsList} />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
+          <Route path="/infopage" element={<InfoPage />}/>
         </Routes>
 
         <Footer />

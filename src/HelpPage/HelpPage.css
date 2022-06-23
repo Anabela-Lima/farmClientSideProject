@@ -1,0 +1,44 @@
+.FAQText {
+    margin: 50px;
+    color: black;
+    font-family: 'GAMERIA', sans-serif;
+}
+
+.FAQtitle {
+    font-size: 30px;
+}
+
+.FAQBodyText {
+    font-size: 20px;
+}
+
+.FAQ-container {
+
+    /* text-align: center; */
+
+    margin: 2rem 30rem;
+    border: 2px solid #aa7e38;
+    border-radius: 1rem;
+
+    background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(137, 113, 81);
+
+}
+
+body {
+
+    color: black;
+    background-image: url("../HomePage/images/website-background.webp");
+    padding: 3rem 0;
+    color: white;
+
+
+    font-family: 'Fredericka the Great', cursive;
+
+}
+
+.paragraph-container {
+
+    padding: 1rem 0;
+}

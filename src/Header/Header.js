@@ -29,9 +29,11 @@ const Header = () => {
 
             <li><Link to="/marketplace" >Market Place</Link></li>
 
+            <li><Link to="/infopage" >Info Page</Link></li>
+
             <li><Link to="/how-to-play" >How To Play</Link></li>
 
-            <li><a href="help" >Help</a></li>
+            <li><a href="/help" >Help</a></li>
 
             <input type="text" placeholder="Search.."/>
 
