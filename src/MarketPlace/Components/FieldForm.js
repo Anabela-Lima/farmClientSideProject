@@ -40,20 +40,15 @@ export const FieldForm = ( {farmsList} ) => {
 
     const handleFieldConfirmOrder = async (event) => {
         event.preventDefault();
-
-
         console.log("1...");
 
         const pleaseWork = await getFarmIdViaName();
-
         console.log("2...");
 
         console.log(pleaseWork);
-
         console.log("3...");
 
         const pleaseWork2 = await getFieldIdViaName();
-
         console.log("4...");
 
         console.log(pleaseWork2);
@@ -69,7 +64,6 @@ export const FieldForm = ( {farmsList} ) => {
         if (pleaseWork2 == null) {
             return alert("Please enter a valid field type 😀")
         } 
-
 
 
         const idfarm = pleaseWork.id;
