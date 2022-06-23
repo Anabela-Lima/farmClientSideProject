@@ -79,13 +79,23 @@ img.title {
 }
 
 /* css for search bar  */
-.navbar input[type=text] {
+.search {
   float: right;
   padding: 6px;
   border: none;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+  color: black;
+  font-family: 'GAMERIA', sans-serif;
+}
+
+#search__input{
+  height: 30px;
+}
+
+.search__submit{
+  height: 30px;
 }
 
 img {
