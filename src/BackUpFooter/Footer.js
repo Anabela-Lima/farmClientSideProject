@@ -1,6 +1,7 @@
 import './Footer.css';
 import { useEffect } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
 
@@ -96,8 +97,8 @@ const Footer = () => {
 
           <div className='social-media-icons'>
             <ul>
-              <li></li>
-              <li></li>
+              <li><FontAwesomeIcon icon={faCoffee} /></li>
+              <li>hi</li>
               <li></li>
               <li></li>
             </ul>
