@@ -144,69 +144,69 @@ const CropsPage = () => {
 
     // get all crops : state
     
-    const [farms, setFarms] = useState([])
+    // const [farms, setFarms] = useState([])
 
-    // get all crops code
+    // // get all crops code
 
-    useEffect(() => {
-        let endpoint3 = "http://localhost:8080/farms/farms"
-        axios
-            .get(endpoint3)
-            .then(response => {
-                const data = response.data;
-                // add logic to filter data based on input
-                // use state with some properties for filtering data 
-                setFarms(data);
-            })
-            .catch(err => console.log(err ));
-    }, [])
+    // useEffect(() => {
+    //     let endpoint3 = "http://localhost:8080/farms/farms"
+    //     axios
+    //         .get(endpoint3)
+    //         .then(response => {
+    //             const data = response.data;
+    //             // add logic to filter data based on input
+    //             // use state with some properties for filtering data 
+    //             setFarms(data);
+    //         })
+    //         .catch(err => console.log(err ));
+    // }, [])
 
-    const [searchTermFarms, setSearchTermFarms] = useState("");
+    // const [searchTermFarms, setSearchTermFarms] = useState("");
 
 
    //-----------------[ farms crops search ]----------------------------------
 
 
-    const getFarms = async (e) =>{
+    // const getFarms = async (e) =>{
         
-        e.preventDefault(); // prevent page refresh
+    //     e.preventDefault(); // prevent page refresh
 
-        // axios API request to backend
-        let response;
-        try {
-            response = await axios.get("http://localhost:8080/farms/farms")
-        }
-        catch(err) {
-            console.log(err);
-        }
+    //     // axios API request to backend
+    //     let response;
+    //     try {
+    //         response = await axios.get("http://localhost:8080/farms/farms")
+    //     }
+    //     catch(err) {
+    //         console.log(err);
+    //     }
 
-        const data = response.data;
-        console.log("data: ", data);
-        console.log(searchTermFarms);
-        console.log(farms);
+    //     const data = response.data;
+    //     console.log("data: ", data);
+    //     console.log(searchTermFarms);
+    //     console.log(farms);
         
-        const filteredFarms = data.filter(farm => farm.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    //     const filteredFarms = data.filter(farm => farm.name.toLowerCase().includes(searchTerm.toLowerCase()))
         
-        // console.log(filteredCrops);
+    //     // console.log(filteredCrops);
 
-        setFarms(filteredFarms); // sets the variable 'farms', also re-renders the component
+    //     setFarms(filteredFarms); // sets the variable 'farms', also re-renders the component
     
-    }
+    // }
 
 
     //----------------[ Arrow function for buttonclick]-------------------
 
-        const buttonClickHandler= (e) => {
+        // const buttonClickHandler= (e) => {
 
-            e.preventDefault();
-            alert("still to be implemented"  + getFieldTypes());
+        //     e.preventDefault();
+        //     alert("still to be implemented"  + getFieldTypes());
         
 
-            // on button click
+        //     // on button click
 
-            // call 
+        //     // call 
 
-        }
+        // }
 
 
      
@@ -356,8 +356,8 @@ const CropsPage = () => {
                                     </tr>
                                     </thead>
                                     <tbody id= "tbodyCrops">
-                                        {crops.map((crops) => (
-                                            <tr>
+                                        {crops.map((crops, index) => (
+                                            <tr key={index}>
                                                 {/* <td><img src={crops.image} width="50" height="50"  alt="wheat"></img></td> */}
                                             <td >{crops.name}</td>
                                             <td>{crops.price}</td>
@@ -425,8 +425,8 @@ const CropsPage = () => {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {fieldTypes.map((fieldtypes) => (
-                                    <tr>
+                                {fieldTypes.map((fieldtypes, index) => (
+                                    <tr key={index}>
                                     <td>{fieldtypes.name}</td>
                                     <td>{fieldtypes.size}</td>
                                     <td>{fieldtypes.cost}</td>
