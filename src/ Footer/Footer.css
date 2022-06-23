@@ -130,4 +130,5 @@
 .dropup:hover .dropup-items {
     display: flex;
     flex-direction: column;
+    transition: height 2s;
 }
