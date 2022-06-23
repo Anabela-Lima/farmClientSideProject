@@ -7,8 +7,9 @@ import "./FarmList.css";
 import { Context } from "../../../context";
 
 
-const FarmList = ( {farmsList, setFarmsList, tellJoke} ) => {
+const FarmList = ( {farmsList, setFarmsList} ) => {
 
+  
     
   const [context, setContext] = useContext(Context);
 
