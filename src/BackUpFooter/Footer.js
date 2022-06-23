@@ -1,7 +1,7 @@
 import './Footer.css';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faGithub, faFacebook, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
 
@@ -97,10 +97,11 @@ const Footer = () => {
 
           <div className='social-media-icons'>
             <ul>
-              <li><FontAwesomeIcon icon={faCoffee} /></li>
-              <li>hi</li>
-              <li></li>
-              <li></li>
+              <li><FontAwesomeIcon icon={faGithub} /></li>
+              <li><FontAwesomeIcon icon={faInstagram} /></li>
+              <li><FontAwesomeIcon icon={faFacebook} /></li>
+              <li><FontAwesomeIcon icon={faLinkedin} /></li>
+              <li><FontAwesomeIcon icon={faTwitter} /></li>
             </ul>
           </div>
 

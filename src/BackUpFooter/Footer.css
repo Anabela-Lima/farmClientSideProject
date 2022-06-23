@@ -149,3 +149,25 @@
     flex-direction: column;
     transition: height 2s;
 }
+
+.social-media-icons>ul {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 2.4rem;
+}
+
+.social-media-icons>ul>li {
+    padding: 0.25rem;
+    color: rgb(78, 7, 78);
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.social-media-icons>ul>li:hover {
+    background-color: rgb(78, 7, 78);
+    border-radius: 0.25rem;
+    color: white;
+
+    cursor: pointer;
+}
