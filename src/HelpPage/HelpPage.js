@@ -1,5 +1,5 @@
 import React from 'react'
-// import './HelpPage.css'
+import './HelpPage.css'
 
 function HelpPage() {
 

@@ -30,15 +30,9 @@ body {
 
     color: black;
     background-image: url("../HomePage/images/website-background.webp");
-    padding: 3rem 0;
-    color: white;
-
-
-    font-family: 'Fredericka the Great', cursive;
 
 }
 
 .paragraph-container {
-
     padding: 1rem 0;
 }
