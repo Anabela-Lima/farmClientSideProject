@@ -46,12 +46,13 @@ const Footer = () => {
         </div>
   
 
+
       <section className= "centreFooter">
 
         <nav id="footerNavbar">
               <ul>
                 <li >
-                  <div className='titles'> Company Info </div>
+                  <div className='titles' id="company"> Company Info </div>
               
                   <ul id = "ul1">
                     <li><a className= "textDropMenu" href="#">Terms of use</a> </li>
@@ -104,6 +105,7 @@ const Footer = () => {
                 </center>
              </div>  
             
+             <p id="footerTextbox" className="white"> <span id="footerText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span> </p>
 
          
          </section>
