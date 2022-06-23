@@ -116,19 +116,13 @@ td button {
     padding: 0.2em;
 }
 
-body {
-    /* font-family: 'Times New Roman', Times, serif; */
-}
-
-
-body h2 {
+#cropsTableTitle {
     font-family: 'GAMERIA', sans-serif;
     font-size: x-large;
 
 }
 
-h1 {
-    font-family: 'GAMERIA', sans-serif;
+.infoTitle {
     font-size: xx-large;
     display: flex;
     flex-direction: row;
