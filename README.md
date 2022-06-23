@@ -27,10 +27,10 @@ The component relationship diagram highlights how our components interact with o
 1 - Open the server-side repository in Intellij and run the SpringBoot application [(Farm_Game_Back_End-main)](https://github.com/LMBroadhurst/farmClientSideProject/tree/main/Farm_Game_Back_End-main)
 
 2 - Open the client-side repository in VSCode and run the following commands:
-- npm install
-- npm start
-- npm install axios
-- npm install use-sound
+- ### `npm install`
+- ### `npm start`
+- ### `npm install axios`
+- ### `npm install use-sound`
 
 
 
