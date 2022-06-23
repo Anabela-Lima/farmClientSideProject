@@ -10,7 +10,7 @@ const NewDay = ( {farmId, farmDaysPassed, setFarmDaysPassed, money, setMoney} ) 
         axios.put(`http://127.0.0.1:8080/farms/newDay/${farmId}`)
             .then( res => {
                 console.log(res.data);
-                setMoney(money + res.data);
+                setMoney(money + res.data)
             })
             .catch( (err) => console.log(err))
 
