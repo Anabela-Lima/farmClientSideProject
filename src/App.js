@@ -6,9 +6,9 @@ import MarketPlace from './MarketPlace/MarketPlace.js';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import HowToPlay from './HowToPlay/HowToPlay';
-import Footer from './ Footer/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Footer from "./BackUpFooter/Footer"
 
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
           <Route path="/how-to-play" element={<HowToPlay />} />
         </Routes>
 
-        <Footer/>
+        <Footer />
     
       </Router>
       
