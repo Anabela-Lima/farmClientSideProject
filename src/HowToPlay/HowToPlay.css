@@ -1,3 +1,40 @@
-.HowToPlay {
-    font-family: 'GAMERIA', sans-serif;
+.HowToPlayText {
+    padding: 2rem;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+#welcome {
+    text-align: center;
+}
+
+
+#Namegif {
+    width: 800px;
+    height: 100px;
+}
+
+#Fieldgif {
+    width: 800px;
+    height: 300px;
+}
+
+#Moneygif {
+    width: 800px;
+    height: 300px;
+}
+
+.Spacing {
+    padding: 2rem 0;
+}
+
+.HowToPlay-container {
+    margin: 2rem 30rem;
+    border: 2px solid #aa7e38;
+    border-radius: 1rem;
+
+    background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(137, 113, 81);
+    padding-bottom: 2rem;
 }
