@@ -5,7 +5,7 @@ import PlaySound from "../Sound/sound";
 
 
 
-const FarmContainer = ( {farmsList, setFarmsList} ) => {
+const FarmContainer = ( {farmsList, setFarmsList, tellJoke} ) => {
 
 
   return (
@@ -18,7 +18,7 @@ const FarmContainer = ( {farmsList, setFarmsList} ) => {
 
           </div>
           
-          <FarmList farmsList={farmsList} setFarmsList={setFarmsList} />
+          <FarmList farmsList={farmsList} setFarmsList={setFarmsList} tellJoke={tellJoke}/>
       </main>
     </>
   )

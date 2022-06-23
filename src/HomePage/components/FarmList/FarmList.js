@@ -3,7 +3,7 @@ import noFarmsGif from "./no-farms-gif.gif";
 import "./FarmList.css";
 
 
-const FarmList = ( {farmsList} ) => {
+const FarmList = ( {farmsList, tellJoke} ) => {
 
 
   
