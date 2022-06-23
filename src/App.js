@@ -8,16 +8,13 @@ import { BrowserRouter as Router, Routes, Route}
 import HowToPlay from './HowToPlay/HowToPlay';
 
 import HelpPage from './HelpPage/HelpPage';
-import Footer from './ Footer/Footer';
+import Footer from './BackUpFooter/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // importing my icon library
-
-import initFontAwesome from './ Footer/initFontAwesome.js'
 // importing crops page
 import InfoPage from './InfoPage/InfoPage';
-initFontAwesome();
 // importing my icon library
 
 

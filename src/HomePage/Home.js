@@ -1,9 +1,6 @@
 import FarmContainer from "./containers/FarmContainer";
 
 
-  
-
-
 const Home = ( {farmsList, setFarmsList} ) => {
   return (
     <>
