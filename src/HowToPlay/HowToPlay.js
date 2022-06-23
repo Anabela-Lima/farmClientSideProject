@@ -17,19 +17,19 @@ const HowToPlay = () => {
       <div className="HowToPlayText">
               
               <h1 id="welcome"> Welcome Farmers</h1>
-              <h1> are you ready to create your own farm?</h1>
+              <h1> are you ready to create your own farm?</h1><br/>
               <p className="Spacing">
-              <h3>Start by selecting a farm name</h3>
+              <h3>Start by selecting a farm name</h3><br/>
                   <img src={name} alt="dancing farm img" id="Namegif"></img>
                   </p>
                   
                   <p className="Spacing">
-              <h3>Pick the right field for your new farm</h3>
+              <h3>Pick the right field for your new farm</h3><br/>
                    <img src={fieldadd} alt="dancing farm img" id="Fieldgif"></img>
                    </p>
               
              <p className="Spacing">
-              <h3>Watch your crops harvest and sell them to earn some money!</h3>
+              <h3>Watch your crops harvest and sell them to earn some money!</h3><br/>
                 <img src={money} alt="crop sales img" id="Moneygif"></img> 
                 </p>
               <h3>Create more farms for endless fun!</h3>

@@ -1,19 +1,22 @@
 .FAQText{
-    margin: 100px;
+    margin: 50px;
     color: black;
     font-family: 'GAMERIA', sans-serif;
-    /* margin: auto;
-    width: 50%; */
-    
-    line-height: 200px;
-    
+    }
+
+    .FAQtitle{
+        font-size: 30px;
+    }
+
+    .FAQBodyText{
+        font-size: 20px;
     }
 
     .FAQ-container{
 
     /* text-align: center; */
     
-    margin: 2rem 10rem;
+    margin: 2rem 30rem;
     border: 2px solid #aa7e38;
     border-radius: 1rem;
 
