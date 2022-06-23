@@ -18,19 +18,20 @@ function App() {
   const [farmsList, setFarmsList] = useState([]);
 
   useEffect( () => {
+
+    async function getFarmData() {
+
+      await axios.get('http://127.0.0.1:8080/farms/farms')
+      .then(res => {
+        const farmsList1 = res.data;
+        setFarmsList(farmsList1);
+      })
+      .catch(err => console.log(err))
+
+    }
+
     getFarmData();
-  });
-
-  const getFarmData = async () => {
-
-  axios.get('http://127.0.0.1:8080/farms/farms')
-  .then(res => {
-    const farmsList1 = res.data;
-    setFarmsList(farmsList1);
-  })
-  .catch(err => console.log(err))
-
-  }
+});
 
 
   return (
