@@ -1,5 +1,5 @@
 import React from 'react';
-import './InfoPage.css';
+// import './InfoPage.css';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';

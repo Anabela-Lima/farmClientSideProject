@@ -26,6 +26,8 @@ const Footer = () => {
 
         <div id="footer">
 
+          <div className='grey-footer-bar'></div>
+
          <footer>
 
           <div className="footerLeft">

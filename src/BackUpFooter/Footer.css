@@ -1,5 +1,11 @@
 #footer {
-    margin-top: -1rem;
+    margin-top: 0rem;
+
+}
+
+.grey-footer-bar {
+    background-color: gainsboro;
+    height: 2rem;
 }
 
 #footer>footer {

@@ -33,7 +33,7 @@ const Header = () => {
 
             <li><Link to="/how-to-play" >How To Play</Link></li>
 
-            <li><a href="/help" >Help</a></li>
+            <li><Link to="/help">Help</Link></li>
 
             <input type="text" placeholder="Search.."/>
 
