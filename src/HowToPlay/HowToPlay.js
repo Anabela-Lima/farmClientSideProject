@@ -5,7 +5,7 @@ import name from './nameyourfarm.gif';
 import money from './money.gif';
 import crop from './crop.gif';
 import fieldadd from './addField.gif';
-
+import './HowToPlay.css';
 
 const HowToPlay = () => {
     return (

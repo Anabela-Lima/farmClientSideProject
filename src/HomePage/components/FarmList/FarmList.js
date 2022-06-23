@@ -7,7 +7,7 @@ import "./FarmList.css";
 import { Context } from "../../../context";
 
 
-const FarmList = ( {farmsList, setFarmsList} ) => {
+const FarmList = ( {farmsList, setFarmsList, tellJoke} ) => {
 
     
   const [context, setContext] = useContext(Context);
@@ -33,6 +33,7 @@ const FarmList = ( {farmsList, setFarmsList} ) => {
       .catch(err => console.log(err));
 
   });
+  
 
 
   return (

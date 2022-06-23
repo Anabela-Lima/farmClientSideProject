@@ -6,9 +6,9 @@ import PlaySound from "../Sound/sound";
 import axios from "axios";
 
 
-const FarmContainer = () => {
 
-  const [farmsList, setFarmsList] = useState([]);
+const FarmContainer = ( {farmsList, setFarmsList, tellJoke} ) => {
+
 
   useEffect( () => {
 
@@ -23,7 +23,7 @@ const FarmContainer = () => {
 
   return (
     <> 
-      <main>
+      <main id="main">
           <div className="addTask-Sound">
 
             <PlaySound />
@@ -31,7 +31,7 @@ const FarmContainer = () => {
 
           </div>
           
-          <FarmList farmsList={farmsList} setFarmsList={setFarmsList} />
+          <FarmList farmsList={farmsList} setFarmsList={setFarmsList} tellJoke={tellJoke}/>
       </main>
     </>
   )

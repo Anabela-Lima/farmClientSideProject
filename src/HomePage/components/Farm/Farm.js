@@ -6,6 +6,7 @@ import FarmFooter from "./FarmFooter/FarmFooter";
 import FieldList from "./FieldList/FieldList";
 import axios from "axios";
 
+
 const Farm = ( {farmName, farmFunds, farmId, ownedFields, farmDate0} ) => {
 
     const [money, setMoney] = useState(farmFunds);
@@ -24,6 +25,18 @@ const Farm = ( {farmName, farmFunds, farmId, ownedFields, farmDate0} ) => {
 
     });
 
+
+    useEffect( () => {
+
+        axios.get('http://127.0.0.1:8080/crops/crops')
+            .then( res => {
+                setAllCropsAvailable(res.data);
+            })
+            .catch(err => console.log(err));
+
+    })
+
+    
 
   return (
     <>

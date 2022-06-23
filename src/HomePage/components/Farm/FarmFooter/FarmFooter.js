@@ -3,9 +3,9 @@ import DeleteFarm from "../../DeleteFarm.js/DeleteFarm";
 import AddCrop from "./AddCrop/AddCrop";
 import "./FarmFooter.css";
 
-const FarmFooter = ( {farmId, setFarmDaysPassed1, money, setMoney, ownedFields, setFieldCropName1, allCropsAvailable}) => {
 
-    
+const FarmFooter = ( {farmId, farmDaysPassed, setFarmDaysPassed1, money, setMoney, ownedFields, setFieldCropName1, allCropsAvailable}) => {
+
 
   return (
     <>

@@ -1,0 +1,136 @@
+/* #footer {
+    margin-top: -1rem;
+}
+
+#footer>footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #bbd6e2;
+}
+
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    padding: 1rem 2rem;
+}
+
+.subscribe-and-backtotop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#scrollToTop {
+    margin: 0 1rem;
+}
+
+.centreFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    padding: 1rem 2rem;
+}
+
+.footerRight>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#farmLogo {
+    height: 120px;
+    width: 160px;
+}
+
+.iconSize {
+    width: 1.5em;
+    height: 1.8em;
+}
+
+#ad1 {
+    width: 220px;
+    height: 85px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.581);
+}
+
+#copyright {
+    font-size: 2rem;
+    color: green;
+    text-shadow: 2px 2px #630909;
+}
+
+
+
+
+/* DROPUPS */
+
+
+/* 
+.centreFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerNavbar {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    font-size: 2rem;
+}
+
+.dropup span {
+    padding: 1rem 4rem;
+    background-color: red;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}
+
+.dropup:hover {
+    margin-top: 1rem;
+}
+
+.dropup span:hover {
+    background-color: #630909;
+}
+
+
+
+.dropup ul {
+    background-color: green;
+    text-align: center;
+    padding: 1.25rem 0.5rem;
+    padding-bottom: 0;
+    margin: 0.5rem;
+}
+
+.dropup-items {
+    display: none;
+}
+
+.dropup:hover .dropup-items {
+    display: flex;
+    flex-direction: column;
+    transition: height 2s;
+}
+
+*/

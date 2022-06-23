@@ -6,14 +6,17 @@ import "./FieldList.css";
 const FieldList = ( {ownedFields, setFieldCropName} ) => {
 
 
-    // const getCropName = (field) => {
-    //     if (field.crop) {
-    //         setFieldCropName(field.crop.name)
-    //         return field.crop.name;
-    //     } else {
-    //         return "No Crop";
-    //     }
-    // }
+    const getCropName = (field) => {
+        if (field.crop) {
+            setFieldCropName(field.crop.name)
+            return field.crop.name;
+        } else {
+            return "No Crop";
+        }
+    };
+
+
+    let ownedFieldsMap = ownedFields;
 
 
 
@@ -21,9 +24,9 @@ const FieldList = ( {ownedFields, setFieldCropName} ) => {
     <>
         <section className="fields-section">
 
-            {ownedFields.length > 0 ? <ul id="list-fields-with-info">
+            {ownedFieldsMap.length > 0 ? <ul id="list-fields-with-info">
                 
-                {ownedFields.map( (field, index) => 
+                {ownedFieldsMap.map( (field, index) => 
                             <li key={index} className="field-sections-details">
                                 <DeleteField fieldId={field.id} />
                                 <div id="field" className="field">
@@ -33,7 +36,7 @@ const FieldList = ( {ownedFields, setFieldCropName} ) => {
                                     <li className="field-name">{field.name}</li>
                                     <li className="minor-field-details">{field.soilType}</li>
                                     <li className="minor-field-details">{field.fieldType.name}</li>
-                                    {/* <li>{getCropName(field)}</li> */}
+                                    <li>{getCropName(field)}</li>
                                 </ul>
                             </li>)}
             

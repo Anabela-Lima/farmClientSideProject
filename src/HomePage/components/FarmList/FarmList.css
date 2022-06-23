@@ -6,10 +6,11 @@
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    
+
     padding: 1rem 2rem;
 
-    border-radius: 1rem;;
+    border-radius: 1rem;
+
 }
 
 .no-farms-image {
@@ -31,7 +32,7 @@
     font-size: 2rem;
 }
 
-.no-farms-text > h3 {
+.no-farms-text>h3 {
     margin-bottom: 3rem;
 }
 
@@ -45,4 +46,3 @@
 .should-be-you h4 span {
     text-decoration: underline;
 }
-

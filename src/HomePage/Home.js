@@ -5,15 +5,16 @@ import FarmContainer from "./containers/FarmContainer";
 const Home = () => {
 
   
-
+const Home = ( {farmsList, setFarmsList} ) => {
   return (
     <>
 
-      <FarmContainer />
+      <FarmContainer farmsList={farmsList} setFarmsList={setFarmsList} />
     
     </>
     
   )
+}
 }
 
 export default Home
