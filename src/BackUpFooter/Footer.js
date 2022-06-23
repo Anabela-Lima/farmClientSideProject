@@ -93,7 +93,18 @@ const Footer = () => {
          
 
         <div className='footerRight'>
-          <img id="ad1"src="https://jobtribes.playmining.com/wp-content/uploads/2021/04/banner_003-3.png" alt="ad"></img>     
+
+          <div className='social-media-icons'>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+
+          <img id="ad1"src="https://jobtribes.playmining.com/wp-content/uploads/2021/04/banner_003-3.png" alt="ad"></img> 
+
         </div>
            
          </footer>

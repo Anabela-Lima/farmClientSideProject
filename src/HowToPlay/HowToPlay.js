@@ -1,5 +1,5 @@
 import React from 'react';
-// import './HowToPlay.css';
+import './HowToPlay.css';
 
 const HowToPlay = () => {
     return (
